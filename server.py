@@ -44,7 +44,7 @@ class Objects(object):
         return json.dumps(new_obj)
 
 
-    def PUT(self, uid, data):
+    def PUT(self, data, uid):
         """Updates the obj specified by the uid.
         Is a COMPLETE REPLACEMENT. returns new obj
         """
@@ -75,9 +75,9 @@ class Objects(object):
         call to objects/ returns json of all uids
         """
         if (uid == None):
-            # return list of all objects
-            all_obj = [{'url':my_url+'/'+x[uid]} for x in self.objects]
-            return all_obj
+            # return list of all objects (the uid is also the dict key
+            all_obj = [{'url': my_url+'/'+ key } for key in self.objects]
+            return json.dumps(all_obj)
         elif uid in self.objects:
             return json.dumps(self.objects[uid])
         else:
@@ -103,8 +103,8 @@ class Objects(object):
 
 if __name__ == "__main__":
     # cherrypy config
-    cherrypy.config.update({'server.socket_host': '52.32.119.107',
-                            'server.socket_port': 80})
+    #cherrypy.config.update({'server.socket_host': '52.32.119.107',
+    #                        'server.socket_port': 80})
     
     # create cherrypy app
     # set to handle /api/objects with Objects()
