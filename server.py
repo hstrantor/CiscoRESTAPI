@@ -5,42 +5,55 @@
 import json
 import cherrypy
 
-# database
-j_objects = {}
+my_url = "127.0.0.1:8080"
 
-def get_uid():
-    # returns new uid
-    pass
+class UID():
+    def __init__(self):
+        self.uid = 1
+    def get_uid(self):
+        self.uid +=1
+        return str(self.uid-1)
 
 
-#@cherrypy.popargs('name')
+
 # class to represent 'object' resources
 class Objects:
     exposed = True
+    objects = {}
+    uids = UID()
     
     def POST(self, json_data):
         """Creates object with new uid and returns it. If called 2+ times,
         creates identical objs with dif uids.
         """
         # create new uid
-        new_uid = get_uid()
-        # create obj from json_data, by adding uid
+        new_uid = self.uids.get_uid()
+        # uid is IN the object AND its the dict key
+        try:
+            new_obj = json.loads(json_data)
+            new_obj['uid'] = new_uid
+        except ValueError:
+            err_msg = {
+                        "verb": "POST",
+                        "url": my_url+"/api/objects/",
+                        "message": "Not a JSON object"
+                      }
+            return json.dumps(err_msg)
         
-        # add new obj to database
+        objects[new_uid] = new_obj
+        return json.dumps(new_obj)
 
-        #return obj with uid
-        
+
     def PUT(self, uid, json_data):
         """Updates the obj specified by the uid.
         Is a COMPLETE REPLACEMENT. returns new obj
         """
         if (uid in objects):
-            # save uid
-            # remove obj from db
-            # create new obj from json_data and uid
-            # add object to db
-            #return obj
-            pass
+            del objects[uid]
+            new_obj = json.loads(json_data)
+            new_obj['uid'] = uid
+            objects[uid] = new_obj
+            return obj
         else:
             #error
             pass
@@ -51,11 +64,13 @@ class Objects:
         call to objects/ returns json of all uids
         """
         if (uid == None):
-            # return list of uids of all objects
+            # return list of all objects
+            # make this a ffunc()
+            return  "no objects"
             pass
         elif uid in j_objects:
             # return full json obj
-            pass
+            return "HIII test A"
         else:
             # return msg obj doesnt exist
             # OR (better) return error HTTP code
@@ -66,8 +81,7 @@ class Objects:
         no response
         """
         if (uid in objects):
-            # delete from db
-            pass
+            del objects[uid]
         else:
             #errro
             pass
