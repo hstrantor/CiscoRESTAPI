@@ -22,22 +22,55 @@ class Objects:
         """Creates object with new uid and returns it. If called 2+ times,
         creates identical objs with dif uids.
         """
+        # create new uid
         new_uid = get_uid()
-        new_obj = {
+        # create obj from json_data, by adding uid
         
+        # add new obj to database
 
-    def GET(self, id=None):
-        if (id == None):
+        #return obj with uid
+        
+    def PUT(self, uid, json_data):
+        """Updates the obj specified by the uid.
+        Is a COMPLETE REPLACEMENT. returns new obj
+        """
+        if (uid in objects):
+            # save uid
+            # remove obj from db
+            # create new obj from json_data and uid
+            # add object to db
+            #return obj
+            pass
+        else:
+            #error
+            pass
+
+
+    def GET(self, uid=None):
+        """call to objects/<uid> returns full obj.
+        call to objects/ returns json of all uids
+        """
+        if (uid == None):
             # return list of uids of all objects
             pass
-        elif id in j_objects:
+        elif uid in j_objects:
             # return full json obj
             pass
         else:
             # return msg obj doesnt exist
-            # OR (better) return HTTP code
+            # OR (better) return error HTTP code
             pass
 
+    def DELETE(self, uid):
+        """ deletes uid specified obj from db.
+        no response
+        """
+        if (uid in objects):
+            # delete from db
+            pass
+        else:
+            #errro
+            pass
 
 if __name__ == "__main__":
     # create cherrypy app
