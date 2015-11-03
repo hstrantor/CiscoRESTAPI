@@ -1,0 +1,17 @@
+#### Cisco REST API
+
+Using:
+* Python (most familiar for first attempts)
+* cherrypy library for http server
+* requests library + curl + telnet for testing
+* uuid.uuid4() python func for unique id
+
+### Specification
+Must support: create, read, update, delete (CRUD) ops.
+Must work for ARBITRARY JSON objects. Each object is 
+assigned a unique identifier id on creation, which is
+used to perform all subsequent ops on the object.
+
+## HTTP POST
+# request
+HTTP POST to "api/objects" URL will create an obj

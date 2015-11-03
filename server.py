@@ -5,7 +5,7 @@
 import json
 import cherrypy
 
-my_url = "127.0.0.1:8080"
+my_url = "127.0.0.1:8080"+"/api/objects"
 
 class UID():
     def __init__(self):
@@ -35,7 +35,7 @@ class Objects(object):
         except ValueError:
             err_msg = {
                         "verb": "POST",
-                        "url": my_url+"/api/objects/",
+                        "url": my_url+"/",
                         "message": "Not a JSON object"
                       }
             return json.dumps(err_msg)
@@ -52,7 +52,7 @@ class Objects(object):
             new_obj = json.loads(data)
         except ValueError:
             err_msg = { "verb": "PUT",
-                        "url": my_url+'/api/objects/',
+                        "url": my_url+'/',
                         "message": "Not a JSON object"
                       }
             return json.dumps(err_msg)
@@ -64,7 +64,7 @@ class Objects(object):
             return json.dumps(obj)
         else:
             err_msg = { "verb": "PUT",
-                        "url": my_url+'/api/objects/',
+                        "url": my_url+'/',
                         "message": "Object does not exist"
                       }
             return json.dumps(err_msg)
@@ -76,15 +76,14 @@ class Objects(object):
         """
         if (uid == None):
             # return list of all objects
-            all_obj = []
-            for all x in self.objects: all_obj.append({'url':my_url+'api/objects/'+x[uid]})
+            all_obj = [{'url':my_url+'/'+x[uid]} for x in self.objects]
             return all_obj
         elif uid in self.objects:
             return json.dumps(self.objects[uid])
         else:
             err_msg = {
                         "verb": "GET",
-                        "url": my_url+"/api/objects/",
+                        "url": my_url+"/",
                         "message": "Object does not exist"
                       }
             return json.dumps(err_msg)
@@ -97,7 +96,7 @@ class Objects(object):
             del self.objects[uid]
         else:
             err_msg = { "verb": "DELETE",
-                        "url": my_url+"/api/objects/"
+                        "url": my_url+"/",
                         "message": "Object does not exists"
                       }
             return json.dumps(err_msg)
