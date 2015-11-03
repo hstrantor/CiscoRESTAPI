@@ -33,6 +33,26 @@ class TestPOST(unittest.TestCase):
         self.assertTrue(r.json()['uid'] != None)
         self.assertFalse(curr_uid == r.json()['uid'])
 
+class TestPUT(unittest.TestCase):
+
+    uids = {}
+    def setUp(self):
+        a = {"a": 2, "aa":3, "aaa":[1,2,3]}
+        b = {"b": 5}
+        c = {}
+        d = {"dee":'c', "school": "achds"}
+        post_data = {'data': json.dumps(a)}
+        r = requests.post(url, data=post_data)
+        uids['a'] = r.json()['uid']
+        post_data = {'data': json.dumps(b)}
+        r = requests.post(url, data=post_data)
+        uids['b'] = r.json()['uid']
+        post_data = {'data': json.dumps(c)}
+        r = requests.post(url, data=post_data)
+        uids['c'] = r.json()['uid']
+        post_data = {'data': json.dumps(d)}
+        r = requests.post(url, data=post_data)
+        uids['d'] = r.json()['uid']
 
 
 if __name__ == '__main__':

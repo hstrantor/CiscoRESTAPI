@@ -102,6 +102,10 @@ class Objects(object):
             return json.dumps(err_msg)
 
 if __name__ == "__main__":
+    # cherrypy config
+    cherrypy.config.update({'server.socket_host': '52.32.119.107',
+                            'server.socket_port': 80})
+    
     # create cherrypy app
     # set to handle /api/objects with Objects()
     # activate Method dispatcher (this sends the
