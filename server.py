@@ -17,20 +17,20 @@ class UID():
 
 
 # class to represent 'object' resources
-class Objects:
+class Objects(object):
     exposed = True
     objects = {}
     uids = UID()
     
-    def POST(self, json_data):
+    def POST(self, data):
         """Creates object with new uid and returns it. If called 2+ times,
         creates identical objs with dif uids.
         """
         # create new uid
         new_uid = self.uids.get_uid()
-        # uid is IN the object AND its the dict key
+        # uid is IN the object AND it's the dict key
         try:
-            new_obj = json.loads(json_data)
+            new_obj = json.loads(data)
             new_obj['uid'] = new_uid
         except ValueError:
             err_msg = {
@@ -40,23 +40,34 @@ class Objects:
                       }
             return json.dumps(err_msg)
         
-        objects[new_uid] = new_obj
+        self.objects[new_uid] = new_obj
         return json.dumps(new_obj)
 
 
-    def PUT(self, uid, json_data):
+    def PUT(self, uid, data):
         """Updates the obj specified by the uid.
         Is a COMPLETE REPLACEMENT. returns new obj
         """
-        if (uid in objects):
-            del objects[uid]
-            new_obj = json.loads(json_data)
+        try:
+            new_obj = json.loads(data)
+        except ValueError:
+            err_msg = { "verb": "PUT",
+                        "url": my_url+'/api/objects/',
+                        "message": "Not a JSON object"
+                      }
+            return json.dumps(err_msg)
+
+        if (uid in self.objects):
+            del self.objects[uid]
             new_obj['uid'] = uid
-            objects[uid] = new_obj
-            return obj
+            self.objects[uid] = new_obj
+            return json.dumps(obj)
         else:
-            #error
-            pass
+            err_msg = { "verb": "PUT",
+                        "url": my_url+'/api/objects/',
+                        "message": "Object does not exist"
+                      }
+            return json.dumps(err_msg)
 
 
     def GET(self, uid=None):
@@ -65,26 +76,31 @@ class Objects:
         """
         if (uid == None):
             # return list of all objects
-            # make this a ffunc()
-            return  "no objects"
-            pass
-        elif uid in j_objects:
-            # return full json obj
-            return "HIII test A"
+            all_obj = []
+            for all x in self.objects: all_obj.append({'url':my_url+'api/objects/'+x[uid]})
+            return all_obj
+        elif uid in self.objects:
+            return json.dumps(self.objects[uid])
         else:
-            # return msg obj doesnt exist
-            # OR (better) return error HTTP code
-            pass
+            err_msg = {
+                        "verb": "GET",
+                        "url": my_url+"/api/objects/",
+                        "message": "Object does not exist"
+                      }
+            return json.dumps(err_msg)
 
     def DELETE(self, uid):
         """ deletes uid specified obj from db.
         no response
         """
-        if (uid in objects):
-            del objects[uid]
+        if (uid in self.objects):
+            del self.objects[uid]
         else:
-            #errro
-            pass
+            err_msg = { "verb": "DELETE",
+                        "url": my_url+"/api/objects/"
+                        "message": "Object does not exists"
+                      }
+            return json.dumps(err_msg)
 
 if __name__ == "__main__":
     # create cherrypy app
@@ -93,7 +109,8 @@ if __name__ == "__main__":
     # right HTTP call to the right function
     cherrypy.tree.mount(
             Objects(), '/api/objects',
-            {'/': { 'request.dispatch': cherrypy.dispatch.MethodDispatcher()}
+            {'/': { 'request.dispatch': cherrypy.dispatch.MethodDispatcher()},
+             '':  { 'request.dispatch': cherrypy.dispatch.MethodDispatcher()}
             }
     )
 
