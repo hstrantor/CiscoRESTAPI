@@ -8,7 +8,7 @@ TODO:
 
 X write config, setup, and run scripts
 
-* add real database (may go hand in hand with uid)
+* add real database (may go hand in hand with uid) USE AWS and my or postgre SQL
 
 ### SUDO ACCESS NEEDED FOR PUBLIC PORTS
 X actually make it go live

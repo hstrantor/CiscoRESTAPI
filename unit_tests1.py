@@ -5,7 +5,8 @@ import unittest
 import json
 import requests
 
-url = 'http://127.0.0.1:8080/api/objects'
+#url = 'http://127.0.0.1:80/api/objects'
+url = 'http://ec2-52-32-119-107.us-west-2.compute.amazonaws.com:80/api/objects'
 
 class TestPOST(unittest.TestCase):
 
@@ -33,7 +34,25 @@ class TestPOST(unittest.TestCase):
         self.assertTrue(r.json()['uid'] != None)
         self.assertFalse(self.curr_uid == r.json()['uid'])
 
+class TestDELETE(unittest.TestCase):
+    """Test for DELETE requests.
+    DELETE requests send the site url with the appended uid
+    of the object to delete. Must be indempotent.
+    If exists: deleted, returns nothing
+    else: return error msg
+    """
 
+    new_obj = None
+    def setUp(self):
+        self.new_obj = {'testing': 'DELETE', 'made_by': 'setup'}
+        jnew_obj = json.dumps(self.new_obj)
+        post_data = {'data': jnew_obj}
+        r = requests.post(url, data=post_data)
+        self.new_obj['uid'] = r.json()['uid']
+        
+    def testDeleteExisting(self):
+        r = requests.delete(url+'/'+self.new_obj['uid'])
+        print r.text, len(r.text)
 
 class TestPUT(unittest.TestCase):
 

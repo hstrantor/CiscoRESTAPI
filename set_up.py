@@ -48,7 +48,9 @@ def main():
     # 3) run app
 
     # load config file and run cherrypy server
-    cherrypy.quickstart(server.Objects("ec2-52-32-119-107.us-west-2.compute.amazonaws.com"), config="cherrypy.conf") 
+    cherrypy.quickstart(server.Objects("ec2-52-32-119-107.us-west-2.compute.amazonaws.com"),
+                        script_name='/api/objects',
+                        config="cherrypy.conf") 
 
 
 if __name__ == "__main__":
