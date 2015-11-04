@@ -1,6 +1,8 @@
 TODO:
 
 * write delete tests plus other basics tests
+in testing, run test that we can connect first (ping, then hit api, then run tests)
+
 
 * write better/more tests
 

@@ -1,7 +1,14 @@
-# main server script for REST API
+""" main server script for REST API
 
-# cherrypy has native json functionality, but i dont
-# understand it yet, so for now, im using json lib
+cherrypy has native json functionality, but it causes
+the server to send an HTTP BAD REQUEST code when sent
+non-json data. We want to send a json encoded error
+message when this happens, and I don't want to wade
+through the cherrypy error handlers, so for now I'm
+just using the python json library.
+"""
+
+
 import json
 import cherrypy
 
@@ -14,12 +21,28 @@ class UID():
 
 
 
+# function to generate error messages
+def get_error_msg(verb, url, message):
+    """Generates message for HTTP handler functions.
+    Doesn't convert to JSON
+    """
+    msg = { 'verb': verb,
+            'url': url,
+            'message': message
+          }
+    return msg
+          
+
 # class to represent 'object' resources
-#@cherrypy.popargs('uid')
 class Objects(object):
+    """Class to represent arbitrary JSON resources.
+    A cherrypy handler calls the specific function based
+    on the matching HTTP request
+    """
     exposed = True
     objects = {}
     uids = UID()
+    # default url is localhost
     my_url = "127.0.0.1:80"+"/api/objects"
 
     def __init__(self, url=None):
@@ -28,7 +51,11 @@ class Objects(object):
    
     def POST(self, data=None):
         """Creates object with new uid and returns it. If called 2+ times,
-        creates identical objs with dif uids.
+        creates identical objects with different uids.
+        
+        Returns: the new json object as a response, or
+                 if request data wasn't json, returns json encoded error
+                 message.
         """
         # create new uid
         new_uid = self.uids.get_uid()
@@ -37,30 +64,27 @@ class Objects(object):
             new_obj = json.loads(data)
             new_obj['uid'] = new_uid
         except (ValueError, TypeError):
-            err_msg = {
-                        "verb": "POST",
-                        "url": self.my_url+"/",
-                        "message": "Not a JSON object"
-                      }
-            return json.dumps(err_msg)
+            return json.dumps(get_error_msg('POST', self.my_url+'/', "Not a JSON object"))
         
         self.objects[new_uid] = new_obj
         return json.dumps(new_obj)
 
     # args take off consecutive bits of the url,
-    # kwargs take keyword data form body of http req
+    # and then HTTP request body
     def PUT(self, uid, data=None):
-        """Updates the obj specified by the uid.
-        Is a COMPLETE REPLACEMENT. returns new obj
+        """Updates the object specified by the given uid.
+        This is a COMPLETE REPLACEMENT; the entire object is
+        replaced by the new one. The creation works the same way
+        as in POST: adds the uid to the new object and json encodes it
+        
+        Returns: The new version of the object (JSON)
+                 Or, if error: An error messsage (JSON)
         """
         try:
             new_obj = json.loads(data)
         except (ValueError, TypeError):
-            err_msg = { "verb": "PUT",
-                        "url": self.my_url+'/',
-                        "message": "Not a JSON object"
-                      }
-            return json.dumps(err_msg)
+            return json.dumps(get_error_msg("PUT", self.my_url+'/', "Not a JSON object"))
+        
 
         if (uid in self.objects):
             del self.objects[uid]
@@ -68,15 +92,15 @@ class Objects(object):
             self.objects[uid] = new_obj
             return json.dumps(new_obj)
         else:
-            err_msg = { "verb": "PUT",
-                        "url": self.my_url+'/',
-                        "message": "Object does not exist"
-                      }
-            return json.dumps(err_msg)
+            return json.dumps(get_error_msg("PUT", self.my_url+'/', "Object does not exist"))
     
     def GET(self, uid=None):
-        """call to objects/<uid> returns full obj.
-        call to objects/ returns json of all uids
+        """Returns object specified by uid, or if none is specified,
+        returns a list of all <uid>:<object url> pairs.
+        
+        Returns: Specified object (JSON),
+                 if no uid specified: List of all objects (JSON)
+                 if object doesn't exist: Error message (JSON)
         """
         if (uid == None):
             # return list of all objects (the uid is also the dict key
@@ -85,36 +109,26 @@ class Objects(object):
         elif uid in self.objects:
             return json.dumps(self.objects[uid])
         else:
-            err_msg = {
-                        "verb": "GET",
-                        "url": self.my_url+"/",
-                        "message": "Object does not exist"
-                      }
-            return json.dumps(err_msg)
+            return json.dumps(get_error_msg("GET", self.my_url+'/', "Object does not exist"))
     
     def DELETE(self, uid):
-        """ deletes uid specified obj from db.
-        no response
+        """Deletes object specified by the uid. Indempotent.
+        
+        Returns: if object exists: Nothing
+                 if object doesn't exist: Error message (JSON)
         """
         if (uid in self.objects):
             del self.objects[uid]
         else:
-            err_msg = { "verb": "DELETE",
-                        "url": self.my_url+"/",
-                        "message": "Object does not exists"
-                      }
-            return json.dumps(err_msg)
+            return json.dumps(get_error_msg("DELETE", self.my_url+'/', "Object does not exist"))
 
 if __name__ == "__main__":
-    #cherrypy.quickstart(Objects())
-    # cherrypy config
-    #cherrypy.config.update({'server.socket_host': '52.32.119.107',
-    #                        'server.socket_port': 80})
+    # if this script is called as an executable (which it usually won't be),
+    # it runs with these defaults
     
     # create cherrypy app
     # set to handle /api/objects with Objects()
-    # activate Method dispatcher (this sends the
-    # right HTTP call to the right function
+    # activate Method dispatcher (this sends the right HTTP call to the right function)
     cherrypy.tree.mount(
             Objects(), '/api/objects',
             {'/': { 'request.dispatch': cherrypy.dispatch.MethodDispatcher()}
