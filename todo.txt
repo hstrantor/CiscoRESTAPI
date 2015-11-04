@@ -1,13 +1,15 @@
 TODO:
 
-* delete tests plus a few others
+* write delete tests plus other basics tests
+
+* write better/more tests
 
 * add better uid handler
 
-* write config, setup, and run scripts
+X write config, setup, and run scripts
 
-* add real database
+* add real database (may go hand in hand with uid)
 
 ### SUDO ACCESS NEEDED FOR PUBLIC PORTS
-[ ] actually make it go live
+X actually make it go live
   
