@@ -5,8 +5,6 @@
 import json
 import cherrypy
 
-my_url = "127.0.0.1:8080"+"/api/objects"
-
 class UID():
     def __init__(self):
         self.uid = 1
@@ -22,7 +20,12 @@ class Objects(object):
     exposed = True
     objects = {}
     uids = UID()
-    
+    my_url = "127.0.0.1:80"+"/api/objects"
+
+    def __init__(self, url=None):
+        if (url != None):
+            self.my_url = url+"/api/objects"
+   
     def POST(self, data=None):
         """Creates object with new uid and returns it. If called 2+ times,
         creates identical objs with dif uids.
@@ -36,7 +39,7 @@ class Objects(object):
         except (ValueError, TypeError):
             err_msg = {
                         "verb": "POST",
-                        "url": my_url+"/",
+                        "url": self.my_url+"/",
                         "message": "Not a JSON object"
                       }
             return json.dumps(err_msg)
@@ -54,7 +57,7 @@ class Objects(object):
             new_obj = json.loads(data)
         except (ValueError, TypeError):
             err_msg = { "verb": "PUT",
-                        "url": my_url+'/',
+                        "url": self.my_url+'/',
                         "message": "Not a JSON object"
                       }
             return json.dumps(err_msg)
@@ -66,7 +69,7 @@ class Objects(object):
             return json.dumps(new_obj)
         else:
             err_msg = { "verb": "PUT",
-                        "url": my_url+'/',
+                        "url": self.my_url+'/',
                         "message": "Object does not exist"
                       }
             return json.dumps(err_msg)
@@ -77,14 +80,14 @@ class Objects(object):
         """
         if (uid == None):
             # return list of all objects (the uid is also the dict key
-            all_obj = [{'url': my_url+'/'+ key } for key in self.objects]
+            all_obj = [{'url': self.my_url+'/'+ key } for key in self.objects]
             return json.dumps(all_obj)
         elif uid in self.objects:
             return json.dumps(self.objects[uid])
         else:
             err_msg = {
                         "verb": "GET",
-                        "url": my_url+"/",
+                        "url": self.my_url+"/",
                         "message": "Object does not exist"
                       }
             return json.dumps(err_msg)
@@ -97,7 +100,7 @@ class Objects(object):
             del self.objects[uid]
         else:
             err_msg = { "verb": "DELETE",
-                        "url": my_url+"/",
+                        "url": self.my_url+"/",
                         "message": "Object does not exists"
                       }
             return json.dumps(err_msg)

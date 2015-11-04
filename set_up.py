@@ -26,7 +26,7 @@ modules = {'sys':sys_loaded, 'cherrypy':cherrypy_loaded,
            'json':json_loaded, 'server':server_loaded}
 for key in modules:
     if modules[key] == False:
-        print "errer msg bc specified module wouldnt load"
+        print "error msg bc specified module wouldnt load"
         sys.exit(1)
 
 #import argparse
@@ -46,19 +46,9 @@ def main():
     # 2) apply changes from cmd-args
     #conf = None
     # 3) run app
-    
-    cherrypy.tree.mount( server.Objects(),
-                         '/api/objects',
-                         config="./cherrypy.conf")
 
-    # start cherrypy engine
-    cherrypy.engine.start()
-    cherrypy.engine.block()
-
-    #config = {'server.socket_host': 'localhost',
-    #          'server.socker_port': 80,
-    #          'response.timeout': 6000
-    #          }
+    # load config file and run cherrypy server
+    cherrypy.quickstart(server.Objects("ec2-52-32-119-107.us-west-2.compute.amazonaws.com"), config="cherrypy.conf") 
 
 
 if __name__ == "__main__":

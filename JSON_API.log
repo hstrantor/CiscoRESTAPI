@@ -1,0 +1,90 @@
+[04/Nov/2015:06:53:11] ENGINE Bus STARTING
+[04/Nov/2015:06:53:11] ENGINE Started monitor thread '_TimeoutMonitor'.
+[04/Nov/2015:06:53:11] ENGINE Started monitor thread 'Autoreloader'.
+[04/Nov/2015:06:53:11] ENGINE Error in HTTP server: shutting down
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/cherrypy/process/servers.py", line 206, in _start_http_thread
+    self.httpserver.start()
+  File "/usr/local/lib/python2.7/site-packages/cherrypy/wsgiserver/wsgiserver2.py", line 1955, in start
+    raise socket.error(msg)
+error: No socket could be created -- (('172.31.16.53', 80): [Errno 13] Permission denied)
+
+[04/Nov/2015:06:53:11] ENGINE Bus STOPPING
+[04/Nov/2015:06:53:11] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('ec2-52-32-119-107.us-west-2.compute.amazonaws.com', 80)) already shut down
+[04/Nov/2015:06:53:11] ENGINE Stopped thread 'Autoreloader'.
+[04/Nov/2015:06:53:11] ENGINE Stopped thread '_TimeoutMonitor'.
+[04/Nov/2015:06:53:11] ENGINE Bus STOPPED
+[04/Nov/2015:06:53:11] ENGINE Bus EXITING
+[04/Nov/2015:06:53:11] ENGINE Bus EXITED
+[04/Nov/2015:06:53:49] ENGINE Bus STARTING
+[04/Nov/2015:06:53:49] ENGINE Started monitor thread '_TimeoutMonitor'.
+[04/Nov/2015:06:53:49] ENGINE Started monitor thread 'Autoreloader'.
+[04/Nov/2015:06:53:49] ENGINE Serving on http://ec2-52-32-119-107.us-west-2.compute.amazonaws.com
+[04/Nov/2015:06:53:49] ENGINE Bus STARTED
+[04/Nov/2015:06:53:55] ENGINE Keyboard Interrupt: shutting down bus
+[04/Nov/2015:06:53:55] ENGINE Bus STOPPING
+[04/Nov/2015:06:53:55] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('ec2-52-32-119-107.us-west-2.compute.amazonaws.com', 80)) shut down
+[04/Nov/2015:06:53:55] ENGINE Stopped thread 'Autoreloader'.
+[04/Nov/2015:06:53:55] ENGINE Stopped thread '_TimeoutMonitor'.
+[04/Nov/2015:06:53:55] ENGINE Bus STOPPED
+[04/Nov/2015:06:53:55] ENGINE Bus EXITING
+[04/Nov/2015:06:53:55] ENGINE Bus EXITED
+[04/Nov/2015:06:53:55] ENGINE Waiting for child threads to terminate...
+[04/Nov/2015:06:55:38] ENGINE Bus STARTING
+[04/Nov/2015:06:55:38] ENGINE Started monitor thread '_TimeoutMonitor'.
+[04/Nov/2015:06:55:38] ENGINE Started monitor thread 'Autoreloader'.
+[04/Nov/2015:06:58:08] ENGINE Listening for SIGHUP.
+[04/Nov/2015:06:58:08] ENGINE Listening for SIGTERM.
+[04/Nov/2015:06:58:08] ENGINE Listening for SIGUSR1.
+[04/Nov/2015:06:58:08] ENGINE Bus STARTING
+[04/Nov/2015:06:58:08] ENGINE Started monitor thread '_TimeoutMonitor'.
+[04/Nov/2015:06:58:08] ENGINE Started monitor thread 'Autoreloader'.
+[04/Nov/2015:06:58:08] ENGINE Error in HTTP server: shutting down
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/cherrypy/process/servers.py", line 206, in _start_http_thread
+    self.httpserver.start()
+  File "/usr/local/lib/python2.7/site-packages/cherrypy/wsgiserver/wsgiserver2.py", line 1955, in start
+    raise socket.error(msg)
+error: No socket could be created -- (('172.31.16.53', 80): [Errno 13] Permission denied)
+
+[04/Nov/2015:06:58:08] ENGINE Bus STOPPING
+[04/Nov/2015:06:58:08] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('ec2-52-32-119-107.us-west-2.compute.amazonaws.com', 80)) already shut down
+[04/Nov/2015:06:58:08] ENGINE Stopped thread '_TimeoutMonitor'.
+[04/Nov/2015:06:58:08] ENGINE Stopped thread 'Autoreloader'.
+[04/Nov/2015:06:58:08] ENGINE Bus STOPPED
+[04/Nov/2015:06:58:08] ENGINE Bus EXITING
+[04/Nov/2015:06:58:08] ENGINE Bus EXITED
+[04/Nov/2015:06:58:14] ENGINE Listening for SIGHUP.
+[04/Nov/2015:06:58:14] ENGINE Listening for SIGTERM.
+[04/Nov/2015:06:58:14] ENGINE Listening for SIGUSR1.
+[04/Nov/2015:06:58:14] ENGINE Bus STARTING
+[04/Nov/2015:06:58:14] ENGINE Started monitor thread '_TimeoutMonitor'.
+[04/Nov/2015:06:58:14] ENGINE Started monitor thread 'Autoreloader'.
+[04/Nov/2015:06:58:15] ENGINE Serving on http://ec2-52-32-119-107.us-west-2.compute.amazonaws.com
+[04/Nov/2015:06:58:15] ENGINE Bus STARTED
+[04/Nov/2015:06:58:25] ENGINE Keyboard Interrupt: shutting down bus
+[04/Nov/2015:06:58:25] ENGINE Bus STOPPING
+[04/Nov/2015:06:58:25] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('ec2-52-32-119-107.us-west-2.compute.amazonaws.com', 80)) shut down
+[04/Nov/2015:06:58:25] ENGINE Stopped thread '_TimeoutMonitor'.
+[04/Nov/2015:06:58:25] ENGINE Stopped thread 'Autoreloader'.
+[04/Nov/2015:06:58:25] ENGINE Bus STOPPED
+[04/Nov/2015:06:58:25] ENGINE Bus EXITING
+[04/Nov/2015:06:58:25] ENGINE Bus EXITED
+[04/Nov/2015:06:58:25] ENGINE Waiting for child threads to terminate...
+[04/Nov/2015:07:01:22] ENGINE Listening for SIGHUP.
+[04/Nov/2015:07:01:22] ENGINE Listening for SIGTERM.
+[04/Nov/2015:07:01:22] ENGINE Listening for SIGUSR1.
+[04/Nov/2015:07:01:22] ENGINE Bus STARTING
+[04/Nov/2015:07:01:22] ENGINE Started monitor thread '_TimeoutMonitor'.
+[04/Nov/2015:07:01:22] ENGINE Started monitor thread 'Autoreloader'.
+[04/Nov/2015:07:01:23] ENGINE Serving on http://ec2-52-32-119-107.us-west-2.compute.amazonaws.com
+[04/Nov/2015:07:01:23] ENGINE Bus STARTED
+[04/Nov/2015:07:01:40] ENGINE Keyboard Interrupt: shutting down bus
+[04/Nov/2015:07:01:40] ENGINE Bus STOPPING
+[04/Nov/2015:07:01:40] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('ec2-52-32-119-107.us-west-2.compute.amazonaws.com', 80)) shut down
+[04/Nov/2015:07:01:40] ENGINE Stopped thread '_TimeoutMonitor'.
+[04/Nov/2015:07:01:40] ENGINE Stopped thread 'Autoreloader'.
+[04/Nov/2015:07:01:40] ENGINE Bus STOPPED
+[04/Nov/2015:07:01:40] ENGINE Bus EXITING
+[04/Nov/2015:07:01:40] ENGINE Bus EXITED
+[04/Nov/2015:07:01:40] ENGINE Waiting for child threads to terminate...
