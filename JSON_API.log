@@ -305,3 +305,45 @@ Request Headers:
 [04/Nov/2015:17:06:07] ENGINE Bus EXITING
 [04/Nov/2015:17:06:07] ENGINE Bus EXITED
 [04/Nov/2015:17:06:07] ENGINE Waiting for child threads to terminate...
+[04/Nov/2015:17:15:56] ENGINE Listening for SIGHUP.
+[04/Nov/2015:17:15:56] ENGINE Listening for SIGTERM.
+[04/Nov/2015:17:15:56] ENGINE Listening for SIGUSR1.
+[04/Nov/2015:17:15:56] ENGINE Bus STARTING
+[04/Nov/2015:17:15:56] ENGINE Started monitor thread 'Autoreloader'.
+[04/Nov/2015:17:15:56] ENGINE Started monitor thread '_TimeoutMonitor'.
+[04/Nov/2015:17:15:56] ENGINE Error in HTTP server: shutting down
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/cherrypy/process/servers.py", line 206, in _start_http_thread
+    self.httpserver.start()
+  File "/usr/local/lib/python2.7/site-packages/cherrypy/wsgiserver/wsgiserver2.py", line 1955, in start
+    raise socket.error(msg)
+error: No socket could be created -- (('172.31.16.53', 80): [Errno 13] Permission denied)
+
+[04/Nov/2015:17:15:56] ENGINE Bus STOPPING
+[04/Nov/2015:17:15:56] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('ec2-52-32-119-107.us-west-2.compute.amazonaws.com', 80)) already shut down
+[04/Nov/2015:17:15:56] ENGINE Stopped thread '_TimeoutMonitor'.
+[04/Nov/2015:17:15:56] ENGINE Stopped thread 'Autoreloader'.
+[04/Nov/2015:17:15:56] ENGINE Bus STOPPED
+[04/Nov/2015:17:15:56] ENGINE Bus EXITING
+[04/Nov/2015:17:15:56] ENGINE Bus EXITED
+[04/Nov/2015:17:16:28] ENGINE Listening for SIGHUP.
+[04/Nov/2015:17:16:28] ENGINE Listening for SIGTERM.
+[04/Nov/2015:17:16:28] ENGINE Listening for SIGUSR1.
+[04/Nov/2015:17:16:28] ENGINE Bus STARTING
+[04/Nov/2015:17:16:28] ENGINE Started monitor thread 'Autoreloader'.
+[04/Nov/2015:17:16:28] ENGINE Started monitor thread '_TimeoutMonitor'.
+[04/Nov/2015:17:16:28] ENGINE Error in HTTP server: shutting down
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/cherrypy/process/servers.py", line 206, in _start_http_thread
+    self.httpserver.start()
+  File "/usr/local/lib/python2.7/site-packages/cherrypy/wsgiserver/wsgiserver2.py", line 1955, in start
+    raise socket.error(msg)
+error: No socket could be created -- (('172.31.16.53', 80): [Errno 13] Permission denied)
+
+[04/Nov/2015:17:16:28] ENGINE Bus STOPPING
+[04/Nov/2015:17:16:28] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('ec2-52-32-119-107.us-west-2.compute.amazonaws.com', 80)) already shut down
+[04/Nov/2015:17:16:28] ENGINE Stopped thread '_TimeoutMonitor'.
+[04/Nov/2015:17:16:28] ENGINE Stopped thread 'Autoreloader'.
+[04/Nov/2015:17:16:28] ENGINE Bus STOPPED
+[04/Nov/2015:17:16:28] ENGINE Bus EXITING
+[04/Nov/2015:17:16:28] ENGINE Bus EXITED

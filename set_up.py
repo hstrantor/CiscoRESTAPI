@@ -17,7 +17,7 @@ try:
 except ImportError:
     json_loaded = False
 try:
-    import server  # change name of api module
+    import server  # TODO change name of api module
     server_loaded = True
 except ImportError:
     server_loaded = False
@@ -29,22 +29,20 @@ for key in modules:
         print "error msg bc specified module wouldnt load"
         sys.exit(1)
 
-#import argparse
+import argparse
 
 def main():
-    """
+    
+    # TODO make these options affect the program
     parser = argparse.ArgumentParser(description="Parser for API setup script")
-    # not '-h', bc this is autoset to 'help'
-    parser.add_argument('-l', '--host', help="HTTP HOST", required=True)
-    parser.add_argument('-p', '--port', help="Port server listens at", required=True)
-    parser.add_argument('-t', '--timeout', help="milliseconds before timeout", required=False)
+    parser.add_argument('-t', '--test', help="Run as test", required=False)
+    parser.add_argument('-d', '--database', help="Run with a database (else, uses runtime dict)", required=False)
     args = parser.parse_args()
 
-    print "just a test", args.host, args.port, args.timeout
-    """
+    print args
+
     # 1) load config from conf file into dict
     # 2) apply changes from cmd-args
-    #conf = None
     # 3) run app
 
     # load config file and run cherrypy server
