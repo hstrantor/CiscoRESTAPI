@@ -49,10 +49,23 @@ class TestDELETE(unittest.TestCase):
         post_data = {'data': jnew_obj}
         r = requests.post(url, data=post_data)
         self.new_obj['uid'] = r.json()['uid']
-        
+       
     def testDeleteExisting(self):
         r = requests.delete(url+'/'+self.new_obj['uid'])
-        print r.text, len(r.text)
+        # check nothing was returned
+        self.assertEquals(len(r.text), 0)
+        # check object was deleted
+        r = requests.get(url+'/'+self.new_obj['uid'])
+        self.assertEquals(r.json()['message'], "Object does not exist") 
+
+    def testDeleteNonExisting(self):
+        r = requests.delete(url+'/'+self.new_obj['uid'])
+        r = requests.delete(url+'/'+self.new_obj['uid'])
+        r = requests.delete(url+'/'+self.new_obj['uid'])
+        r = requests.get(url+'/'+self.new_obj['uid'])
+        self.assertEquals(r.json()['message'], "Object does not exist") 
+
+
 
 class TestPUT(unittest.TestCase):
 

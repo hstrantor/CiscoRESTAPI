@@ -271,3 +271,20 @@ Request Headers:
 [04/Nov/2015:15:09:08] ENGINE Bus EXITING
 [04/Nov/2015:15:09:08] ENGINE Bus EXITED
 [04/Nov/2015:15:09:08] ENGINE Waiting for child threads to terminate...
+[04/Nov/2015:15:10:23] ENGINE Listening for SIGHUP.
+[04/Nov/2015:15:10:23] ENGINE Listening for SIGTERM.
+[04/Nov/2015:15:10:23] ENGINE Listening for SIGUSR1.
+[04/Nov/2015:15:10:23] ENGINE Bus STARTING
+[04/Nov/2015:15:10:23] ENGINE Started monitor thread '_TimeoutMonitor'.
+[04/Nov/2015:15:10:23] ENGINE Started monitor thread 'Autoreloader'.
+[04/Nov/2015:15:10:23] ENGINE Serving on http://ec2-52-32-119-107.us-west-2.compute.amazonaws.com
+[04/Nov/2015:15:10:23] ENGINE Bus STARTED
+[04/Nov/2015:15:19:43] ENGINE Keyboard Interrupt: shutting down bus
+[04/Nov/2015:15:19:43] ENGINE Bus STOPPING
+[04/Nov/2015:15:19:43] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('ec2-52-32-119-107.us-west-2.compute.amazonaws.com', 80)) shut down
+[04/Nov/2015:15:19:43] ENGINE Stopped thread '_TimeoutMonitor'.
+[04/Nov/2015:15:19:43] ENGINE Stopped thread 'Autoreloader'.
+[04/Nov/2015:15:19:43] ENGINE Bus STOPPED
+[04/Nov/2015:15:19:43] ENGINE Bus EXITING
+[04/Nov/2015:15:19:43] ENGINE Bus EXITED
+[04/Nov/2015:15:19:43] ENGINE Waiting for child threads to terminate...
