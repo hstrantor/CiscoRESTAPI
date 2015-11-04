@@ -1,0 +1,12 @@
+TODO:
+
+* delete tests plus a few others
+
+* add better uid handler
+
+* write config, setup, and run scripts
+
+* add real database
+
+[ ] actually make it go live
+  
