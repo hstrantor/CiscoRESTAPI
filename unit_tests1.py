@@ -33,6 +33,8 @@ class TestPOST(unittest.TestCase):
         self.assertTrue(r.json()['uid'] != None)
         self.assertFalse(self.curr_uid == r.json()['uid'])
 
+
+
 class TestPUT(unittest.TestCase):
 
     uids = {}
@@ -57,9 +59,15 @@ class TestPUT(unittest.TestCase):
     def testPut(self):
         updated_obj = {'name':'johnson', 'age': 3, 'alive': True}
         j_obj = json.dumps(updated_obj)
-        put_data = {'data': j_obj,}
-        r = requests.put(url+self.uids['a'], data=put_data)
+        put_data = {'data': j_obj}
+        print url+'/'+self.uids['a']
+        
+        r = requests.put(url+'/'+self.uids['a'], data=put_data)
+        #r = requests.put(url+'/'+self.uids['a'], data=put_data)
+
+        print r.json()
         self.assertEquals(self.uids['a'], r.json()['uid'])
+        
         #self.assertFalse( r.json()['a'] == 2)
         #self.assertFalse( r.json()['aa'] == 3)
         #self.assertFalse( r.json()['aaa'] == [1,2,3])

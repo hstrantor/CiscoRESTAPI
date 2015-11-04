@@ -17,12 +17,13 @@ class UID():
 
 
 # class to represent 'object' resources
+#@cherrypy.popargs('uid')
 class Objects(object):
     exposed = True
     objects = {}
     uids = UID()
     
-    def POST(self, data):
+    def POST(self, data=None):
         """Creates object with new uid and returns it. If called 2+ times,
         creates identical objs with dif uids.
         """
@@ -32,7 +33,7 @@ class Objects(object):
         try:
             new_obj = json.loads(data)
             new_obj['uid'] = new_uid
-        except ValueError:
+        except (ValueError, TypeError):
             err_msg = {
                         "verb": "POST",
                         "url": my_url+"/",
@@ -43,14 +44,15 @@ class Objects(object):
         self.objects[new_uid] = new_obj
         return json.dumps(new_obj)
 
-
-    def PUT(self, data, uid):
+    # args take off consecutive bits of the url,
+    # kwargs take keyword data form body of http req
+    def PUT(self, uid, data=None):
         """Updates the obj specified by the uid.
         Is a COMPLETE REPLACEMENT. returns new obj
         """
         try:
             new_obj = json.loads(data)
-        except ValueError:
+        except (ValueError, TypeError):
             err_msg = { "verb": "PUT",
                         "url": my_url+'/',
                         "message": "Not a JSON object"
@@ -61,15 +63,14 @@ class Objects(object):
             del self.objects[uid]
             new_obj['uid'] = uid
             self.objects[uid] = new_obj
-            return json.dumps(obj)
+            return json.dumps(new_obj)
         else:
             err_msg = { "verb": "PUT",
                         "url": my_url+'/',
                         "message": "Object does not exist"
                       }
             return json.dumps(err_msg)
-
-
+    
     def GET(self, uid=None):
         """call to objects/<uid> returns full obj.
         call to objects/ returns json of all uids
@@ -87,7 +88,7 @@ class Objects(object):
                         "message": "Object does not exist"
                       }
             return json.dumps(err_msg)
-
+    
     def DELETE(self, uid):
         """ deletes uid specified obj from db.
         no response
@@ -102,6 +103,7 @@ class Objects(object):
             return json.dumps(err_msg)
 
 if __name__ == "__main__":
+    #cherrypy.quickstart(Objects())
     # cherrypy config
     #cherrypy.config.update({'server.socket_host': '52.32.119.107',
     #                        'server.socket_port': 80})
@@ -112,8 +114,7 @@ if __name__ == "__main__":
     # right HTTP call to the right function
     cherrypy.tree.mount(
             Objects(), '/api/objects',
-            {'/': { 'request.dispatch': cherrypy.dispatch.MethodDispatcher()},
-             '':  { 'request.dispatch': cherrypy.dispatch.MethodDispatcher()}
+            {'/': { 'request.dispatch': cherrypy.dispatch.MethodDispatcher()}
             }
     )
 
