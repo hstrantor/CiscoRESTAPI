@@ -28,10 +28,7 @@ def get_error_msg(verb, url, message):
     """Generates message for HTTP handler functions.
     Doesn't convert to JSON
     """
-    msg = { 'verb': verb,
-            'url': url,
-            'message': message
-          }
+    msg = {'verb': verb, 'url': url, 'message': message}
     return msg
           
 
@@ -58,7 +55,7 @@ class Objects_db(object):
         new_uid = uuid.uuid4().hex  # self.uids.get_uid()
         # uid is IN the object AND it's the dict key
         new_obj = get_json(data)
-        if new_obj==None:
+        if new_obj is None:
             return json.dumps(get_error_msg('POST', cherrypy.url(), "Not a JSON object"))
         
         new_obj['uid'] = new_uid
@@ -78,10 +75,10 @@ class Objects_db(object):
         as in POST: adds the uid to the new object and json encodes it
         
         Returns: The new version of the object (JSON)
-                 Or, if error: An error messsage (JSON)
+                 Or, if error: An error message (JSON)
         """
         new_obj = get_json(data)
-        if (new_obj == None):
+        if new_obj is None:
             return json.dumps(get_error_msg("PUT", cherrypy.url(), "Not a JSON object"))
         
         new_obj['uid'] = uid
@@ -90,12 +87,11 @@ class Objects_db(object):
         with sqlite3.connect(self.db) as conn:
             r = conn.execute("SELECT value FROM objects WHERE uid=?", [uid])
             data = r.fetchone()
-            if (data==None):
+            if data is None:
                 return json.dumps(get_error_msg("PUT", cherrypy.url(), "Object does not exists"))
             else:
-                r = conn.execute("UPDATE objects SET value=? WHERE uid=?", [str(new_obj), uid])
+                conn.execute("UPDATE objects SET value=? WHERE uid=?", [str(new_obj), uid])
                 return j_obj
-    
 
     def GET(self, uid=None):
         """Returns object specified by uid, or if none is specified,
@@ -105,7 +101,7 @@ class Objects_db(object):
                  if no uid specified: List of all objects (JSON)
                  if object doesn't exist: Error message (JSON)
         """
-        if (uid == None):
+        if uid is None:
             # return list of all objects (the uid is also the dict key
             with sqlite3.connect(self.db) as conn:
                 r = conn.execute("SELECT uid FROM objects")
@@ -113,32 +109,21 @@ class Objects_db(object):
                 # get and fix url
                 url = cherrypy.url()
                 if url[len(url)-1] != '/':
-                    url = url+'/'
+                    url += '/'
                 all_uids = [{'uid': x, 'url': url+x} for x in all_uids]
                 return json.dumps(all_uids)
             
         with sqlite3.connect(self.db) as conn:
-            #a = conn.execute("COL_LENGTH(objects, uid=?) IS NULL", [uid])
-            #print type(a), a
             r = conn.execute("SELECT value FROM objects WHERE uid=?", [uid])
             data = r.fetchone()
-            #data = ast.literal_eval(data)
-            #print "data = ", data, type(data)
             
-            if data==None:
+            if data is None:
                 return json.dumps(get_error_msg("GET", cherrypy.url(), "Object does not exist"))
             else:
                 return json.dumps(ast.literal_eval(data[0]))
-            #return json.dumps(r.fetchone())
-        #elif uid in self.objects:
-        #    return json.dumps(self.objects[uid])
-        #else:
-        #    return json.dumps(get_error_msg("GET", cherrypy.url(), "Object does not exist"))
-            #return json.dumps(get_error_msg("GET", cherrypy.request.url+'/', "Object does not exist"))
-    
 
     def DELETE(self, uid):
-        """Deletes object specified by the uid. Indempotent.
+        """Deletes object specified by the uid. Idempotent.
         
         Returns: if object exists: Nothing
                  if object doesn't exist: Error message (JSON)
@@ -146,7 +131,7 @@ class Objects_db(object):
         with sqlite3.connect(self.db) as conn:
             r = conn.execute("SELECT value FROM objects WHERE uid=?", [uid])
             data = r.fetchone()
-            if data==None:
+            if data is None:
                 return json.dumps(get_error_msg("GET", cherrypy.url(), "Object does not exist"))
             else:
                 conn.execute("DELETE FROM objects WHERE uid=?", [uid])
@@ -175,7 +160,7 @@ class Objects_nodb(object):
         new_uid = uuid.uuid4().hex  # self.uids.get_uid()
         # uid is IN the object AND it's the dict key
         new_obj = get_json()
-        if (new_obj==None):
+        if new_obj is None:
             return json.dumps(get_error_msg('POST', cherrypy.url(), "Not a JSON object"))
         
         new_obj['uid'] = new_uid
@@ -191,13 +176,13 @@ class Objects_nodb(object):
         as in POST: adds the uid to the new object and json encodes it
         
         Returns: The new version of the object (JSON)
-                 Or, if error: An error messsage (JSON)
+                 Or, if error: An error message (JSON)
         """
         new_obj = get_json(data)
-        if (new_obj == None):
+        if new_obj is None:
             return json.dumps(get_error_msg("PUT", cherrypy.url(), "Not a JSON object"))
         
-        if (uid in self.objects):
+        if uid in self.objects:
             del self.objects[uid]
             new_obj['uid'] = uid
             self.objects[uid] = new_obj
@@ -213,41 +198,22 @@ class Objects_nodb(object):
                  if no uid specified: List of all objects (JSON)
                  if object doesn't exist: Error message (JSON)
         """
-        if (uid == None):
+        if uid is None:
             # return list of all objects (the uid is also the dict key
-            all_obj = [{'url': self.my_url+'/'+ key } for key in self.objects]
+            all_obj = [{'url': self.my_url+'/'+key} for key in self.objects]
             return json.dumps(all_obj)
         elif uid in self.objects:
             return json.dumps(self.objects[uid])
         else:
             return json.dumps(get_error_msg("GET", cherrypy.url(), "Object does not exist"))
-            #return json.dumps(get_error_msg("GET", cherrypy.request.url+'/', "Object does not exist"))
-    
 
     def DELETE(self, uid):
-        """Deletes object specified by the uid. Indempotent.
+        """Deletes object specified by the uid. Idempotent.
         
         Returns: if object exists: Nothing
                  if object doesn't exist: Error message (JSON)
         """
-        if (uid in self.objects):
+        if uid in self.objects:
             del self.objects[uid]
         else:
             return json.dumps(get_error_msg("DELETE", cherrypy.url(), "Object does not exist"))
-
-if __name__ == "__main__":
-    # if this script is called as an executable (which it usually won't be),
-    # it runs with these defaults
-    
-    # create cherrypy app
-    # set to handle /api/objects with Objects()
-    # activate Method dispatcher (this sends the right HTTP call to the right function)
-    cherrypy.tree.mount(
-            Objects(), '/api/objects',
-            {'/': { 'request.dispatch': cherrypy.dispatch.MethodDispatcher()}
-            }
-    )
-
-    # start cherrypy engine
-    cherrypy.engine.start()
-    cherrypy.engine.block()

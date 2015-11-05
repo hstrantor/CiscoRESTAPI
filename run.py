@@ -1,37 +1,11 @@
 #!/usr/bin/python
 
-# TODO check for necessary modules on system -> set up
-"""
-try:
-    import cherrypy
-    cherrypy_loaded = True
-except ImportError:
-    cherrypy_loaded = False
-try:
-    import argparse
-    argparse_loaded = True
-except ImportError:
-    argparse_loaded = False
-try:
-    import server  # TODO change name of api module
-    server_loaded = True
-except ImportError:
-    server_loaded = False
-
-modules = {'cherrypy':cherrypy_loaded,
-           'argparse':argparse_loaded, 
-           'server':server_loaded}
-
-for key in modules:
-    if modules[key] == False:
-        print "error msg bc specified module wouldnt load"
-        sys.exit(1)
-"""
 import sys
 import argparse
 import cherrypy
 import sqlite3
 import jsonAPI
+
 
 def main():
     

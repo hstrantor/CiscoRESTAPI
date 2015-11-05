@@ -51,12 +51,13 @@ class TestPOST(unittest.TestCase):
 class TestDELETE(unittest.TestCase):
     """Test for DELETE requests.
     DELETE requests send the site url with the appended uid
-    of the object to delete. Must be indempotent.
+    of the object to delete. Must be idempotent.
     If exists: deleted, returns nothing
     else: return error msg
     """
 
     new_obj = None
+
     def setUp(self):
         self.new_obj = {'testing': 'DELETE', 'made_by': 'setup'}
         jnew_obj = json.dumps(self.new_obj)
@@ -80,15 +81,15 @@ class TestDELETE(unittest.TestCase):
         self.assertEquals(r.json()['message'], "Object does not exist") 
 
 
-
 class TestPUT(unittest.TestCase):
 
     uids = {}
+
     def setUp(self):
-        a = {"a": 2, "aa":3, "aaa":[1,2,3]}
+        a = {"a": 2, "aa": 3, "aaa": [1, 2, 3]}
         b = {"b": 5}
         c = {}
-        d = {"dee":'c', "school": "achds"}
+        d = {"dee": 'c', "school": "achds"}
         post_data = {'data': json.dumps(a)}
         r = requests.post(url, data=post_data)
         self.uids['a'] = r.json()['uid']
@@ -104,44 +105,44 @@ class TestPUT(unittest.TestCase):
 
     def testPut(self):
         # update obj uid a
-        updated_obj = {'name':'johnson', 'age': 3, 'alive': True}
+        updated_obj = {'name': 'johnson', 'age': 3, 'alive': True}
         j_obj = json.dumps(updated_obj)
         put_data = {'data': j_obj}
         r = requests.put(url+'/'+self.uids['a'], data=put_data)
         # make sure returned obj has uid
-        self.assertTrue( "uid" in r.json())
+        self.assertTrue("uid" in r.json())
         # make sure returned obj has same uid
         self.assertEquals(self.uids['a'], r.json()['uid'])
         # updated obj shouldn't have any of the old data
-        self.assertFalse( 'a' in r.json())
-        self.assertFalse( 'aa' in r.json())
-        self.assertFalse( 'aaa' in r.json())
+        self.assertFalse('a' in r.json())
+        self.assertFalse('aa' in r.json())
+        self.assertFalse('aaa' in r.json())
         # updated obj should have all the new data
-        self.assertTrue( r.json()['name'] == updated_obj['name'])
-        self.assertTrue( r.json()['age'] == updated_obj['age'])
-        self.assertTrue( r.json()['alive'] == updated_obj['alive'])
+        self.assertTrue(r.json()['name'] == updated_obj['name'])
+        self.assertTrue(r.json()['age'] == updated_obj['age'])
+        self.assertTrue(r.json()['alive'] == updated_obj['alive'])
 
     def testPutNonExist(self):
-        updated_obj = {'name':'johnson', 'age': 3, 'alive': True}
+        updated_obj = {'name': 'johnson', 'age': 3, 'alive': True}
         j_obj = json.dumps(updated_obj)
         put_data = {'data': j_obj}
         r = requests.put(url+'/'+'almost-def-not-a-uid', data=put_data)
         # make sure msg was sent, not obj
         self.assertEquals(r.json()['message'], "Object does not exist")
-        # make sure obj wasnt created
+        # make sure obj wasn't created
         r = requests.get(url+'/'+'almost-def-not-a-uid')
         self.assertEquals(r.json()['message'], "Object does not exist")
-
 
 
 class TestGET(unittest.TestCase):
 
     uids = {}
+
     def setUp(self):
         a = {"a": 2, "aa":3, "aaa":[1,2,3]}
         b = {"b": 5}
         c = {}
-        d = {"dee":'c', "school": "achds"}
+        d = {"dee": 'c', "school": "achds"}
         post_data = {'data': json.dumps(a)}
         r = requests.post(url, data=post_data)
         self.uids['a'] = r.json()['uid']
@@ -159,26 +160,16 @@ class TestGET(unittest.TestCase):
     def testGETall(self):
         r = requests.get(url)
         # test returns list of multiple urls
-        #print r.text
-        #print r.json()
-        #print len(r.json())
-        #self.assertTrue( len(r.json()) > 1)
-        #TODO test that test current len and contect of this return
+        self.assertTrue(len(r.json()) > 1)
+        # TODO test that test current len and content of this return
 
     def testGET(self):
         r = requests.get(url+'/'+self.uids['a'])
-        #print r
-        #print r.text
-        #print r.json()
         
         self.assertEquals(r.json()['uid'], self.uids['a'])
         self.assertEquals(r.json()['a'], 2)
         self.assertEquals(r.json()['aa'], 3)
-        self.assertEquals(r.json()['aaa'],[1,2,3])
-
-
-
-
+        self.assertEquals(r.json()['aaa'], [1, 2, 3])
 
 if __name__ == '__main__':
     unittest.main()

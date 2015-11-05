@@ -42,13 +42,11 @@ try:
 except ImportError:
     can_jsonAPI = False
 
-
-
 # check for missing modules
-modules = [('sys',can_sys), ('ast',can_ast), ('json',can_json), 
-           ('cherrypy',can_cherrypy), ('argparse',can_argparse), 
-           ('sqlite3',can_sqlite3), ('jsonAPI',can_jsonAPI)]
-missing_modules = [x[0] for x in modules if x[1]==False]
+modules = [('sys', can_sys), ('ast', can_ast), ('json', can_json),
+           ('cherrypy', can_cherrypy), ('argparse', can_argparse),
+           ('sqlite3', can_sqlite3), ('jsonAPI', can_jsonAPI)]
+missing_modules = [x[0] for x in modules if x[1] is False]
 
 if len(missing_modules) > 0:
     print "Please install the following modules: "
