@@ -1,62 +1,60 @@
-#!/usr/bin/python
+#!/bin/bash/python
 
-# TODO check for necessary modules on system -> set up
-"""
 try:
-    import cherrypy
-    cherrypy_loaded = True
+    import sys
+    can_sys = True
 except ImportError:
-    cherrypy_loaded = False
+    can_sys = False
+
+try:
+    import ast
+    can_ast = True
+except ImportError:
+    can_ast = False
+
+try:
+    import json
+    can_json = True
+except ImportError:
+    can_json = False
+
+try:
+    import sqlite3
+    can_sqlite3 = True
+except ImportError:
+    can_sqlite3 = False
+
 try:
     import argparse
-    argparse_loaded = True
+    can_argparse = True
 except ImportError:
-    argparse_loaded = False
+    can_argparse = False
+
 try:
-    import server  # TODO change name of api module
-    server_loaded = True
+    import cherrypy
+    can_cherrypy = True
 except ImportError:
-    server_loaded = False
+    can_cherrypy = False
 
-modules = {'cherrypy':cherrypy_loaded,
-           'argparse':argparse_loaded, 
-           'server':server_loaded}
-
-for key in modules:
-    if modules[key] == False:
-        print "error msg bc specified module wouldnt load"
-        sys.exit(1)
-"""
-import sys
-import argparse
-import cherrypy
-import sqlite3
-import RESTAPI_basic
-import RESTAPI_db
-
-def main():
-    
-    parser = argparse.ArgumentParser(description="Parser for API setup script")
-    parser.add_argument('-t', '--test', help="Run tests", required=False)
-    parser.add_argument('-d', '--database', help="Run with a database instead of python dict", required=False)
-    args = parser.parse_args()
-
-    if args.database:
-        # set up database
-        with sqlite3.connect(args.database) as c:
-            c.execute("CREATE TABLE IF NOT EXISTS objects (uid, value)")
-        # set API to database version
-        print "Running RESTAPI with database"
-        cherrypy.quickstart(RESTAPI_db.Objects(args.database),
-                            script_name='/api/objects',
-                            config="cherrypy.conf") 
-    else:
-        # set API to non db version
-        print "Running RESTAPI with no database"
-        cherrypy.quickstart(RESTAPI_basic.Objects(),
-                            script_name='/api/objects',
-                            config="cherrypy.conf") 
+try:
+    import jsonAPI
+    can_jsonAPI = True
+except ImportError:
+    can_jsonAPI = False
 
 
-if __name__ == "__main__":
-    main()
+
+# check for missing modules
+modules = [('sys',can_sys), ('ast',can_ast), ('json',can_json), 
+           ('cherrypy',can_cherrypy), ('argparse',can_argparse), 
+           ('sqlite3',can_sqlite3), ('jsonAPI',can_jsonAPI)]
+missing_modules = [x[0] for x in modules if x[1]==False]
+
+if len(missing_modules) > 0:
+    print "Please install the following modules: "
+    for m in missing_modules:
+        print m
+    sys.exit(1)
+
+
+
