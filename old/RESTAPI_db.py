@@ -81,10 +81,14 @@ class Objects(object):
         new_obj['uid'] = uid
         j_obj = json.dumps(new_obj)
 
-        #TODO handle uid not found
         with sqlite3.connect(self.db) as conn:
-            conn.execute("UPDATE objects SET value=? WHERE uid=?", [str(new_obj), uid])
-            return j_obj
+            r = conn.execute("SELECT value FROM objects WHERE uid=?", [uid])
+            data = r.fetchone()
+            if (data==None):
+                return json.dumps(get_error_msg("PUT", cherrypy.url(), "Object does not exist"))
+            else:
+                r = conn.execute("UPDATE objects SET value=? WHERE uid=?", [str(new_obj), uid])
+                return j_obj
         #else:
         #    return json.dumps(get_error_msg("PUT", cherrypy.url(), "Object does not exist"))
     

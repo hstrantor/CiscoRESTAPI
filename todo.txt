@@ -1,17 +1,15 @@
 TODO:
 
-* write delete tests plus other basics tests
-in testing, run test that we can connect first (ping, then hit api, then run tests)
-
+*in testing, run test that we can connect first (ping, then hit api, then run tests)
 
 * write better/more tests
 
-* add better uid handler
+* organize code better
 
-X write config, setup, and run scripts
+* return DNS name instead of ip
 
-* add real database (may go hand in hand with uid) USE AWS and my or postgre SQL
+* write real setup script
 
-### SUDO ACCESS NEEDED FOR PUBLIC PORTS
-X actually make it go live
-  
+* make go live
+ 
+* comments, and style. make this production code!

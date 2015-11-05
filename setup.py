@@ -1,6 +1,6 @@
 #!/usr/bin/python
 
-# TODO check for necessary modules on system
+# TODO check for necessary modules on system -> set up
 """
 try:
     import cherrypy
@@ -38,7 +38,7 @@ def main():
     
     parser = argparse.ArgumentParser(description="Parser for API setup script")
     parser.add_argument('-t', '--test', help="Run tests", required=False)
-    parser.add_argument('-d', '--database', help="Run with a database (else, uses runtime dict)", required=False)
+    parser.add_argument('-d', '--database', help="Run with a database instead of python dict", required=False)
     args = parser.parse_args()
 
     if args.database:
@@ -46,20 +46,14 @@ def main():
         with sqlite3.connect(args.database) as c:
             c.execute("CREATE TABLE IF NOT EXISTS objects (uid, value)")
         # set API to database version
-        API = RESTAPI_db.Objects(args.database)
         print "Running RESTAPI with database"
+        cherrypy.quickstart(RESTAPI_db.Objects(args.database),
+                            script_name='/api/objects',
+                            config="cherrypy.conf") 
     else:
         # set API to non db version
-        API = RESTAPI_basic.Objects()
         print "Running RESTAPI with no database"
-
-    if args.test:
-        pass
-        # TODO set up db for tests
-        # run test script
-    else:
-        # load config file and run cherrypy server
-        cherrypy.quickstart(RESTAPI_db.Objects(args.database),
+        cherrypy.quickstart(RESTAPI_basic.Objects(),
                             script_name='/api/objects',
                             config="cherrypy.conf") 
 

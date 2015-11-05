@@ -121,6 +121,18 @@ class TestPUT(unittest.TestCase):
         self.assertTrue( r.json()['age'] == updated_obj['age'])
         self.assertTrue( r.json()['alive'] == updated_obj['alive'])
 
+    def testPutNonExist(self):
+        updated_obj = {'name':'johnson', 'age': 3, 'alive': True}
+        j_obj = json.dumps(updated_obj)
+        put_data = {'data': j_obj}
+        r = requests.put(url+'/'+'almost-def-not-a-uid', data=put_data)
+        # make sure msg was sent, not obj
+        self.assertEquals(r.json()['message'], "Object does not exist")
+        # make sure obj wasnt created
+        r = requests.get(url+'/'+'almost-def-not-a-uid')
+        self.assertEquals(r.json()['message'], "Object does not exist")
+
+
 
 class TestGET(unittest.TestCase):
 
