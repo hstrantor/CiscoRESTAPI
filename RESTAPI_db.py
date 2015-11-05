@@ -13,13 +13,6 @@ import json
 import cherrypy
 import sqlite3
 
-#class UID():
-#    def __init__(self):
-#        self.uid = 1
-#    def get_uid(self):
-#        self.uid +=1
-#        return str(self.uid-1)
-
 
 
 # function to generate error messages
@@ -41,14 +34,9 @@ class Objects(object):
     on the matching HTTP request
     """
     exposed = True
-
-    #def __init__(self):
-    #    if (db != None):
-    #        self.db_conn = sqlite3.connect(db)
-    #        self.db = True
-    #    else:
-    #        self.objects = {}
-    #        self.db = False
+    
+    def __init__(self, database):
+        self.db_conn = sqlite3.connect(database)
    
     def POST(self, data=None):
         """Creates object with new uid and returns it. If called 2+ times,
@@ -67,7 +55,10 @@ class Objects(object):
         except (ValueError, TypeError):
             return json.dumps(get_error_msg('POST', cherrypy.url(), "Not a JSON object"))
         
-        self.objects[new_uid] = new_obj
+        with sqlite3.connect(self.db) as conn:
+            conn.execute("UPDATE objects SET value=? WHERE uid=?",
+                         [new_obj, new_obj['uid']])
+
         return json.dumps(new_obj)
 
     # args take off consecutive bits of the url,
@@ -85,15 +76,15 @@ class Objects(object):
             new_obj = json.loads(data)
         except (ValueError, TypeError):
             return json.dumps(get_error_msg("PUT", cherrypy.url(), "Not a JSON object"))
-        
+        new_obj['uid'] = uid
 
-        if (uid in self.objects):
-            del self.objects[uid]
-            new_obj['uid'] = uid
-            self.objects[uid] = new_obj
+        #TODO handle uid not found
+        with sqlite3.connect(self.db) as conn:
+            conn.execute("UPDATE objects SET value=? WHERE uid=?",
+                         [new_obj, uid])
             return json.dumps(new_obj)
-        else:
-            return json.dumps(get_error_msg("PUT", cherrypy.url(), "Object does not exist"))
+        #else:
+        #    return json.dumps(get_error_msg("PUT", cherrypy.url(), "Object does not exist"))
     
     def GET(self, uid=None):
         """Returns object specified by uid, or if none is specified,
@@ -105,12 +96,19 @@ class Objects(object):
         """
         if (uid == None):
             # return list of all objects (the uid is also the dict key
-            all_obj = [{'url': self.my_url+'/'+ key } for key in self.objects]
-            return json.dumps(all_obj)
-        elif uid in self.objects:
-            return json.dumps(self.objects[uid])
-        else:
-            return json.dumps(get_error_msg("GET", cherrypy.url(), "Object does not exist"))
+            #TODO figure this out
+            #all_obj = [{'url': self.my_url+'/'+ key } for key in self.objects]
+            #return json.dumps(all_obj)
+            pass
+
+        #TODO handle object not found
+        with sqlite3.connect(self.db) as conn:
+            r = conn.execute("SELECT value FROM objetcs WHERE uid=?", [uid])
+            return json.dumps(r.fetchone())
+        #elif uid in self.objects:
+        #    return json.dumps(self.objects[uid])
+        #else:
+        #    return json.dumps(get_error_msg("GET", cherrypy.url(), "Object does not exist"))
             #return json.dumps(get_error_msg("GET", cherrypy.request.url+'/', "Object does not exist"))
     
 
@@ -120,10 +118,14 @@ class Objects(object):
         Returns: if object exists: Nothing
                  if object doesn't exist: Error message (JSON)
         """
-        if (uid in self.objects):
-            del self.objects[uid]
-        else:
-            return json.dumps(get_error_msg("DELETE", cherrypy.url(), "Object does not exist"))
+        with sqlite3.connect(self.db) as conn:
+            conn.execute("DELETE FROM objects WHERE uid=?", [uid])
+
+        # TODO handle obj not found
+        #if (uid in self.objects):
+        #    del self.objects[uid]
+        #else:
+        #    return json.dumps(get_error_msg("DELETE", cherrypy.url(), "Object does not exist"))
 
 if __name__ == "__main__":
     # if this script is called as an executable (which it usually won't be),

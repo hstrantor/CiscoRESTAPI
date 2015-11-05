@@ -26,21 +26,22 @@ for key in modules:
         print "error msg bc specified module wouldnt load"
         sys.exit(1)
 
-import argparse
+import sqlite3
 
 def main():
     
-    # TODO make these options affect the program
     parser = argparse.ArgumentParser(description="Parser for API setup script")
-    parser.add_argument('-t', '--test', help="Run as test", required=False)
+    #parser.add_argument('-t', '--test', help="Run as test", required=False)
     parser.add_argument('-d', '--database', help="Run with a database (else, uses runtime dict)", required=False)
     args = parser.parse_args()
 
-    print args
-    #TODO get url out of conf file to put into Object()
-    # 1) load config from conf file into dict
-    # 2) apply changes from cmd-args
-    # 3) run app
+    # if database, set up database
+    if args.database != None:
+        with sqlite3.connect(args.database) as c:
+            c.execute("CREATE TABLE IF NOT EXISTS objects (uid, value)")
+
+    # print msg describing running options
+    print "Running JSON_API_server with database: ", args.database
 
     # load config file and run cherrypy server
     cherrypy.quickstart(server.Objects(),
