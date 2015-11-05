@@ -64,7 +64,7 @@ class Objects(object):
             new_obj = json.loads(data)
             new_obj['uid'] = new_uid
         except (ValueError, TypeError):
-            return json.dumps(get_error_msg('POST', self.my_url+'/', "Not a JSON object"))
+            return json.dumps(get_error_msg('POST', cherrypy.url(), "Not a JSON object"))
         
         self.objects[new_uid] = new_obj
         return json.dumps(new_obj)
@@ -83,7 +83,7 @@ class Objects(object):
         try:
             new_obj = json.loads(data)
         except (ValueError, TypeError):
-            return json.dumps(get_error_msg("PUT", self.my_url+'/', "Not a JSON object"))
+            return json.dumps(get_error_msg("PUT", cherrypy.url(), "Not a JSON object"))
         
 
         if (uid in self.objects):
@@ -92,7 +92,7 @@ class Objects(object):
             self.objects[uid] = new_obj
             return json.dumps(new_obj)
         else:
-            return json.dumps(get_error_msg("PUT", self.my_url+'/', "Object does not exist"))
+            return json.dumps(get_error_msg("PUT", cherrypy.url(), "Object does not exist"))
     
     def GET(self, uid=None):
         """Returns object specified by uid, or if none is specified,
@@ -109,8 +109,10 @@ class Objects(object):
         elif uid in self.objects:
             return json.dumps(self.objects[uid])
         else:
-            return json.dumps(get_error_msg("GET", self.my_url+'/', "Object does not exist"))
+            return json.dumps(get_error_msg("GET", cherrypy.url(), "Object does not exist"))
+            #return json.dumps(get_error_msg("GET", cherrypy.request.url+'/', "Object does not exist"))
     
+
     def DELETE(self, uid):
         """Deletes object specified by the uid. Indempotent.
         
@@ -120,7 +122,7 @@ class Objects(object):
         if (uid in self.objects):
             del self.objects[uid]
         else:
-            return json.dumps(get_error_msg("DELETE", self.my_url+'/', "Object does not exist"))
+            return json.dumps(get_error_msg("DELETE", cherrypy.url(), "Object does not exist"))
 
 if __name__ == "__main__":
     # if this script is called as an executable (which it usually won't be),
