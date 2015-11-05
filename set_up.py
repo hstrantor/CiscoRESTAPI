@@ -2,28 +2,25 @@
 
 # check for necessary modules on system
 try:
-    import sys
-    sys_loaded = True
-except ImportError:
-    sys_loaded = False
-try:
     import cherrypy
     cherrypy_loaded = True
 except ImportError:
     cherrypy_loaded = False
 try:
-    import json
-    json_loaded = True
+    import argparse
+    argparse_loaded = True
 except ImportError:
-    json_loaded = False
+    argparse_loaded = False
 try:
     import server  # TODO change name of api module
     server_loaded = True
 except ImportError:
     server_loaded = False
 
-modules = {'sys':sys_loaded, 'cherrypy':cherrypy_loaded,
-           'json':json_loaded, 'server':server_loaded}
+modules = {'cherrypy':cherrypy_loaded,
+           'argparse':argparse_loaded, 
+           'server':server_loaded}
+
 for key in modules:
     if modules[key] == False:
         print "error msg bc specified module wouldnt load"
@@ -40,7 +37,7 @@ def main():
     args = parser.parse_args()
 
     print args
-
+    #TODO get url out of conf file to put into Object()
     # 1) load config from conf file into dict
     # 2) apply changes from cmd-args
     # 3) run app

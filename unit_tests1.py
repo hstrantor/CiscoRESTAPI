@@ -6,7 +6,8 @@ import json
 import requests
 
 #url = 'http://127.0.0.1:80/api/objects'
-url = 'http://ec2-52-32-119-107.us-west-2.compute.amazonaws.com:80/api/objects'
+#url = 'http://ec2-52-32-119-107.us-west-2.compute.amazonaws.com:80/api/objects'
+url = 'http://172.31.25.94/api/objects'
 
 class TestPOST(unittest.TestCase):
 
@@ -33,6 +34,19 @@ class TestPOST(unittest.TestCase):
         self.assertEquals(new_obj['age'], r.json()['age'])
         self.assertTrue(r.json()['uid'] != None)
         self.assertFalse(self.curr_uid == r.json()['uid'])
+
+    def testUIDUnique(self):
+        new_obj = {'X': 5}
+        post_data = {'data':json.dumps(new_obj)}
+        r = requests.post(url, data=post_data)
+        id1 = r.json()['uid']
+
+        new_obj = {'Y': 6}
+        post_data = {'data':json.dumps(new_obj)}
+        r = requests.post(url, data=post_data)
+        self.assertFalse(id1==r.json()['uid'])
+
+
 
 class TestDELETE(unittest.TestCase):
     """Test for DELETE requests.

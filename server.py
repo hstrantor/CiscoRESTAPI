@@ -8,16 +8,16 @@ through the cherrypy error handlers, so for now I'm
 just using the python json library.
 """
 
-
+import uuid
 import json
 import cherrypy
 
-class UID():
-    def __init__(self):
-        self.uid = 1
-    def get_uid(self):
-        self.uid +=1
-        return str(self.uid-1)
+#class UID():
+#    def __init__(self):
+#        self.uid = 1
+#    def get_uid(self):
+#        self.uid +=1
+#        return str(self.uid-1)
 
 
 
@@ -41,7 +41,7 @@ class Objects(object):
     """
     exposed = True
     objects = {}
-    uids = UID()
+    #uids = UID()
     # default url is localhost
     my_url = "127.0.0.1:80"+"/api/objects"
 
@@ -58,7 +58,7 @@ class Objects(object):
                  message.
         """
         # create new uid
-        new_uid = self.uids.get_uid()
+        new_uid = uuid.uuid4().hex  # self.uids.get_uid()
         # uid is IN the object AND it's the dict key
         try:
             new_obj = json.loads(data)
