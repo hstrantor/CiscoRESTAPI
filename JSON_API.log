@@ -2559,3 +2559,122 @@ Request Headers:
 [05/Nov/2015:05:34:40] ENGINE Bus EXITING
 [05/Nov/2015:05:34:40] ENGINE Bus EXITED
 [05/Nov/2015:05:34:40] ENGINE Waiting for child threads to terminate...
+[05/Nov/2015:05:37:01] ENGINE Listening for SIGHUP.
+[05/Nov/2015:05:37:01] ENGINE Listening for SIGTERM.
+[05/Nov/2015:05:37:01] ENGINE Listening for SIGUSR1.
+[05/Nov/2015:05:37:01] ENGINE Bus STARTING
+[05/Nov/2015:05:37:01] ENGINE Started monitor thread 'Autoreloader'.
+[05/Nov/2015:05:37:01] ENGINE Started monitor thread '_TimeoutMonitor'.
+[05/Nov/2015:05:37:01] ENGINE Serving on http://172.31.25.94
+[05/Nov/2015:05:37:01] ENGINE Bus STARTED
+[05/Nov/2015:05:39:29] ENGINE Keyboard Interrupt: shutting down bus
+[05/Nov/2015:05:39:29] ENGINE Bus STOPPING
+[05/Nov/2015:05:39:29] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('172.31.25.94', 80)) shut down
+[05/Nov/2015:05:39:29] ENGINE Stopped thread '_TimeoutMonitor'.
+[05/Nov/2015:05:39:29] ENGINE Stopped thread 'Autoreloader'.
+[05/Nov/2015:05:39:29] ENGINE Bus STOPPED
+[05/Nov/2015:05:39:29] ENGINE Bus EXITING
+[05/Nov/2015:05:39:29] ENGINE Bus EXITED
+[05/Nov/2015:05:39:29] ENGINE Waiting for child threads to terminate...
+[05/Nov/2015:05:41:51] ENGINE Listening for SIGHUP.
+[05/Nov/2015:05:41:51] ENGINE Listening for SIGTERM.
+[05/Nov/2015:05:41:51] ENGINE Listening for SIGUSR1.
+[05/Nov/2015:05:41:51] ENGINE Bus STARTING
+[05/Nov/2015:05:41:51] ENGINE Started monitor thread 'Autoreloader'.
+[05/Nov/2015:05:41:51] ENGINE Started monitor thread '_TimeoutMonitor'.
+[05/Nov/2015:05:41:51] ENGINE Serving on http://172.31.25.94
+[05/Nov/2015:05:41:51] ENGINE Bus STARTED
+[05/Nov/2015:05:47:51] ENGINE Keyboard Interrupt: shutting down bus
+[05/Nov/2015:05:47:51] ENGINE Bus STOPPING
+[05/Nov/2015:05:47:51] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('172.31.25.94', 80)) shut down
+[05/Nov/2015:05:47:51] ENGINE Stopped thread '_TimeoutMonitor'.
+[05/Nov/2015:05:47:51] ENGINE Stopped thread 'Autoreloader'.
+[05/Nov/2015:05:47:51] ENGINE Bus STOPPED
+[05/Nov/2015:05:47:51] ENGINE Bus EXITING
+[05/Nov/2015:05:47:51] ENGINE Bus EXITED
+[05/Nov/2015:05:47:51] ENGINE Waiting for child threads to terminate...
+[05/Nov/2015:05:59:11] ENGINE Listening for SIGHUP.
+[05/Nov/2015:05:59:11] ENGINE Listening for SIGTERM.
+[05/Nov/2015:05:59:11] ENGINE Listening for SIGUSR1.
+[05/Nov/2015:05:59:11] ENGINE Bus STARTING
+[05/Nov/2015:05:59:11] ENGINE Started monitor thread 'Autoreloader'.
+[05/Nov/2015:05:59:11] ENGINE Started monitor thread '_TimeoutMonitor'.
+[05/Nov/2015:05:59:12] ENGINE Serving on http://172.31.25.94
+[05/Nov/2015:05:59:12] ENGINE Bus STARTED
+[05/Nov/2015:06:00:33] ENGINE Keyboard Interrupt: shutting down bus
+[05/Nov/2015:06:00:33] ENGINE Bus STOPPING
+[05/Nov/2015:06:00:33] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('172.31.25.94', 80)) shut down
+[05/Nov/2015:06:00:33] ENGINE Stopped thread '_TimeoutMonitor'.
+[05/Nov/2015:06:00:33] ENGINE Stopped thread 'Autoreloader'.
+[05/Nov/2015:06:00:33] ENGINE Bus STOPPED
+[05/Nov/2015:06:00:33] ENGINE Bus EXITING
+[05/Nov/2015:06:00:33] ENGINE Bus EXITED
+[05/Nov/2015:06:00:33] ENGINE Waiting for child threads to terminate...
+[05/Nov/2015:06:01:24] ENGINE Listening for SIGHUP.
+[05/Nov/2015:06:01:24] ENGINE Listening for SIGTERM.
+[05/Nov/2015:06:01:24] ENGINE Listening for SIGUSR1.
+[05/Nov/2015:06:01:24] ENGINE Bus STARTING
+[05/Nov/2015:06:01:24] ENGINE Started monitor thread 'Autoreloader'.
+[05/Nov/2015:06:01:24] ENGINE Started monitor thread '_TimeoutMonitor'.
+[05/Nov/2015:06:01:24] ENGINE Serving on http://172.31.25.94
+[05/Nov/2015:06:01:24] ENGINE Bus STARTED
+[05/Nov/2015:06:01:45] ENGINE Keyboard Interrupt: shutting down bus
+[05/Nov/2015:06:01:45] ENGINE Bus STOPPING
+[05/Nov/2015:06:01:45] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('172.31.25.94', 80)) shut down
+[05/Nov/2015:06:01:45] ENGINE Stopped thread '_TimeoutMonitor'.
+[05/Nov/2015:06:01:45] ENGINE Stopped thread 'Autoreloader'.
+[05/Nov/2015:06:01:45] ENGINE Bus STOPPED
+[05/Nov/2015:06:01:45] ENGINE Bus EXITING
+[05/Nov/2015:06:01:45] ENGINE Bus EXITED
+[05/Nov/2015:06:01:45] ENGINE Waiting for child threads to terminate...
+[05/Nov/2015:06:04:26] ENGINE Listening for SIGHUP.
+[05/Nov/2015:06:04:26] ENGINE Listening for SIGTERM.
+[05/Nov/2015:06:04:26] ENGINE Listening for SIGUSR1.
+[05/Nov/2015:06:04:26] ENGINE Bus STARTING
+[05/Nov/2015:06:04:26] ENGINE Started monitor thread 'Autoreloader'.
+[05/Nov/2015:06:04:26] ENGINE Started monitor thread '_TimeoutMonitor'.
+[05/Nov/2015:06:04:26] ENGINE Serving on http://172.31.25.94
+[05/Nov/2015:06:04:26] ENGINE Bus STARTED
+[05/Nov/2015:06:04:46] ENGINE Keyboard Interrupt: shutting down bus
+[05/Nov/2015:06:04:46] ENGINE Bus STOPPING
+[05/Nov/2015:06:04:46] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('172.31.25.94', 80)) shut down
+[05/Nov/2015:06:04:46] ENGINE Stopped thread '_TimeoutMonitor'.
+[05/Nov/2015:06:04:46] ENGINE Stopped thread 'Autoreloader'.
+[05/Nov/2015:06:04:46] ENGINE Bus STOPPED
+[05/Nov/2015:06:04:46] ENGINE Bus EXITING
+[05/Nov/2015:06:04:46] ENGINE Bus EXITED
+[05/Nov/2015:06:04:46] ENGINE Waiting for child threads to terminate...
+[05/Nov/2015:06:14:46] ENGINE Listening for SIGHUP.
+[05/Nov/2015:06:14:46] ENGINE Listening for SIGTERM.
+[05/Nov/2015:06:14:46] ENGINE Listening for SIGUSR1.
+[05/Nov/2015:06:14:46] ENGINE Bus STARTING
+[05/Nov/2015:06:14:46] ENGINE Started monitor thread 'Autoreloader'.
+[05/Nov/2015:06:14:46] ENGINE Started monitor thread '_TimeoutMonitor'.
+[05/Nov/2015:06:14:46] ENGINE Serving on http://172.31.25.94
+[05/Nov/2015:06:14:46] ENGINE Bus STARTED
+[05/Nov/2015:06:15:39] ENGINE Keyboard Interrupt: shutting down bus
+[05/Nov/2015:06:15:39] ENGINE Bus STOPPING
+[05/Nov/2015:06:15:39] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('172.31.25.94', 80)) shut down
+[05/Nov/2015:06:15:39] ENGINE Stopped thread '_TimeoutMonitor'.
+[05/Nov/2015:06:15:39] ENGINE Stopped thread 'Autoreloader'.
+[05/Nov/2015:06:15:39] ENGINE Bus STOPPED
+[05/Nov/2015:06:15:39] ENGINE Bus EXITING
+[05/Nov/2015:06:15:39] ENGINE Bus EXITED
+[05/Nov/2015:06:15:39] ENGINE Waiting for child threads to terminate...
+[05/Nov/2015:06:16:59] ENGINE Listening for SIGHUP.
+[05/Nov/2015:06:16:59] ENGINE Listening for SIGTERM.
+[05/Nov/2015:06:16:59] ENGINE Listening for SIGUSR1.
+[05/Nov/2015:06:16:59] ENGINE Bus STARTING
+[05/Nov/2015:06:16:59] ENGINE Started monitor thread 'Autoreloader'.
+[05/Nov/2015:06:16:59] ENGINE Started monitor thread '_TimeoutMonitor'.
+[05/Nov/2015:06:16:59] ENGINE Serving on http://172.31.25.94
+[05/Nov/2015:06:16:59] ENGINE Bus STARTED
+[05/Nov/2015:06:17:12] ENGINE Keyboard Interrupt: shutting down bus
+[05/Nov/2015:06:17:12] ENGINE Bus STOPPING
+[05/Nov/2015:06:17:12] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('172.31.25.94', 80)) shut down
+[05/Nov/2015:06:17:12] ENGINE Stopped thread '_TimeoutMonitor'.
+[05/Nov/2015:06:17:12] ENGINE Stopped thread 'Autoreloader'.
+[05/Nov/2015:06:17:12] ENGINE Bus STOPPED
+[05/Nov/2015:06:17:12] ENGINE Bus EXITING
+[05/Nov/2015:06:17:12] ENGINE Bus EXITED
+[05/Nov/2015:06:17:12] ENGINE Waiting for child threads to terminate...

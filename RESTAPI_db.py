@@ -98,12 +98,16 @@ class Objects(object):
         """
         if (uid == None):
             # return list of all objects (the uid is also the dict key
-            #TODO figure this out
-            #all_obj = [{'url': self.my_url+'/'+ key } for key in self.objects]
-            #return json.dumps(all_obj)
-            pass
-
-        #TODO handle object not found
+            with sqlite3.connect(self.db) as conn:
+                r = conn.execute("SELECT uid FROM objects")
+                all_uids = [x[0] for x in r.fetchall()]
+                # get and fix url
+                url = cherrypy.url()
+                if url[len(url)-1] != '/':
+                    url = url+'/'
+                all_uids = [{'uid': x, 'url': url+x} for x in all_uids]
+                return json.dumps(all_uids)
+            
         with sqlite3.connect(self.db) as conn:
             #a = conn.execute("COL_LENGTH(objects, uid=?) IS NULL", [uid])
             #print type(a), a
@@ -131,13 +135,13 @@ class Objects(object):
                  if object doesn't exist: Error message (JSON)
         """
         with sqlite3.connect(self.db) as conn:
-            conn.execute("DELETE FROM objects WHERE uid=?", [uid])
+            r = conn.execute("SELECT value FROM objects WHERE uid=?", [uid])
+            data = r.fetchone()
+            if data==None:
+                return json.dumps(get_error_msg("GET", cherrypy.url(), "Object does not exist"))
+            else:
+                conn.execute("DELETE FROM objects WHERE uid=?", [uid])
 
-        # TODO handle obj not found
-        #if (uid in self.objects):
-        #    del self.objects[uid]
-        #else:
-        #    return json.dumps(get_error_msg("DELETE", cherrypy.url(), "Object does not exist"))
 
 if __name__ == "__main__":
     # if this script is called as an executable (which it usually won't be),

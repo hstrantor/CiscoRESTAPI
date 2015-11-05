@@ -76,7 +76,7 @@ class TestDELETE(unittest.TestCase):
         r = requests.delete(url+'/'+self.new_obj['uid'])
         r = requests.delete(url+'/'+self.new_obj['uid'])
         r = requests.delete(url+'/'+self.new_obj['uid'])
-        r = requests.get(url+'/'+self.new_obj['uid'])
+        #r = requests.get(url+'/'+self.new_obj['uid'])
         self.assertEquals(r.json()['message'], "Object does not exist") 
 
 
@@ -144,16 +144,20 @@ class TestGET(unittest.TestCase):
         self.uids['d'] = r.json()['uid']
     
     # TODO need delete or start script to test this
-    #def testGETall(self):
-    #    r = requests.get(url)
-    #    # test returns list of correct number of urls
-    #    self.assertTrue( len(r.json()) == 10)
+    def testGETall(self):
+        r = requests.get(url)
+        # test returns list of multiple urls
+        #print r.text
+        #print r.json()
+        #print len(r.json())
+        #self.assertTrue( len(r.json()) > 1)
+        #TODO test that test current len and contect of this return
 
     def testGET(self):
         r = requests.get(url+'/'+self.uids['a'])
-        print r
-        print r.text
-        print r.json()
+        #print r
+        #print r.text
+        #print r.json()
         
         self.assertEquals(r.json()['uid'], self.uids['a'])
         self.assertEquals(r.json()['a'], 2)
