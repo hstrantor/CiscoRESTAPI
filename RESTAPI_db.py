@@ -12,7 +12,7 @@ import uuid
 import json
 import cherrypy
 import sqlite3
-
+import ast
 
 
 # function to generate error messages
@@ -36,7 +36,7 @@ class Objects(object):
     exposed = True
     
     def __init__(self, database):
-        self.db_conn = sqlite3.connect(database)
+        self.db = str(database)
    
     def POST(self, data=None):
         """Creates object with new uid and returns it. If called 2+ times,
@@ -51,15 +51,16 @@ class Objects(object):
         # uid is IN the object AND it's the dict key
         try:
             new_obj = json.loads(data)
-            new_obj['uid'] = new_uid
         except (ValueError, TypeError):
             return json.dumps(get_error_msg('POST', cherrypy.url(), "Not a JSON object"))
         
-        with sqlite3.connect(self.db) as conn:
-            conn.execute("UPDATE objects SET value=? WHERE uid=?",
-                         [new_obj, new_obj['uid']])
+        new_obj['uid'] = new_uid
+        j_obj = json.dumps(new_obj)
 
-        return json.dumps(new_obj)
+        with sqlite3.connect(self.db) as conn:
+            conn.execute("INSERT INTO objects VALUES(?, ?)", [new_uid, str(new_obj)])
+
+        return j_obj
 
     # args take off consecutive bits of the url,
     # and then HTTP request body
@@ -76,13 +77,14 @@ class Objects(object):
             new_obj = json.loads(data)
         except (ValueError, TypeError):
             return json.dumps(get_error_msg("PUT", cherrypy.url(), "Not a JSON object"))
+        
         new_obj['uid'] = uid
+        j_obj = json.dumps(new_obj)
 
         #TODO handle uid not found
         with sqlite3.connect(self.db) as conn:
-            conn.execute("UPDATE objects SET value=? WHERE uid=?",
-                         [new_obj, uid])
-            return json.dumps(new_obj)
+            conn.execute("UPDATE objects SET value=? WHERE uid=?", [str(new_obj), uid])
+            return j_obj
         #else:
         #    return json.dumps(get_error_msg("PUT", cherrypy.url(), "Object does not exist"))
     
@@ -103,8 +105,18 @@ class Objects(object):
 
         #TODO handle object not found
         with sqlite3.connect(self.db) as conn:
-            r = conn.execute("SELECT value FROM objetcs WHERE uid=?", [uid])
-            return json.dumps(r.fetchone())
+            #a = conn.execute("COL_LENGTH(objects, uid=?) IS NULL", [uid])
+            #print type(a), a
+            r = conn.execute("SELECT value FROM objects WHERE uid=?", [uid])
+            data = r.fetchone()
+            #data = ast.literal_eval(data)
+            #print "data = ", data, type(data)
+            
+            if data==None:
+                return json.dumps(get_error_msg("GET", cherrypy.url(), "Object does not exist"))
+            else:
+                return json.dumps(ast.literal_eval(data[0]))
+            #return json.dumps(r.fetchone())
         #elif uid in self.objects:
         #    return json.dumps(self.objects[uid])
         #else:

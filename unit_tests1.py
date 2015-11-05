@@ -151,6 +151,10 @@ class TestGET(unittest.TestCase):
 
     def testGET(self):
         r = requests.get(url+'/'+self.uids['a'])
+        print r
+        print r.text
+        print r.json()
+        
         self.assertEquals(r.json()['uid'], self.uids['a'])
         self.assertEquals(r.json()['a'], 2)
         self.assertEquals(r.json()['aa'], 3)

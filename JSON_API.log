@@ -777,3 +777,1785 @@ error: No socket could be created -- (('172.31.25.94', 80): [Errno 13] Permissio
 [05/Nov/2015:03:16:24] ENGINE Bus EXITING
 [05/Nov/2015:03:16:24] ENGINE Bus EXITED
 [05/Nov/2015:03:16:24] ENGINE Waiting for child threads to terminate...
+[05/Nov/2015:04:03:51] ENGINE Listening for SIGHUP.
+[05/Nov/2015:04:03:51] ENGINE Listening for SIGTERM.
+[05/Nov/2015:04:03:51] ENGINE Listening for SIGUSR1.
+[05/Nov/2015:04:03:51] ENGINE Bus STARTING
+[05/Nov/2015:04:03:51] ENGINE Started monitor thread 'Autoreloader'.
+[05/Nov/2015:04:03:51] ENGINE Started monitor thread '_TimeoutMonitor'.
+[05/Nov/2015:04:03:52] ENGINE Serving on http://172.31.25.94
+[05/Nov/2015:04:03:52] ENGINE Bus STARTED
+[05/Nov/2015:04:04:00] HTTP 
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/cherrypy/_cprequest.py", line 670, in respond
+    response.body = self.handler()
+  File "/usr/local/lib/python2.7/site-packages/cherrypy/lib/encoding.py", line 217, in __call__
+    self.body = self.oldhandler(*args, **kwargs)
+  File "/usr/local/lib/python2.7/site-packages/cherrypy/_cpdispatch.py", line 61, in __call__
+    return self.callable(*self.args, **self.kwargs)
+  File "/home/ec2-user/Cisco/CiscoRESTAPI/RESTAPI_basic.py", line 70, in POST
+    self.objects[new_uid] = new_obj
+AttributeError: 'Objects' object has no attribute 'objects'
+[05/Nov/2015:04:04:00] HTTP 
+Request Headers:
+  Content-Length: 72
+  HOST: 172.31.25.94
+  Remote-Addr: 172.31.25.94
+  ACCEPT: */*
+  USER-AGENT: python-requests/1.2.3 CPython/2.7.10 Linux/4.1.10-17.31.amzn1.x86_64
+  Content-Type: application/x-www-form-urlencoded
+  ACCEPT-ENCODING: gzip, deflate, compress
+[05/Nov/2015:04:04:00] HTTP 
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/cherrypy/_cprequest.py", line 670, in respond
+    response.body = self.handler()
+  File "/usr/local/lib/python2.7/site-packages/cherrypy/lib/encoding.py", line 217, in __call__
+    self.body = self.oldhandler(*args, **kwargs)
+  File "/usr/local/lib/python2.7/site-packages/cherrypy/_cpdispatch.py", line 61, in __call__
+    return self.callable(*self.args, **self.kwargs)
+  File "/home/ec2-user/Cisco/CiscoRESTAPI/RESTAPI_basic.py", line 70, in POST
+    self.objects[new_uid] = new_obj
+AttributeError: 'Objects' object has no attribute 'objects'
+[05/Nov/2015:04:04:00] HTTP 
+Request Headers:
+  Content-Length: 72
+  HOST: 172.31.25.94
+  Remote-Addr: 172.31.25.94
+  ACCEPT: */*
+  USER-AGENT: python-requests/1.2.3 CPython/2.7.10 Linux/4.1.10-17.31.amzn1.x86_64
+  Content-Type: application/x-www-form-urlencoded
+  ACCEPT-ENCODING: gzip, deflate, compress
+[05/Nov/2015:04:04:00] HTTP 
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/cherrypy/_cprequest.py", line 670, in respond
+    response.body = self.handler()
+  File "/usr/local/lib/python2.7/site-packages/cherrypy/lib/encoding.py", line 217, in __call__
+    self.body = self.oldhandler(*args, **kwargs)
+  File "/usr/local/lib/python2.7/site-packages/cherrypy/_cpdispatch.py", line 61, in __call__
+    return self.callable(*self.args, **self.kwargs)
+  File "/home/ec2-user/Cisco/CiscoRESTAPI/RESTAPI_basic.py", line 70, in POST
+    self.objects[new_uid] = new_obj
+AttributeError: 'Objects' object has no attribute 'objects'
+[05/Nov/2015:04:04:00] HTTP 
+Request Headers:
+  Content-Length: 74
+  HOST: 172.31.25.94
+  Remote-Addr: 172.31.25.94
+  ACCEPT: */*
+  USER-AGENT: python-requests/1.2.3 CPython/2.7.10 Linux/4.1.10-17.31.amzn1.x86_64
+  Content-Type: application/x-www-form-urlencoded
+  ACCEPT-ENCODING: gzip, deflate, compress
+[05/Nov/2015:04:04:00] HTTP 
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/cherrypy/_cprequest.py", line 670, in respond
+    response.body = self.handler()
+  File "/usr/local/lib/python2.7/site-packages/cherrypy/lib/encoding.py", line 217, in __call__
+    self.body = self.oldhandler(*args, **kwargs)
+  File "/usr/local/lib/python2.7/site-packages/cherrypy/_cpdispatch.py", line 61, in __call__
+    return self.callable(*self.args, **self.kwargs)
+  File "/home/ec2-user/Cisco/CiscoRESTAPI/RESTAPI_basic.py", line 70, in POST
+    self.objects[new_uid] = new_obj
+AttributeError: 'Objects' object has no attribute 'objects'
+[05/Nov/2015:04:04:00] HTTP 
+Request Headers:
+  Content-Length: 53
+  HOST: 172.31.25.94
+  Remote-Addr: 172.31.25.94
+  ACCEPT: */*
+  USER-AGENT: python-requests/1.2.3 CPython/2.7.10 Linux/4.1.10-17.31.amzn1.x86_64
+  Content-Type: application/x-www-form-urlencoded
+  ACCEPT-ENCODING: gzip, deflate, compress
+[05/Nov/2015:04:04:00] HTTP 
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/cherrypy/_cprequest.py", line 670, in respond
+    response.body = self.handler()
+  File "/usr/local/lib/python2.7/site-packages/cherrypy/lib/encoding.py", line 217, in __call__
+    self.body = self.oldhandler(*args, **kwargs)
+  File "/usr/local/lib/python2.7/site-packages/cherrypy/_cpdispatch.py", line 61, in __call__
+    return self.callable(*self.args, **self.kwargs)
+  File "/home/ec2-user/Cisco/CiscoRESTAPI/RESTAPI_basic.py", line 70, in POST
+    self.objects[new_uid] = new_obj
+AttributeError: 'Objects' object has no attribute 'objects'
+[05/Nov/2015:04:04:00] HTTP 
+Request Headers:
+  Content-Length: 53
+  HOST: 172.31.25.94
+  Remote-Addr: 172.31.25.94
+  ACCEPT: */*
+  USER-AGENT: python-requests/1.2.3 CPython/2.7.10 Linux/4.1.10-17.31.amzn1.x86_64
+  Content-Type: application/x-www-form-urlencoded
+  ACCEPT-ENCODING: gzip, deflate, compress
+[05/Nov/2015:04:04:00] HTTP 
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/cherrypy/_cprequest.py", line 670, in respond
+    response.body = self.handler()
+  File "/usr/local/lib/python2.7/site-packages/cherrypy/lib/encoding.py", line 217, in __call__
+    self.body = self.oldhandler(*args, **kwargs)
+  File "/usr/local/lib/python2.7/site-packages/cherrypy/_cpdispatch.py", line 61, in __call__
+    return self.callable(*self.args, **self.kwargs)
+  File "/home/ec2-user/Cisco/CiscoRESTAPI/RESTAPI_basic.py", line 70, in POST
+    self.objects[new_uid] = new_obj
+AttributeError: 'Objects' object has no attribute 'objects'
+[05/Nov/2015:04:04:00] HTTP 
+Request Headers:
+  Content-Length: 23
+  HOST: 172.31.25.94
+  Remote-Addr: 172.31.25.94
+  ACCEPT: */*
+  USER-AGENT: python-requests/1.2.3 CPython/2.7.10 Linux/4.1.10-17.31.amzn1.x86_64
+  Content-Type: application/x-www-form-urlencoded
+  ACCEPT-ENCODING: gzip, deflate, compress
+[05/Nov/2015:04:04:00] HTTP 
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/cherrypy/_cprequest.py", line 670, in respond
+    response.body = self.handler()
+  File "/usr/local/lib/python2.7/site-packages/cherrypy/lib/encoding.py", line 217, in __call__
+    self.body = self.oldhandler(*args, **kwargs)
+  File "/usr/local/lib/python2.7/site-packages/cherrypy/_cpdispatch.py", line 61, in __call__
+    return self.callable(*self.args, **self.kwargs)
+  File "/home/ec2-user/Cisco/CiscoRESTAPI/RESTAPI_basic.py", line 70, in POST
+    self.objects[new_uid] = new_obj
+AttributeError: 'Objects' object has no attribute 'objects'
+[05/Nov/2015:04:04:00] HTTP 
+Request Headers:
+  Content-Length: 74
+  HOST: 172.31.25.94
+  Remote-Addr: 172.31.25.94
+  ACCEPT: */*
+  USER-AGENT: python-requests/1.2.3 CPython/2.7.10 Linux/4.1.10-17.31.amzn1.x86_64
+  Content-Type: application/x-www-form-urlencoded
+  ACCEPT-ENCODING: gzip, deflate, compress
+[05/Nov/2015:04:04:32] ENGINE Keyboard Interrupt: shutting down bus
+[05/Nov/2015:04:04:32] ENGINE Bus STOPPING
+[05/Nov/2015:04:04:32] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('172.31.25.94', 80)) shut down
+[05/Nov/2015:04:04:32] ENGINE Stopped thread 'Autoreloader'.
+[05/Nov/2015:04:04:32] ENGINE Stopped thread '_TimeoutMonitor'.
+[05/Nov/2015:04:04:32] ENGINE Bus STOPPED
+[05/Nov/2015:04:04:32] ENGINE Bus EXITING
+[05/Nov/2015:04:04:32] ENGINE Bus EXITED
+[05/Nov/2015:04:04:32] ENGINE Waiting for child threads to terminate...
+[05/Nov/2015:04:06:09] ENGINE Listening for SIGHUP.
+[05/Nov/2015:04:06:09] ENGINE Listening for SIGTERM.
+[05/Nov/2015:04:06:09] ENGINE Listening for SIGUSR1.
+[05/Nov/2015:04:06:09] ENGINE Bus STARTING
+[05/Nov/2015:04:06:09] ENGINE Started monitor thread 'Autoreloader'.
+[05/Nov/2015:04:06:09] ENGINE Started monitor thread '_TimeoutMonitor'.
+[05/Nov/2015:04:06:09] ENGINE Serving on http://172.31.25.94
+[05/Nov/2015:04:06:09] ENGINE Bus STARTED
+[05/Nov/2015:04:06:14] HTTP 
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/cherrypy/_cprequest.py", line 670, in respond
+    response.body = self.handler()
+  File "/usr/local/lib/python2.7/site-packages/cherrypy/lib/encoding.py", line 217, in __call__
+    self.body = self.oldhandler(*args, **kwargs)
+  File "/usr/local/lib/python2.7/site-packages/cherrypy/_cpdispatch.py", line 61, in __call__
+    return self.callable(*self.args, **self.kwargs)
+  File "/home/ec2-user/Cisco/CiscoRESTAPI/RESTAPI_basic.py", line 70, in POST
+    self.objects[new_uid] = new_obj
+AttributeError: 'Objects' object has no attribute 'objects'
+[05/Nov/2015:04:06:14] HTTP 
+Request Headers:
+  Content-Length: 72
+  HOST: 172.31.25.94
+  Remote-Addr: 172.31.25.94
+  ACCEPT: */*
+  USER-AGENT: python-requests/1.2.3 CPython/2.7.10 Linux/4.1.10-17.31.amzn1.x86_64
+  Content-Type: application/x-www-form-urlencoded
+  ACCEPT-ENCODING: gzip, deflate, compress
+[05/Nov/2015:04:06:14] HTTP 
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/cherrypy/_cprequest.py", line 670, in respond
+    response.body = self.handler()
+  File "/usr/local/lib/python2.7/site-packages/cherrypy/lib/encoding.py", line 217, in __call__
+    self.body = self.oldhandler(*args, **kwargs)
+  File "/usr/local/lib/python2.7/site-packages/cherrypy/_cpdispatch.py", line 61, in __call__
+    return self.callable(*self.args, **self.kwargs)
+  File "/home/ec2-user/Cisco/CiscoRESTAPI/RESTAPI_basic.py", line 70, in POST
+    self.objects[new_uid] = new_obj
+AttributeError: 'Objects' object has no attribute 'objects'
+[05/Nov/2015:04:06:14] HTTP 
+Request Headers:
+  Content-Length: 72
+  HOST: 172.31.25.94
+  Remote-Addr: 172.31.25.94
+  ACCEPT: */*
+  USER-AGENT: python-requests/1.2.3 CPython/2.7.10 Linux/4.1.10-17.31.amzn1.x86_64
+  Content-Type: application/x-www-form-urlencoded
+  ACCEPT-ENCODING: gzip, deflate, compress
+[05/Nov/2015:04:06:14] HTTP 
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/cherrypy/_cprequest.py", line 670, in respond
+    response.body = self.handler()
+  File "/usr/local/lib/python2.7/site-packages/cherrypy/lib/encoding.py", line 217, in __call__
+    self.body = self.oldhandler(*args, **kwargs)
+  File "/usr/local/lib/python2.7/site-packages/cherrypy/_cpdispatch.py", line 61, in __call__
+    return self.callable(*self.args, **self.kwargs)
+  File "/home/ec2-user/Cisco/CiscoRESTAPI/RESTAPI_basic.py", line 70, in POST
+    self.objects[new_uid] = new_obj
+AttributeError: 'Objects' object has no attribute 'objects'
+[05/Nov/2015:04:06:14] HTTP 
+Request Headers:
+  Content-Length: 74
+  HOST: 172.31.25.94
+  Remote-Addr: 172.31.25.94
+  ACCEPT: */*
+  USER-AGENT: python-requests/1.2.3 CPython/2.7.10 Linux/4.1.10-17.31.amzn1.x86_64
+  Content-Type: application/x-www-form-urlencoded
+  ACCEPT-ENCODING: gzip, deflate, compress
+[05/Nov/2015:04:06:14] HTTP 
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/cherrypy/_cprequest.py", line 670, in respond
+    response.body = self.handler()
+  File "/usr/local/lib/python2.7/site-packages/cherrypy/lib/encoding.py", line 217, in __call__
+    self.body = self.oldhandler(*args, **kwargs)
+  File "/usr/local/lib/python2.7/site-packages/cherrypy/_cpdispatch.py", line 61, in __call__
+    return self.callable(*self.args, **self.kwargs)
+  File "/home/ec2-user/Cisco/CiscoRESTAPI/RESTAPI_basic.py", line 70, in POST
+    self.objects[new_uid] = new_obj
+AttributeError: 'Objects' object has no attribute 'objects'
+[05/Nov/2015:04:06:14] HTTP 
+Request Headers:
+  Content-Length: 53
+  HOST: 172.31.25.94
+  Remote-Addr: 172.31.25.94
+  ACCEPT: */*
+  USER-AGENT: python-requests/1.2.3 CPython/2.7.10 Linux/4.1.10-17.31.amzn1.x86_64
+  Content-Type: application/x-www-form-urlencoded
+  ACCEPT-ENCODING: gzip, deflate, compress
+[05/Nov/2015:04:06:14] HTTP 
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/cherrypy/_cprequest.py", line 670, in respond
+    response.body = self.handler()
+  File "/usr/local/lib/python2.7/site-packages/cherrypy/lib/encoding.py", line 217, in __call__
+    self.body = self.oldhandler(*args, **kwargs)
+  File "/usr/local/lib/python2.7/site-packages/cherrypy/_cpdispatch.py", line 61, in __call__
+    return self.callable(*self.args, **self.kwargs)
+  File "/home/ec2-user/Cisco/CiscoRESTAPI/RESTAPI_basic.py", line 70, in POST
+    self.objects[new_uid] = new_obj
+AttributeError: 'Objects' object has no attribute 'objects'
+[05/Nov/2015:04:06:14] HTTP 
+Request Headers:
+  Content-Length: 53
+  HOST: 172.31.25.94
+  Remote-Addr: 172.31.25.94
+  ACCEPT: */*
+  USER-AGENT: python-requests/1.2.3 CPython/2.7.10 Linux/4.1.10-17.31.amzn1.x86_64
+  Content-Type: application/x-www-form-urlencoded
+  ACCEPT-ENCODING: gzip, deflate, compress
+[05/Nov/2015:04:06:14] HTTP 
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/cherrypy/_cprequest.py", line 670, in respond
+    response.body = self.handler()
+  File "/usr/local/lib/python2.7/site-packages/cherrypy/lib/encoding.py", line 217, in __call__
+    self.body = self.oldhandler(*args, **kwargs)
+  File "/usr/local/lib/python2.7/site-packages/cherrypy/_cpdispatch.py", line 61, in __call__
+    return self.callable(*self.args, **self.kwargs)
+  File "/home/ec2-user/Cisco/CiscoRESTAPI/RESTAPI_basic.py", line 70, in POST
+    self.objects[new_uid] = new_obj
+AttributeError: 'Objects' object has no attribute 'objects'
+[05/Nov/2015:04:06:14] HTTP 
+Request Headers:
+  Content-Length: 23
+  HOST: 172.31.25.94
+  Remote-Addr: 172.31.25.94
+  ACCEPT: */*
+  USER-AGENT: python-requests/1.2.3 CPython/2.7.10 Linux/4.1.10-17.31.amzn1.x86_64
+  Content-Type: application/x-www-form-urlencoded
+  ACCEPT-ENCODING: gzip, deflate, compress
+[05/Nov/2015:04:06:14] HTTP 
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/cherrypy/_cprequest.py", line 670, in respond
+    response.body = self.handler()
+  File "/usr/local/lib/python2.7/site-packages/cherrypy/lib/encoding.py", line 217, in __call__
+    self.body = self.oldhandler(*args, **kwargs)
+  File "/usr/local/lib/python2.7/site-packages/cherrypy/_cpdispatch.py", line 61, in __call__
+    return self.callable(*self.args, **self.kwargs)
+  File "/home/ec2-user/Cisco/CiscoRESTAPI/RESTAPI_basic.py", line 70, in POST
+    self.objects[new_uid] = new_obj
+AttributeError: 'Objects' object has no attribute 'objects'
+[05/Nov/2015:04:06:14] HTTP 
+Request Headers:
+  Content-Length: 74
+  HOST: 172.31.25.94
+  Remote-Addr: 172.31.25.94
+  ACCEPT: */*
+  USER-AGENT: python-requests/1.2.3 CPython/2.7.10 Linux/4.1.10-17.31.amzn1.x86_64
+  Content-Type: application/x-www-form-urlencoded
+  ACCEPT-ENCODING: gzip, deflate, compress
+[05/Nov/2015:04:06:39] ENGINE Keyboard Interrupt: shutting down bus
+[05/Nov/2015:04:06:39] ENGINE Bus STOPPING
+[05/Nov/2015:04:06:39] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('172.31.25.94', 80)) shut down
+[05/Nov/2015:04:06:39] ENGINE Stopped thread 'Autoreloader'.
+[05/Nov/2015:04:06:39] ENGINE Stopped thread '_TimeoutMonitor'.
+[05/Nov/2015:04:06:39] ENGINE Bus STOPPED
+[05/Nov/2015:04:06:39] ENGINE Bus EXITING
+[05/Nov/2015:04:06:39] ENGINE Bus EXITED
+[05/Nov/2015:04:06:39] ENGINE Waiting for child threads to terminate...
+[05/Nov/2015:04:08:50] ENGINE Listening for SIGHUP.
+[05/Nov/2015:04:08:50] ENGINE Listening for SIGTERM.
+[05/Nov/2015:04:08:50] ENGINE Listening for SIGUSR1.
+[05/Nov/2015:04:08:50] ENGINE Bus STARTING
+[05/Nov/2015:04:08:50] ENGINE Started monitor thread 'Autoreloader'.
+[05/Nov/2015:04:08:50] ENGINE Started monitor thread '_TimeoutMonitor'.
+[05/Nov/2015:04:08:51] ENGINE Serving on http://172.31.25.94
+[05/Nov/2015:04:08:51] ENGINE Bus STARTED
+[05/Nov/2015:04:08:57] HTTP 
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/cherrypy/_cprequest.py", line 670, in respond
+    response.body = self.handler()
+  File "/usr/local/lib/python2.7/site-packages/cherrypy/lib/encoding.py", line 217, in __call__
+    self.body = self.oldhandler(*args, **kwargs)
+  File "/usr/local/lib/python2.7/site-packages/cherrypy/_cpdispatch.py", line 61, in __call__
+    return self.callable(*self.args, **self.kwargs)
+  File "/home/ec2-user/Cisco/CiscoRESTAPI/RESTAPI_db.py", line 58, in POST
+    with sqlite3.connect(self.db) as conn:
+ValueError: database parameter must be string or APSW Connection object
+[05/Nov/2015:04:08:57] HTTP 
+Request Headers:
+  Content-Length: 72
+  HOST: 172.31.25.94
+  Remote-Addr: 172.31.25.94
+  ACCEPT: */*
+  USER-AGENT: python-requests/1.2.3 CPython/2.7.10 Linux/4.1.10-17.31.amzn1.x86_64
+  Content-Type: application/x-www-form-urlencoded
+  ACCEPT-ENCODING: gzip, deflate, compress
+[05/Nov/2015:04:08:57] HTTP 
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/cherrypy/_cprequest.py", line 670, in respond
+    response.body = self.handler()
+  File "/usr/local/lib/python2.7/site-packages/cherrypy/lib/encoding.py", line 217, in __call__
+    self.body = self.oldhandler(*args, **kwargs)
+  File "/usr/local/lib/python2.7/site-packages/cherrypy/_cpdispatch.py", line 61, in __call__
+    return self.callable(*self.args, **self.kwargs)
+  File "/home/ec2-user/Cisco/CiscoRESTAPI/RESTAPI_db.py", line 58, in POST
+    with sqlite3.connect(self.db) as conn:
+ValueError: database parameter must be string or APSW Connection object
+[05/Nov/2015:04:08:57] HTTP 
+Request Headers:
+  Content-Length: 72
+  HOST: 172.31.25.94
+  Remote-Addr: 172.31.25.94
+  ACCEPT: */*
+  USER-AGENT: python-requests/1.2.3 CPython/2.7.10 Linux/4.1.10-17.31.amzn1.x86_64
+  Content-Type: application/x-www-form-urlencoded
+  ACCEPT-ENCODING: gzip, deflate, compress
+[05/Nov/2015:04:08:57] HTTP 
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/cherrypy/_cprequest.py", line 670, in respond
+    response.body = self.handler()
+  File "/usr/local/lib/python2.7/site-packages/cherrypy/lib/encoding.py", line 217, in __call__
+    self.body = self.oldhandler(*args, **kwargs)
+  File "/usr/local/lib/python2.7/site-packages/cherrypy/_cpdispatch.py", line 61, in __call__
+    return self.callable(*self.args, **self.kwargs)
+  File "/home/ec2-user/Cisco/CiscoRESTAPI/RESTAPI_db.py", line 58, in POST
+    with sqlite3.connect(self.db) as conn:
+ValueError: database parameter must be string or APSW Connection object
+[05/Nov/2015:04:08:57] HTTP 
+Request Headers:
+  Content-Length: 74
+  HOST: 172.31.25.94
+  Remote-Addr: 172.31.25.94
+  ACCEPT: */*
+  USER-AGENT: python-requests/1.2.3 CPython/2.7.10 Linux/4.1.10-17.31.amzn1.x86_64
+  Content-Type: application/x-www-form-urlencoded
+  ACCEPT-ENCODING: gzip, deflate, compress
+[05/Nov/2015:04:08:57] HTTP 
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/cherrypy/_cprequest.py", line 670, in respond
+    response.body = self.handler()
+  File "/usr/local/lib/python2.7/site-packages/cherrypy/lib/encoding.py", line 217, in __call__
+    self.body = self.oldhandler(*args, **kwargs)
+  File "/usr/local/lib/python2.7/site-packages/cherrypy/_cpdispatch.py", line 61, in __call__
+    return self.callable(*self.args, **self.kwargs)
+  File "/home/ec2-user/Cisco/CiscoRESTAPI/RESTAPI_db.py", line 58, in POST
+    with sqlite3.connect(self.db) as conn:
+ValueError: database parameter must be string or APSW Connection object
+[05/Nov/2015:04:08:57] HTTP 
+Request Headers:
+  Content-Length: 53
+  HOST: 172.31.25.94
+  Remote-Addr: 172.31.25.94
+  ACCEPT: */*
+  USER-AGENT: python-requests/1.2.3 CPython/2.7.10 Linux/4.1.10-17.31.amzn1.x86_64
+  Content-Type: application/x-www-form-urlencoded
+  ACCEPT-ENCODING: gzip, deflate, compress
+[05/Nov/2015:04:08:57] HTTP 
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/cherrypy/_cprequest.py", line 670, in respond
+    response.body = self.handler()
+  File "/usr/local/lib/python2.7/site-packages/cherrypy/lib/encoding.py", line 217, in __call__
+    self.body = self.oldhandler(*args, **kwargs)
+  File "/usr/local/lib/python2.7/site-packages/cherrypy/_cpdispatch.py", line 61, in __call__
+    return self.callable(*self.args, **self.kwargs)
+  File "/home/ec2-user/Cisco/CiscoRESTAPI/RESTAPI_db.py", line 58, in POST
+    with sqlite3.connect(self.db) as conn:
+ValueError: database parameter must be string or APSW Connection object
+[05/Nov/2015:04:08:57] HTTP 
+Request Headers:
+  Content-Length: 53
+  HOST: 172.31.25.94
+  Remote-Addr: 172.31.25.94
+  ACCEPT: */*
+  USER-AGENT: python-requests/1.2.3 CPython/2.7.10 Linux/4.1.10-17.31.amzn1.x86_64
+  Content-Type: application/x-www-form-urlencoded
+  ACCEPT-ENCODING: gzip, deflate, compress
+[05/Nov/2015:04:08:57] HTTP 
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/cherrypy/_cprequest.py", line 670, in respond
+    response.body = self.handler()
+  File "/usr/local/lib/python2.7/site-packages/cherrypy/lib/encoding.py", line 217, in __call__
+    self.body = self.oldhandler(*args, **kwargs)
+  File "/usr/local/lib/python2.7/site-packages/cherrypy/_cpdispatch.py", line 61, in __call__
+    return self.callable(*self.args, **self.kwargs)
+  File "/home/ec2-user/Cisco/CiscoRESTAPI/RESTAPI_db.py", line 58, in POST
+    with sqlite3.connect(self.db) as conn:
+ValueError: database parameter must be string or APSW Connection object
+[05/Nov/2015:04:08:57] HTTP 
+Request Headers:
+  Content-Length: 23
+  HOST: 172.31.25.94
+  Remote-Addr: 172.31.25.94
+  ACCEPT: */*
+  USER-AGENT: python-requests/1.2.3 CPython/2.7.10 Linux/4.1.10-17.31.amzn1.x86_64
+  Content-Type: application/x-www-form-urlencoded
+  ACCEPT-ENCODING: gzip, deflate, compress
+[05/Nov/2015:04:08:57] HTTP 
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/cherrypy/_cprequest.py", line 670, in respond
+    response.body = self.handler()
+  File "/usr/local/lib/python2.7/site-packages/cherrypy/lib/encoding.py", line 217, in __call__
+    self.body = self.oldhandler(*args, **kwargs)
+  File "/usr/local/lib/python2.7/site-packages/cherrypy/_cpdispatch.py", line 61, in __call__
+    return self.callable(*self.args, **self.kwargs)
+  File "/home/ec2-user/Cisco/CiscoRESTAPI/RESTAPI_db.py", line 58, in POST
+    with sqlite3.connect(self.db) as conn:
+ValueError: database parameter must be string or APSW Connection object
+[05/Nov/2015:04:08:57] HTTP 
+Request Headers:
+  Content-Length: 74
+  HOST: 172.31.25.94
+  Remote-Addr: 172.31.25.94
+  ACCEPT: */*
+  USER-AGENT: python-requests/1.2.3 CPython/2.7.10 Linux/4.1.10-17.31.amzn1.x86_64
+  Content-Type: application/x-www-form-urlencoded
+  ACCEPT-ENCODING: gzip, deflate, compress
+[05/Nov/2015:04:10:20] ENGINE Keyboard Interrupt: shutting down bus
+[05/Nov/2015:04:10:20] ENGINE Bus STOPPING
+[05/Nov/2015:04:10:20] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('172.31.25.94', 80)) shut down
+[05/Nov/2015:04:10:20] ENGINE Stopped thread 'Autoreloader'.
+[05/Nov/2015:04:10:20] ENGINE Stopped thread '_TimeoutMonitor'.
+[05/Nov/2015:04:10:20] ENGINE Bus STOPPED
+[05/Nov/2015:04:10:20] ENGINE Bus EXITING
+[05/Nov/2015:04:10:20] ENGINE Bus EXITED
+[05/Nov/2015:04:10:20] ENGINE Waiting for child threads to terminate...
+[05/Nov/2015:04:10:48] ENGINE Listening for SIGHUP.
+[05/Nov/2015:04:10:48] ENGINE Listening for SIGTERM.
+[05/Nov/2015:04:10:48] ENGINE Listening for SIGUSR1.
+[05/Nov/2015:04:10:48] ENGINE Bus STARTING
+[05/Nov/2015:04:10:48] ENGINE Started monitor thread 'Autoreloader'.
+[05/Nov/2015:04:10:48] ENGINE Started monitor thread '_TimeoutMonitor'.
+[05/Nov/2015:04:10:48] ENGINE Serving on http://172.31.25.94
+[05/Nov/2015:04:10:48] ENGINE Bus STARTED
+[05/Nov/2015:04:10:52] ENGINE Keyboard Interrupt: shutting down bus
+[05/Nov/2015:04:10:52] ENGINE Bus STOPPING
+[05/Nov/2015:04:10:52] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('172.31.25.94', 80)) shut down
+[05/Nov/2015:04:10:52] ENGINE Stopped thread 'Autoreloader'.
+[05/Nov/2015:04:10:52] ENGINE Stopped thread '_TimeoutMonitor'.
+[05/Nov/2015:04:10:52] ENGINE Bus STOPPED
+[05/Nov/2015:04:10:52] ENGINE Bus EXITING
+[05/Nov/2015:04:10:52] ENGINE Bus EXITED
+[05/Nov/2015:04:10:52] ENGINE Waiting for child threads to terminate...
+[05/Nov/2015:04:11:02] ENGINE Listening for SIGHUP.
+[05/Nov/2015:04:11:02] ENGINE Listening for SIGTERM.
+[05/Nov/2015:04:11:02] ENGINE Listening for SIGUSR1.
+[05/Nov/2015:04:11:02] ENGINE Bus STARTING
+[05/Nov/2015:04:11:02] ENGINE Started monitor thread 'Autoreloader'.
+[05/Nov/2015:04:11:02] ENGINE Started monitor thread '_TimeoutMonitor'.
+[05/Nov/2015:04:11:02] ENGINE Serving on http://172.31.25.94
+[05/Nov/2015:04:11:02] ENGINE Bus STARTED
+[05/Nov/2015:04:11:08] HTTP 
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/cherrypy/_cprequest.py", line 670, in respond
+    response.body = self.handler()
+  File "/usr/local/lib/python2.7/site-packages/cherrypy/lib/encoding.py", line 217, in __call__
+    self.body = self.oldhandler(*args, **kwargs)
+  File "/usr/local/lib/python2.7/site-packages/cherrypy/_cpdispatch.py", line 61, in __call__
+    return self.callable(*self.args, **self.kwargs)
+  File "/home/ec2-user/Cisco/CiscoRESTAPI/RESTAPI_db.py", line 60, in POST
+    [new_obj, new_obj['uid']])
+InterfaceError: Error binding parameter 0 - probably unsupported type.
+[05/Nov/2015:04:11:08] HTTP 
+Request Headers:
+  Content-Length: 72
+  HOST: 172.31.25.94
+  Remote-Addr: 172.31.25.94
+  ACCEPT: */*
+  USER-AGENT: python-requests/1.2.3 CPython/2.7.10 Linux/4.1.10-17.31.amzn1.x86_64
+  Content-Type: application/x-www-form-urlencoded
+  ACCEPT-ENCODING: gzip, deflate, compress
+[05/Nov/2015:04:11:08] HTTP 
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/cherrypy/_cprequest.py", line 670, in respond
+    response.body = self.handler()
+  File "/usr/local/lib/python2.7/site-packages/cherrypy/lib/encoding.py", line 217, in __call__
+    self.body = self.oldhandler(*args, **kwargs)
+  File "/usr/local/lib/python2.7/site-packages/cherrypy/_cpdispatch.py", line 61, in __call__
+    return self.callable(*self.args, **self.kwargs)
+  File "/home/ec2-user/Cisco/CiscoRESTAPI/RESTAPI_db.py", line 60, in POST
+    [new_obj, new_obj['uid']])
+InterfaceError: Error binding parameter 0 - probably unsupported type.
+[05/Nov/2015:04:11:08] HTTP 
+Request Headers:
+  Content-Length: 72
+  HOST: 172.31.25.94
+  Remote-Addr: 172.31.25.94
+  ACCEPT: */*
+  USER-AGENT: python-requests/1.2.3 CPython/2.7.10 Linux/4.1.10-17.31.amzn1.x86_64
+  Content-Type: application/x-www-form-urlencoded
+  ACCEPT-ENCODING: gzip, deflate, compress
+[05/Nov/2015:04:11:08] HTTP 
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/cherrypy/_cprequest.py", line 670, in respond
+    response.body = self.handler()
+  File "/usr/local/lib/python2.7/site-packages/cherrypy/lib/encoding.py", line 217, in __call__
+    self.body = self.oldhandler(*args, **kwargs)
+  File "/usr/local/lib/python2.7/site-packages/cherrypy/_cpdispatch.py", line 61, in __call__
+    return self.callable(*self.args, **self.kwargs)
+  File "/home/ec2-user/Cisco/CiscoRESTAPI/RESTAPI_db.py", line 60, in POST
+    [new_obj, new_obj['uid']])
+InterfaceError: Error binding parameter 0 - probably unsupported type.
+[05/Nov/2015:04:11:08] HTTP 
+Request Headers:
+  Content-Length: 74
+  HOST: 172.31.25.94
+  Remote-Addr: 172.31.25.94
+  ACCEPT: */*
+  USER-AGENT: python-requests/1.2.3 CPython/2.7.10 Linux/4.1.10-17.31.amzn1.x86_64
+  Content-Type: application/x-www-form-urlencoded
+  ACCEPT-ENCODING: gzip, deflate, compress
+[05/Nov/2015:04:11:08] HTTP 
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/cherrypy/_cprequest.py", line 670, in respond
+    response.body = self.handler()
+  File "/usr/local/lib/python2.7/site-packages/cherrypy/lib/encoding.py", line 217, in __call__
+    self.body = self.oldhandler(*args, **kwargs)
+  File "/usr/local/lib/python2.7/site-packages/cherrypy/_cpdispatch.py", line 61, in __call__
+    return self.callable(*self.args, **self.kwargs)
+  File "/home/ec2-user/Cisco/CiscoRESTAPI/RESTAPI_db.py", line 60, in POST
+    [new_obj, new_obj['uid']])
+InterfaceError: Error binding parameter 0 - probably unsupported type.
+[05/Nov/2015:04:11:08] HTTP 
+Request Headers:
+  Content-Length: 53
+  HOST: 172.31.25.94
+  Remote-Addr: 172.31.25.94
+  ACCEPT: */*
+  USER-AGENT: python-requests/1.2.3 CPython/2.7.10 Linux/4.1.10-17.31.amzn1.x86_64
+  Content-Type: application/x-www-form-urlencoded
+  ACCEPT-ENCODING: gzip, deflate, compress
+[05/Nov/2015:04:11:08] HTTP 
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/cherrypy/_cprequest.py", line 670, in respond
+    response.body = self.handler()
+  File "/usr/local/lib/python2.7/site-packages/cherrypy/lib/encoding.py", line 217, in __call__
+    self.body = self.oldhandler(*args, **kwargs)
+  File "/usr/local/lib/python2.7/site-packages/cherrypy/_cpdispatch.py", line 61, in __call__
+    return self.callable(*self.args, **self.kwargs)
+  File "/home/ec2-user/Cisco/CiscoRESTAPI/RESTAPI_db.py", line 60, in POST
+    [new_obj, new_obj['uid']])
+InterfaceError: Error binding parameter 0 - probably unsupported type.
+[05/Nov/2015:04:11:08] HTTP 
+Request Headers:
+  Content-Length: 53
+  HOST: 172.31.25.94
+  Remote-Addr: 172.31.25.94
+  ACCEPT: */*
+  USER-AGENT: python-requests/1.2.3 CPython/2.7.10 Linux/4.1.10-17.31.amzn1.x86_64
+  Content-Type: application/x-www-form-urlencoded
+  ACCEPT-ENCODING: gzip, deflate, compress
+[05/Nov/2015:04:11:08] HTTP 
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/cherrypy/_cprequest.py", line 670, in respond
+    response.body = self.handler()
+  File "/usr/local/lib/python2.7/site-packages/cherrypy/lib/encoding.py", line 217, in __call__
+    self.body = self.oldhandler(*args, **kwargs)
+  File "/usr/local/lib/python2.7/site-packages/cherrypy/_cpdispatch.py", line 61, in __call__
+    return self.callable(*self.args, **self.kwargs)
+  File "/home/ec2-user/Cisco/CiscoRESTAPI/RESTAPI_db.py", line 60, in POST
+    [new_obj, new_obj['uid']])
+InterfaceError: Error binding parameter 0 - probably unsupported type.
+[05/Nov/2015:04:11:08] HTTP 
+Request Headers:
+  Content-Length: 23
+  HOST: 172.31.25.94
+  Remote-Addr: 172.31.25.94
+  ACCEPT: */*
+  USER-AGENT: python-requests/1.2.3 CPython/2.7.10 Linux/4.1.10-17.31.amzn1.x86_64
+  Content-Type: application/x-www-form-urlencoded
+  ACCEPT-ENCODING: gzip, deflate, compress
+[05/Nov/2015:04:11:08] HTTP 
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/cherrypy/_cprequest.py", line 670, in respond
+    response.body = self.handler()
+  File "/usr/local/lib/python2.7/site-packages/cherrypy/lib/encoding.py", line 217, in __call__
+    self.body = self.oldhandler(*args, **kwargs)
+  File "/usr/local/lib/python2.7/site-packages/cherrypy/_cpdispatch.py", line 61, in __call__
+    return self.callable(*self.args, **self.kwargs)
+  File "/home/ec2-user/Cisco/CiscoRESTAPI/RESTAPI_db.py", line 60, in POST
+    [new_obj, new_obj['uid']])
+InterfaceError: Error binding parameter 0 - probably unsupported type.
+[05/Nov/2015:04:11:08] HTTP 
+Request Headers:
+  Content-Length: 74
+  HOST: 172.31.25.94
+  Remote-Addr: 172.31.25.94
+  ACCEPT: */*
+  USER-AGENT: python-requests/1.2.3 CPython/2.7.10 Linux/4.1.10-17.31.amzn1.x86_64
+  Content-Type: application/x-www-form-urlencoded
+  ACCEPT-ENCODING: gzip, deflate, compress
+[05/Nov/2015:04:15:12] ENGINE Keyboard Interrupt: shutting down bus
+[05/Nov/2015:04:15:12] ENGINE Bus STOPPING
+[05/Nov/2015:04:15:12] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('172.31.25.94', 80)) shut down
+[05/Nov/2015:04:15:12] ENGINE Stopped thread '_TimeoutMonitor'.
+[05/Nov/2015:04:15:12] ENGINE Stopped thread 'Autoreloader'.
+[05/Nov/2015:04:15:12] ENGINE Bus STOPPED
+[05/Nov/2015:04:15:12] ENGINE Bus EXITING
+[05/Nov/2015:04:15:12] ENGINE Bus EXITED
+[05/Nov/2015:04:15:12] ENGINE Waiting for child threads to terminate...
+[05/Nov/2015:04:16:01] ENGINE Listening for SIGHUP.
+[05/Nov/2015:04:16:01] ENGINE Listening for SIGTERM.
+[05/Nov/2015:04:16:01] ENGINE Listening for SIGUSR1.
+[05/Nov/2015:04:16:01] ENGINE Bus STARTING
+[05/Nov/2015:04:16:01] ENGINE Started monitor thread 'Autoreloader'.
+[05/Nov/2015:04:16:01] ENGINE Started monitor thread '_TimeoutMonitor'.
+[05/Nov/2015:04:16:01] ENGINE Serving on http://172.31.25.94
+[05/Nov/2015:04:16:01] ENGINE Bus STARTED
+[05/Nov/2015:04:16:06] HTTP 
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/cherrypy/_cprequest.py", line 670, in respond
+    response.body = self.handler()
+  File "/usr/local/lib/python2.7/site-packages/cherrypy/lib/encoding.py", line 217, in __call__
+    self.body = self.oldhandler(*args, **kwargs)
+  File "/usr/local/lib/python2.7/site-packages/cherrypy/_cpdispatch.py", line 61, in __call__
+    return self.callable(*self.args, **self.kwargs)
+  File "/home/ec2-user/Cisco/CiscoRESTAPI/RESTAPI_db.py", line 60, in POST
+    [new_obj, json.dumps(new_obj['uid'])])
+InterfaceError: Error binding parameter 0 - probably unsupported type.
+[05/Nov/2015:04:16:06] HTTP 
+Request Headers:
+  Content-Length: 72
+  HOST: 172.31.25.94
+  Remote-Addr: 172.31.25.94
+  ACCEPT: */*
+  USER-AGENT: python-requests/1.2.3 CPython/2.7.10 Linux/4.1.10-17.31.amzn1.x86_64
+  Content-Type: application/x-www-form-urlencoded
+  ACCEPT-ENCODING: gzip, deflate, compress
+[05/Nov/2015:04:16:06] HTTP 
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/cherrypy/_cprequest.py", line 670, in respond
+    response.body = self.handler()
+  File "/usr/local/lib/python2.7/site-packages/cherrypy/lib/encoding.py", line 217, in __call__
+    self.body = self.oldhandler(*args, **kwargs)
+  File "/usr/local/lib/python2.7/site-packages/cherrypy/_cpdispatch.py", line 61, in __call__
+    return self.callable(*self.args, **self.kwargs)
+  File "/home/ec2-user/Cisco/CiscoRESTAPI/RESTAPI_db.py", line 60, in POST
+    [new_obj, json.dumps(new_obj['uid'])])
+InterfaceError: Error binding parameter 0 - probably unsupported type.
+[05/Nov/2015:04:16:06] HTTP 
+Request Headers:
+  Content-Length: 72
+  HOST: 172.31.25.94
+  Remote-Addr: 172.31.25.94
+  ACCEPT: */*
+  USER-AGENT: python-requests/1.2.3 CPython/2.7.10 Linux/4.1.10-17.31.amzn1.x86_64
+  Content-Type: application/x-www-form-urlencoded
+  ACCEPT-ENCODING: gzip, deflate, compress
+[05/Nov/2015:04:16:06] HTTP 
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/cherrypy/_cprequest.py", line 670, in respond
+    response.body = self.handler()
+  File "/usr/local/lib/python2.7/site-packages/cherrypy/lib/encoding.py", line 217, in __call__
+    self.body = self.oldhandler(*args, **kwargs)
+  File "/usr/local/lib/python2.7/site-packages/cherrypy/_cpdispatch.py", line 61, in __call__
+    return self.callable(*self.args, **self.kwargs)
+  File "/home/ec2-user/Cisco/CiscoRESTAPI/RESTAPI_db.py", line 60, in POST
+    [new_obj, json.dumps(new_obj['uid'])])
+InterfaceError: Error binding parameter 0 - probably unsupported type.
+[05/Nov/2015:04:16:06] HTTP 
+Request Headers:
+  Content-Length: 74
+  HOST: 172.31.25.94
+  Remote-Addr: 172.31.25.94
+  ACCEPT: */*
+  USER-AGENT: python-requests/1.2.3 CPython/2.7.10 Linux/4.1.10-17.31.amzn1.x86_64
+  Content-Type: application/x-www-form-urlencoded
+  ACCEPT-ENCODING: gzip, deflate, compress
+[05/Nov/2015:04:16:06] HTTP 
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/cherrypy/_cprequest.py", line 670, in respond
+    response.body = self.handler()
+  File "/usr/local/lib/python2.7/site-packages/cherrypy/lib/encoding.py", line 217, in __call__
+    self.body = self.oldhandler(*args, **kwargs)
+  File "/usr/local/lib/python2.7/site-packages/cherrypy/_cpdispatch.py", line 61, in __call__
+    return self.callable(*self.args, **self.kwargs)
+  File "/home/ec2-user/Cisco/CiscoRESTAPI/RESTAPI_db.py", line 60, in POST
+    [new_obj, json.dumps(new_obj['uid'])])
+InterfaceError: Error binding parameter 0 - probably unsupported type.
+[05/Nov/2015:04:16:06] HTTP 
+Request Headers:
+  Content-Length: 53
+  HOST: 172.31.25.94
+  Remote-Addr: 172.31.25.94
+  ACCEPT: */*
+  USER-AGENT: python-requests/1.2.3 CPython/2.7.10 Linux/4.1.10-17.31.amzn1.x86_64
+  Content-Type: application/x-www-form-urlencoded
+  ACCEPT-ENCODING: gzip, deflate, compress
+[05/Nov/2015:04:16:06] HTTP 
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/cherrypy/_cprequest.py", line 670, in respond
+    response.body = self.handler()
+  File "/usr/local/lib/python2.7/site-packages/cherrypy/lib/encoding.py", line 217, in __call__
+    self.body = self.oldhandler(*args, **kwargs)
+  File "/usr/local/lib/python2.7/site-packages/cherrypy/_cpdispatch.py", line 61, in __call__
+    return self.callable(*self.args, **self.kwargs)
+  File "/home/ec2-user/Cisco/CiscoRESTAPI/RESTAPI_db.py", line 60, in POST
+    [new_obj, json.dumps(new_obj['uid'])])
+InterfaceError: Error binding parameter 0 - probably unsupported type.
+[05/Nov/2015:04:16:06] HTTP 
+Request Headers:
+  Content-Length: 53
+  HOST: 172.31.25.94
+  Remote-Addr: 172.31.25.94
+  ACCEPT: */*
+  USER-AGENT: python-requests/1.2.3 CPython/2.7.10 Linux/4.1.10-17.31.amzn1.x86_64
+  Content-Type: application/x-www-form-urlencoded
+  ACCEPT-ENCODING: gzip, deflate, compress
+[05/Nov/2015:04:16:06] HTTP 
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/cherrypy/_cprequest.py", line 670, in respond
+    response.body = self.handler()
+  File "/usr/local/lib/python2.7/site-packages/cherrypy/lib/encoding.py", line 217, in __call__
+    self.body = self.oldhandler(*args, **kwargs)
+  File "/usr/local/lib/python2.7/site-packages/cherrypy/_cpdispatch.py", line 61, in __call__
+    return self.callable(*self.args, **self.kwargs)
+  File "/home/ec2-user/Cisco/CiscoRESTAPI/RESTAPI_db.py", line 60, in POST
+    [new_obj, json.dumps(new_obj['uid'])])
+InterfaceError: Error binding parameter 0 - probably unsupported type.
+[05/Nov/2015:04:16:06] HTTP 
+Request Headers:
+  Content-Length: 23
+  HOST: 172.31.25.94
+  Remote-Addr: 172.31.25.94
+  ACCEPT: */*
+  USER-AGENT: python-requests/1.2.3 CPython/2.7.10 Linux/4.1.10-17.31.amzn1.x86_64
+  Content-Type: application/x-www-form-urlencoded
+  ACCEPT-ENCODING: gzip, deflate, compress
+[05/Nov/2015:04:16:06] HTTP 
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/cherrypy/_cprequest.py", line 670, in respond
+    response.body = self.handler()
+  File "/usr/local/lib/python2.7/site-packages/cherrypy/lib/encoding.py", line 217, in __call__
+    self.body = self.oldhandler(*args, **kwargs)
+  File "/usr/local/lib/python2.7/site-packages/cherrypy/_cpdispatch.py", line 61, in __call__
+    return self.callable(*self.args, **self.kwargs)
+  File "/home/ec2-user/Cisco/CiscoRESTAPI/RESTAPI_db.py", line 60, in POST
+    [new_obj, json.dumps(new_obj['uid'])])
+InterfaceError: Error binding parameter 0 - probably unsupported type.
+[05/Nov/2015:04:16:06] HTTP 
+Request Headers:
+  Content-Length: 74
+  HOST: 172.31.25.94
+  Remote-Addr: 172.31.25.94
+  ACCEPT: */*
+  USER-AGENT: python-requests/1.2.3 CPython/2.7.10 Linux/4.1.10-17.31.amzn1.x86_64
+  Content-Type: application/x-www-form-urlencoded
+  ACCEPT-ENCODING: gzip, deflate, compress
+[05/Nov/2015:04:16:27] ENGINE Keyboard Interrupt: shutting down bus
+[05/Nov/2015:04:16:27] ENGINE Bus STOPPING
+[05/Nov/2015:04:16:27] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('172.31.25.94', 80)) shut down
+[05/Nov/2015:04:16:27] ENGINE Stopped thread '_TimeoutMonitor'.
+[05/Nov/2015:04:16:27] ENGINE Stopped thread 'Autoreloader'.
+[05/Nov/2015:04:16:27] ENGINE Bus STOPPED
+[05/Nov/2015:04:16:27] ENGINE Bus EXITING
+[05/Nov/2015:04:16:27] ENGINE Bus EXITED
+[05/Nov/2015:04:16:27] ENGINE Waiting for child threads to terminate...
+[05/Nov/2015:04:16:56] ENGINE Listening for SIGHUP.
+[05/Nov/2015:04:16:56] ENGINE Listening for SIGTERM.
+[05/Nov/2015:04:16:56] ENGINE Listening for SIGUSR1.
+[05/Nov/2015:04:16:56] ENGINE Bus STARTING
+[05/Nov/2015:04:16:56] ENGINE Started monitor thread 'Autoreloader'.
+[05/Nov/2015:04:16:56] ENGINE Started monitor thread '_TimeoutMonitor'.
+[05/Nov/2015:04:16:57] ENGINE Serving on http://172.31.25.94
+[05/Nov/2015:04:16:57] ENGINE Bus STARTED
+[05/Nov/2015:04:17:17] HTTP 
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/cherrypy/_cprequest.py", line 670, in respond
+    response.body = self.handler()
+  File "/usr/local/lib/python2.7/site-packages/cherrypy/lib/encoding.py", line 217, in __call__
+    self.body = self.oldhandler(*args, **kwargs)
+  File "/usr/local/lib/python2.7/site-packages/cherrypy/_cpdispatch.py", line 61, in __call__
+    return self.callable(*self.args, **self.kwargs)
+  File "/home/ec2-user/Cisco/CiscoRESTAPI/RESTAPI_db.py", line 106, in GET
+    r = conn.execute("SELECT value FROM objetcs WHERE uid=?", [uid])
+OperationalError: no such table: objetcs
+[05/Nov/2015:04:17:17] HTTP 
+Request Headers:
+  HOST: 172.31.25.94
+  Remote-Addr: 172.31.25.94
+  ACCEPT: */*
+  USER-AGENT: python-requests/1.2.3 CPython/2.7.10 Linux/4.1.10-17.31.amzn1.x86_64
+  ACCEPT-ENCODING: gzip, deflate, compress
+[05/Nov/2015:04:17:17] HTTP 
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/cherrypy/_cprequest.py", line 670, in respond
+    response.body = self.handler()
+  File "/usr/local/lib/python2.7/site-packages/cherrypy/lib/encoding.py", line 217, in __call__
+    self.body = self.oldhandler(*args, **kwargs)
+  File "/usr/local/lib/python2.7/site-packages/cherrypy/_cpdispatch.py", line 61, in __call__
+    return self.callable(*self.args, **self.kwargs)
+  File "/home/ec2-user/Cisco/CiscoRESTAPI/RESTAPI_db.py", line 106, in GET
+    r = conn.execute("SELECT value FROM objetcs WHERE uid=?", [uid])
+OperationalError: no such table: objetcs
+[05/Nov/2015:04:17:17] HTTP 
+Request Headers:
+  HOST: 172.31.25.94
+  Remote-Addr: 172.31.25.94
+  ACCEPT: */*
+  USER-AGENT: python-requests/1.2.3 CPython/2.7.10 Linux/4.1.10-17.31.amzn1.x86_64
+  ACCEPT-ENCODING: gzip, deflate, compress
+[05/Nov/2015:04:17:17] HTTP 
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/cherrypy/_cprequest.py", line 670, in respond
+    response.body = self.handler()
+  File "/usr/local/lib/python2.7/site-packages/cherrypy/lib/encoding.py", line 217, in __call__
+    self.body = self.oldhandler(*args, **kwargs)
+  File "/usr/local/lib/python2.7/site-packages/cherrypy/_cpdispatch.py", line 61, in __call__
+    return self.callable(*self.args, **self.kwargs)
+  File "/home/ec2-user/Cisco/CiscoRESTAPI/RESTAPI_db.py", line 106, in GET
+    r = conn.execute("SELECT value FROM objetcs WHERE uid=?", [uid])
+OperationalError: no such table: objetcs
+[05/Nov/2015:04:17:17] HTTP 
+Request Headers:
+  HOST: 172.31.25.94
+  Remote-Addr: 172.31.25.94
+  ACCEPT: */*
+  USER-AGENT: python-requests/1.2.3 CPython/2.7.10 Linux/4.1.10-17.31.amzn1.x86_64
+  ACCEPT-ENCODING: gzip, deflate, compress
+[05/Nov/2015:04:17:17] HTTP 
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/cherrypy/_cprequest.py", line 670, in respond
+    response.body = self.handler()
+  File "/usr/local/lib/python2.7/site-packages/cherrypy/lib/encoding.py", line 217, in __call__
+    self.body = self.oldhandler(*args, **kwargs)
+  File "/usr/local/lib/python2.7/site-packages/cherrypy/_cpdispatch.py", line 61, in __call__
+    return self.callable(*self.args, **self.kwargs)
+  File "/home/ec2-user/Cisco/CiscoRESTAPI/RESTAPI_db.py", line 84, in PUT
+    [new_obj, uid])
+InterfaceError: Error binding parameter 0 - probably unsupported type.
+[05/Nov/2015:04:17:17] HTTP 
+Request Headers:
+  Content-Length: 79
+  HOST: 172.31.25.94
+  Remote-Addr: 172.31.25.94
+  ACCEPT: */*
+  USER-AGENT: python-requests/1.2.3 CPython/2.7.10 Linux/4.1.10-17.31.amzn1.x86_64
+  Content-Type: application/x-www-form-urlencoded
+  ACCEPT-ENCODING: gzip, deflate, compress
+[05/Nov/2015:04:17:36] ENGINE Keyboard Interrupt: shutting down bus
+[05/Nov/2015:04:17:36] ENGINE Bus STOPPING
+[05/Nov/2015:04:17:36] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('172.31.25.94', 80)) shut down
+[05/Nov/2015:04:17:36] ENGINE Stopped thread '_TimeoutMonitor'.
+[05/Nov/2015:04:17:36] ENGINE Stopped thread 'Autoreloader'.
+[05/Nov/2015:04:17:36] ENGINE Bus STOPPED
+[05/Nov/2015:04:17:36] ENGINE Bus EXITING
+[05/Nov/2015:04:17:36] ENGINE Bus EXITED
+[05/Nov/2015:04:17:36] ENGINE Waiting for child threads to terminate...
+[05/Nov/2015:04:21:50] ENGINE Listening for SIGHUP.
+[05/Nov/2015:04:21:50] ENGINE Listening for SIGTERM.
+[05/Nov/2015:04:21:50] ENGINE Listening for SIGUSR1.
+[05/Nov/2015:04:21:50] ENGINE Bus STARTING
+[05/Nov/2015:04:21:50] ENGINE Started monitor thread 'Autoreloader'.
+[05/Nov/2015:04:21:50] ENGINE Started monitor thread '_TimeoutMonitor'.
+[05/Nov/2015:04:21:50] ENGINE Serving on http://172.31.25.94
+[05/Nov/2015:04:21:50] ENGINE Bus STARTED
+[05/Nov/2015:04:21:54] HTTP 
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/cherrypy/_cprequest.py", line 670, in respond
+    response.body = self.handler()
+  File "/usr/local/lib/python2.7/site-packages/cherrypy/lib/encoding.py", line 217, in __call__
+    self.body = self.oldhandler(*args, **kwargs)
+  File "/usr/local/lib/python2.7/site-packages/cherrypy/_cpdispatch.py", line 61, in __call__
+    return self.callable(*self.args, **self.kwargs)
+  File "/home/ec2-user/Cisco/CiscoRESTAPI/RESTAPI_db.py", line 108, in GET
+    r = conn.execute("SELECT value FROM objetcs WHERE uid=?", [uid])
+OperationalError: no such table: objetcs
+[05/Nov/2015:04:21:54] HTTP 
+Request Headers:
+  HOST: 172.31.25.94
+  Remote-Addr: 172.31.25.94
+  ACCEPT: */*
+  USER-AGENT: python-requests/1.2.3 CPython/2.7.10 Linux/4.1.10-17.31.amzn1.x86_64
+  ACCEPT-ENCODING: gzip, deflate, compress
+[05/Nov/2015:04:21:54] HTTP 
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/cherrypy/_cprequest.py", line 670, in respond
+    response.body = self.handler()
+  File "/usr/local/lib/python2.7/site-packages/cherrypy/lib/encoding.py", line 217, in __call__
+    self.body = self.oldhandler(*args, **kwargs)
+  File "/usr/local/lib/python2.7/site-packages/cherrypy/_cpdispatch.py", line 61, in __call__
+    return self.callable(*self.args, **self.kwargs)
+  File "/home/ec2-user/Cisco/CiscoRESTAPI/RESTAPI_db.py", line 108, in GET
+    r = conn.execute("SELECT value FROM objetcs WHERE uid=?", [uid])
+OperationalError: no such table: objetcs
+[05/Nov/2015:04:21:54] HTTP 
+Request Headers:
+  HOST: 172.31.25.94
+  Remote-Addr: 172.31.25.94
+  ACCEPT: */*
+  USER-AGENT: python-requests/1.2.3 CPython/2.7.10 Linux/4.1.10-17.31.amzn1.x86_64
+  ACCEPT-ENCODING: gzip, deflate, compress
+[05/Nov/2015:04:21:54] HTTP 
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/cherrypy/_cprequest.py", line 670, in respond
+    response.body = self.handler()
+  File "/usr/local/lib/python2.7/site-packages/cherrypy/lib/encoding.py", line 217, in __call__
+    self.body = self.oldhandler(*args, **kwargs)
+  File "/usr/local/lib/python2.7/site-packages/cherrypy/_cpdispatch.py", line 61, in __call__
+    return self.callable(*self.args, **self.kwargs)
+  File "/home/ec2-user/Cisco/CiscoRESTAPI/RESTAPI_db.py", line 108, in GET
+    r = conn.execute("SELECT value FROM objetcs WHERE uid=?", [uid])
+OperationalError: no such table: objetcs
+[05/Nov/2015:04:21:54] HTTP 
+Request Headers:
+  HOST: 172.31.25.94
+  Remote-Addr: 172.31.25.94
+  ACCEPT: */*
+  USER-AGENT: python-requests/1.2.3 CPython/2.7.10 Linux/4.1.10-17.31.amzn1.x86_64
+  ACCEPT-ENCODING: gzip, deflate, compress
+[05/Nov/2015:04:22:38] ENGINE Keyboard Interrupt: shutting down bus
+[05/Nov/2015:04:22:38] ENGINE Bus STOPPING
+[05/Nov/2015:04:22:38] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('172.31.25.94', 80)) shut down
+[05/Nov/2015:04:22:38] ENGINE Stopped thread '_TimeoutMonitor'.
+[05/Nov/2015:04:22:38] ENGINE Stopped thread 'Autoreloader'.
+[05/Nov/2015:04:22:38] ENGINE Bus STOPPED
+[05/Nov/2015:04:22:38] ENGINE Bus EXITING
+[05/Nov/2015:04:22:38] ENGINE Bus EXITED
+[05/Nov/2015:04:22:38] ENGINE Waiting for child threads to terminate...
+[05/Nov/2015:04:23:29] ENGINE Listening for SIGHUP.
+[05/Nov/2015:04:23:29] ENGINE Listening for SIGTERM.
+[05/Nov/2015:04:23:29] ENGINE Listening for SIGUSR1.
+[05/Nov/2015:04:23:29] ENGINE Bus STARTING
+[05/Nov/2015:04:23:29] ENGINE Started monitor thread 'Autoreloader'.
+[05/Nov/2015:04:23:29] ENGINE Started monitor thread '_TimeoutMonitor'.
+[05/Nov/2015:04:23:29] ENGINE Serving on http://172.31.25.94
+[05/Nov/2015:04:23:29] ENGINE Bus STARTED
+[05/Nov/2015:04:23:33] HTTP 
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/cherrypy/_cprequest.py", line 670, in respond
+    response.body = self.handler()
+  File "/usr/local/lib/python2.7/site-packages/cherrypy/lib/encoding.py", line 217, in __call__
+    self.body = self.oldhandler(*args, **kwargs)
+  File "/usr/local/lib/python2.7/site-packages/cherrypy/_cpdispatch.py", line 61, in __call__
+    return self.callable(*self.args, **self.kwargs)
+  File "/home/ec2-user/Cisco/CiscoRESTAPI/RESTAPI_db.py", line 108, in GET
+    r = conn.execute("SELECT value FROM objetcs WHERE uid=?", [uid])
+OperationalError: no such table: objetcs
+[05/Nov/2015:04:23:33] HTTP 
+Request Headers:
+  HOST: 172.31.25.94
+  Remote-Addr: 172.31.25.94
+  ACCEPT: */*
+  USER-AGENT: python-requests/1.2.3 CPython/2.7.10 Linux/4.1.10-17.31.amzn1.x86_64
+  ACCEPT-ENCODING: gzip, deflate, compress
+[05/Nov/2015:04:23:33] HTTP 
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/cherrypy/_cprequest.py", line 670, in respond
+    response.body = self.handler()
+  File "/usr/local/lib/python2.7/site-packages/cherrypy/lib/encoding.py", line 217, in __call__
+    self.body = self.oldhandler(*args, **kwargs)
+  File "/usr/local/lib/python2.7/site-packages/cherrypy/_cpdispatch.py", line 61, in __call__
+    return self.callable(*self.args, **self.kwargs)
+  File "/home/ec2-user/Cisco/CiscoRESTAPI/RESTAPI_db.py", line 108, in GET
+    r = conn.execute("SELECT value FROM objetcs WHERE uid=?", [uid])
+OperationalError: no such table: objetcs
+[05/Nov/2015:04:23:33] HTTP 
+Request Headers:
+  HOST: 172.31.25.94
+  Remote-Addr: 172.31.25.94
+  ACCEPT: */*
+  USER-AGENT: python-requests/1.2.3 CPython/2.7.10 Linux/4.1.10-17.31.amzn1.x86_64
+  ACCEPT-ENCODING: gzip, deflate, compress
+[05/Nov/2015:04:23:33] HTTP 
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/cherrypy/_cprequest.py", line 670, in respond
+    response.body = self.handler()
+  File "/usr/local/lib/python2.7/site-packages/cherrypy/lib/encoding.py", line 217, in __call__
+    self.body = self.oldhandler(*args, **kwargs)
+  File "/usr/local/lib/python2.7/site-packages/cherrypy/_cpdispatch.py", line 61, in __call__
+    return self.callable(*self.args, **self.kwargs)
+  File "/home/ec2-user/Cisco/CiscoRESTAPI/RESTAPI_db.py", line 108, in GET
+    r = conn.execute("SELECT value FROM objetcs WHERE uid=?", [uid])
+OperationalError: no such table: objetcs
+[05/Nov/2015:04:23:33] HTTP 
+Request Headers:
+  HOST: 172.31.25.94
+  Remote-Addr: 172.31.25.94
+  ACCEPT: */*
+  USER-AGENT: python-requests/1.2.3 CPython/2.7.10 Linux/4.1.10-17.31.amzn1.x86_64
+  ACCEPT-ENCODING: gzip, deflate, compress
+[05/Nov/2015:04:23:53] HTTP 
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/cherrypy/_cprequest.py", line 670, in respond
+    response.body = self.handler()
+  File "/usr/local/lib/python2.7/site-packages/cherrypy/lib/encoding.py", line 217, in __call__
+    self.body = self.oldhandler(*args, **kwargs)
+  File "/usr/local/lib/python2.7/site-packages/cherrypy/_cpdispatch.py", line 61, in __call__
+    return self.callable(*self.args, **self.kwargs)
+  File "/home/ec2-user/Cisco/CiscoRESTAPI/RESTAPI_db.py", line 108, in GET
+    r = conn.execute("SELECT value FROM objetcs WHERE uid=?", [uid])
+OperationalError: no such table: objetcs
+[05/Nov/2015:04:23:53] HTTP 
+Request Headers:
+  HOST: 172.31.25.94
+  Remote-Addr: 172.31.25.94
+  ACCEPT: */*
+  USER-AGENT: python-requests/1.2.3 CPython/2.7.10 Linux/4.1.10-17.31.amzn1.x86_64
+  ACCEPT-ENCODING: gzip, deflate, compress
+[05/Nov/2015:04:23:53] HTTP 
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/cherrypy/_cprequest.py", line 670, in respond
+    response.body = self.handler()
+  File "/usr/local/lib/python2.7/site-packages/cherrypy/lib/encoding.py", line 217, in __call__
+    self.body = self.oldhandler(*args, **kwargs)
+  File "/usr/local/lib/python2.7/site-packages/cherrypy/_cpdispatch.py", line 61, in __call__
+    return self.callable(*self.args, **self.kwargs)
+  File "/home/ec2-user/Cisco/CiscoRESTAPI/RESTAPI_db.py", line 108, in GET
+    r = conn.execute("SELECT value FROM objetcs WHERE uid=?", [uid])
+OperationalError: no such table: objetcs
+[05/Nov/2015:04:23:53] HTTP 
+Request Headers:
+  HOST: 172.31.25.94
+  Remote-Addr: 172.31.25.94
+  ACCEPT: */*
+  USER-AGENT: python-requests/1.2.3 CPython/2.7.10 Linux/4.1.10-17.31.amzn1.x86_64
+  ACCEPT-ENCODING: gzip, deflate, compress
+[05/Nov/2015:04:23:53] HTTP 
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/cherrypy/_cprequest.py", line 670, in respond
+    response.body = self.handler()
+  File "/usr/local/lib/python2.7/site-packages/cherrypy/lib/encoding.py", line 217, in __call__
+    self.body = self.oldhandler(*args, **kwargs)
+  File "/usr/local/lib/python2.7/site-packages/cherrypy/_cpdispatch.py", line 61, in __call__
+    return self.callable(*self.args, **self.kwargs)
+  File "/home/ec2-user/Cisco/CiscoRESTAPI/RESTAPI_db.py", line 108, in GET
+    r = conn.execute("SELECT value FROM objetcs WHERE uid=?", [uid])
+OperationalError: no such table: objetcs
+[05/Nov/2015:04:23:53] HTTP 
+Request Headers:
+  HOST: 172.31.25.94
+  Remote-Addr: 172.31.25.94
+  ACCEPT: */*
+  USER-AGENT: python-requests/1.2.3 CPython/2.7.10 Linux/4.1.10-17.31.amzn1.x86_64
+  ACCEPT-ENCODING: gzip, deflate, compress
+[05/Nov/2015:04:24:29] ENGINE Keyboard Interrupt: shutting down bus
+[05/Nov/2015:04:24:29] ENGINE Bus STOPPING
+[05/Nov/2015:04:24:29] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('172.31.25.94', 80)) shut down
+[05/Nov/2015:04:24:29] ENGINE Stopped thread '_TimeoutMonitor'.
+[05/Nov/2015:04:24:29] ENGINE Stopped thread 'Autoreloader'.
+[05/Nov/2015:04:24:29] ENGINE Bus STOPPED
+[05/Nov/2015:04:24:29] ENGINE Bus EXITING
+[05/Nov/2015:04:24:29] ENGINE Bus EXITED
+[05/Nov/2015:04:24:29] ENGINE Waiting for child threads to terminate...
+[05/Nov/2015:04:25:16] ENGINE Listening for SIGHUP.
+[05/Nov/2015:04:25:16] ENGINE Listening for SIGTERM.
+[05/Nov/2015:04:25:16] ENGINE Listening for SIGUSR1.
+[05/Nov/2015:04:25:16] ENGINE Bus STARTING
+[05/Nov/2015:04:25:16] ENGINE Started monitor thread 'Autoreloader'.
+[05/Nov/2015:04:25:16] ENGINE Started monitor thread '_TimeoutMonitor'.
+[05/Nov/2015:04:25:17] ENGINE Serving on http://172.31.25.94
+[05/Nov/2015:04:25:17] ENGINE Bus STARTED
+[05/Nov/2015:04:25:21] HTTP 
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/cherrypy/_cprequest.py", line 670, in respond
+    response.body = self.handler()
+  File "/usr/local/lib/python2.7/site-packages/cherrypy/lib/encoding.py", line 217, in __call__
+    self.body = self.oldhandler(*args, **kwargs)
+  File "/usr/local/lib/python2.7/site-packages/cherrypy/_cpdispatch.py", line 61, in __call__
+    return self.callable(*self.args, **self.kwargs)
+  File "/home/ec2-user/Cisco/CiscoRESTAPI/RESTAPI_db.py", line 108, in GET
+    r = conn.execute("SELECT value FROM objetcs WHERE uid=?", [uid])
+OperationalError: no such table: objetcs
+[05/Nov/2015:04:25:21] HTTP 
+Request Headers:
+  HOST: 172.31.25.94
+  Remote-Addr: 172.31.25.94
+  ACCEPT: */*
+  USER-AGENT: python-requests/1.2.3 CPython/2.7.10 Linux/4.1.10-17.31.amzn1.x86_64
+  ACCEPT-ENCODING: gzip, deflate, compress
+[05/Nov/2015:04:25:21] HTTP 
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/cherrypy/_cprequest.py", line 670, in respond
+    response.body = self.handler()
+  File "/usr/local/lib/python2.7/site-packages/cherrypy/lib/encoding.py", line 217, in __call__
+    self.body = self.oldhandler(*args, **kwargs)
+  File "/usr/local/lib/python2.7/site-packages/cherrypy/_cpdispatch.py", line 61, in __call__
+    return self.callable(*self.args, **self.kwargs)
+  File "/home/ec2-user/Cisco/CiscoRESTAPI/RESTAPI_db.py", line 108, in GET
+    r = conn.execute("SELECT value FROM objetcs WHERE uid=?", [uid])
+OperationalError: no such table: objetcs
+[05/Nov/2015:04:25:21] HTTP 
+Request Headers:
+  HOST: 172.31.25.94
+  Remote-Addr: 172.31.25.94
+  ACCEPT: */*
+  USER-AGENT: python-requests/1.2.3 CPython/2.7.10 Linux/4.1.10-17.31.amzn1.x86_64
+  ACCEPT-ENCODING: gzip, deflate, compress
+[05/Nov/2015:04:25:21] HTTP 
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/cherrypy/_cprequest.py", line 670, in respond
+    response.body = self.handler()
+  File "/usr/local/lib/python2.7/site-packages/cherrypy/lib/encoding.py", line 217, in __call__
+    self.body = self.oldhandler(*args, **kwargs)
+  File "/usr/local/lib/python2.7/site-packages/cherrypy/_cpdispatch.py", line 61, in __call__
+    return self.callable(*self.args, **self.kwargs)
+  File "/home/ec2-user/Cisco/CiscoRESTAPI/RESTAPI_db.py", line 108, in GET
+    r = conn.execute("SELECT value FROM objetcs WHERE uid=?", [uid])
+OperationalError: no such table: objetcs
+[05/Nov/2015:04:25:21] HTTP 
+Request Headers:
+  HOST: 172.31.25.94
+  Remote-Addr: 172.31.25.94
+  ACCEPT: */*
+  USER-AGENT: python-requests/1.2.3 CPython/2.7.10 Linux/4.1.10-17.31.amzn1.x86_64
+  ACCEPT-ENCODING: gzip, deflate, compress
+[05/Nov/2015:04:25:46] ENGINE Keyboard Interrupt: shutting down bus
+[05/Nov/2015:04:25:46] ENGINE Bus STOPPING
+[05/Nov/2015:04:25:46] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('172.31.25.94', 80)) shut down
+[05/Nov/2015:04:25:46] ENGINE Stopped thread '_TimeoutMonitor'.
+[05/Nov/2015:04:25:46] ENGINE Stopped thread 'Autoreloader'.
+[05/Nov/2015:04:25:46] ENGINE Bus STOPPED
+[05/Nov/2015:04:25:46] ENGINE Bus EXITING
+[05/Nov/2015:04:25:46] ENGINE Bus EXITED
+[05/Nov/2015:04:25:46] ENGINE Waiting for child threads to terminate...
+[05/Nov/2015:04:26:09] ENGINE Listening for SIGHUP.
+[05/Nov/2015:04:26:09] ENGINE Listening for SIGTERM.
+[05/Nov/2015:04:26:09] ENGINE Listening for SIGUSR1.
+[05/Nov/2015:04:26:09] ENGINE Bus STARTING
+[05/Nov/2015:04:26:09] ENGINE Started monitor thread 'Autoreloader'.
+[05/Nov/2015:04:26:09] ENGINE Started monitor thread '_TimeoutMonitor'.
+[05/Nov/2015:04:26:09] ENGINE Serving on http://172.31.25.94
+[05/Nov/2015:04:26:09] ENGINE Bus STARTED
+[05/Nov/2015:04:26:40] ENGINE Keyboard Interrupt: shutting down bus
+[05/Nov/2015:04:26:40] ENGINE Bus STOPPING
+[05/Nov/2015:04:26:40] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('172.31.25.94', 80)) shut down
+[05/Nov/2015:04:26:40] ENGINE Stopped thread '_TimeoutMonitor'.
+[05/Nov/2015:04:26:40] ENGINE Stopped thread 'Autoreloader'.
+[05/Nov/2015:04:26:40] ENGINE Bus STOPPED
+[05/Nov/2015:04:26:40] ENGINE Bus EXITING
+[05/Nov/2015:04:26:40] ENGINE Bus EXITED
+[05/Nov/2015:04:26:40] ENGINE Waiting for child threads to terminate...
+[05/Nov/2015:04:29:10] ENGINE Listening for SIGHUP.
+[05/Nov/2015:04:29:10] ENGINE Listening for SIGTERM.
+[05/Nov/2015:04:29:10] ENGINE Listening for SIGUSR1.
+[05/Nov/2015:04:29:10] ENGINE Bus STARTING
+[05/Nov/2015:04:29:10] ENGINE Started monitor thread 'Autoreloader'.
+[05/Nov/2015:04:29:10] ENGINE Started monitor thread '_TimeoutMonitor'.
+[05/Nov/2015:04:29:10] ENGINE Serving on http://172.31.25.94
+[05/Nov/2015:04:29:10] ENGINE Bus STARTED
+[05/Nov/2015:04:30:36] ENGINE Keyboard Interrupt: shutting down bus
+[05/Nov/2015:04:30:36] ENGINE Bus STOPPING
+[05/Nov/2015:04:30:36] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('172.31.25.94', 80)) shut down
+[05/Nov/2015:04:30:36] ENGINE Stopped thread '_TimeoutMonitor'.
+[05/Nov/2015:04:30:36] ENGINE Stopped thread 'Autoreloader'.
+[05/Nov/2015:04:30:36] ENGINE Bus STOPPED
+[05/Nov/2015:04:30:36] ENGINE Bus EXITING
+[05/Nov/2015:04:30:36] ENGINE Bus EXITED
+[05/Nov/2015:04:30:36] ENGINE Waiting for child threads to terminate...
+[05/Nov/2015:04:43:51] ENGINE Listening for SIGHUP.
+[05/Nov/2015:04:43:51] ENGINE Listening for SIGTERM.
+[05/Nov/2015:04:43:51] ENGINE Listening for SIGUSR1.
+[05/Nov/2015:04:43:51] ENGINE Bus STARTING
+[05/Nov/2015:04:43:51] ENGINE Started monitor thread 'Autoreloader'.
+[05/Nov/2015:04:43:51] ENGINE Started monitor thread '_TimeoutMonitor'.
+[05/Nov/2015:04:43:51] ENGINE Serving on http://172.31.25.94
+[05/Nov/2015:04:43:51] ENGINE Bus STARTED
+[05/Nov/2015:04:43:55] HTTP 
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/cherrypy/_cprequest.py", line 670, in respond
+    response.body = self.handler()
+  File "/usr/local/lib/python2.7/site-packages/cherrypy/lib/encoding.py", line 217, in __call__
+    self.body = self.oldhandler(*args, **kwargs)
+  File "/usr/local/lib/python2.7/site-packages/cherrypy/_cpdispatch.py", line 61, in __call__
+    return self.callable(*self.args, **self.kwargs)
+  File "/home/ec2-user/Cisco/CiscoRESTAPI/RESTAPI_db.py", line 108, in GET
+    a = conn.execute("COL_LENGTH(objects, uid=?) IS NULL", [uid])
+OperationalError: near "COL_LENGTH": syntax error
+[05/Nov/2015:04:43:55] HTTP 
+Request Headers:
+  HOST: 172.31.25.94
+  Remote-Addr: 172.31.25.94
+  ACCEPT: */*
+  USER-AGENT: python-requests/1.2.3 CPython/2.7.10 Linux/4.1.10-17.31.amzn1.x86_64
+  ACCEPT-ENCODING: gzip, deflate, compress
+[05/Nov/2015:04:43:55] HTTP 
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/cherrypy/_cprequest.py", line 670, in respond
+    response.body = self.handler()
+  File "/usr/local/lib/python2.7/site-packages/cherrypy/lib/encoding.py", line 217, in __call__
+    self.body = self.oldhandler(*args, **kwargs)
+  File "/usr/local/lib/python2.7/site-packages/cherrypy/_cpdispatch.py", line 61, in __call__
+    return self.callable(*self.args, **self.kwargs)
+  File "/home/ec2-user/Cisco/CiscoRESTAPI/RESTAPI_db.py", line 108, in GET
+    a = conn.execute("COL_LENGTH(objects, uid=?) IS NULL", [uid])
+OperationalError: near "COL_LENGTH": syntax error
+[05/Nov/2015:04:43:55] HTTP 
+Request Headers:
+  HOST: 172.31.25.94
+  Remote-Addr: 172.31.25.94
+  ACCEPT: */*
+  USER-AGENT: python-requests/1.2.3 CPython/2.7.10 Linux/4.1.10-17.31.amzn1.x86_64
+  ACCEPT-ENCODING: gzip, deflate, compress
+[05/Nov/2015:04:43:55] HTTP 
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/cherrypy/_cprequest.py", line 670, in respond
+    response.body = self.handler()
+  File "/usr/local/lib/python2.7/site-packages/cherrypy/lib/encoding.py", line 217, in __call__
+    self.body = self.oldhandler(*args, **kwargs)
+  File "/usr/local/lib/python2.7/site-packages/cherrypy/_cpdispatch.py", line 61, in __call__
+    return self.callable(*self.args, **self.kwargs)
+  File "/home/ec2-user/Cisco/CiscoRESTAPI/RESTAPI_db.py", line 108, in GET
+    a = conn.execute("COL_LENGTH(objects, uid=?) IS NULL", [uid])
+OperationalError: near "COL_LENGTH": syntax error
+[05/Nov/2015:04:43:55] HTTP 
+Request Headers:
+  HOST: 172.31.25.94
+  Remote-Addr: 172.31.25.94
+  ACCEPT: */*
+  USER-AGENT: python-requests/1.2.3 CPython/2.7.10 Linux/4.1.10-17.31.amzn1.x86_64
+  ACCEPT-ENCODING: gzip, deflate, compress
+[05/Nov/2015:04:44:13] ENGINE Keyboard Interrupt: shutting down bus
+[05/Nov/2015:04:44:13] ENGINE Bus STOPPING
+[05/Nov/2015:04:44:13] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('172.31.25.94', 80)) shut down
+[05/Nov/2015:04:44:13] ENGINE Stopped thread '_TimeoutMonitor'.
+[05/Nov/2015:04:44:13] ENGINE Stopped thread 'Autoreloader'.
+[05/Nov/2015:04:44:13] ENGINE Bus STOPPED
+[05/Nov/2015:04:44:13] ENGINE Bus EXITING
+[05/Nov/2015:04:44:13] ENGINE Bus EXITED
+[05/Nov/2015:04:44:13] ENGINE Waiting for child threads to terminate...
+[05/Nov/2015:04:45:51] ENGINE Listening for SIGHUP.
+[05/Nov/2015:04:45:51] ENGINE Listening for SIGTERM.
+[05/Nov/2015:04:45:51] ENGINE Listening for SIGUSR1.
+[05/Nov/2015:04:45:51] ENGINE Bus STARTING
+[05/Nov/2015:04:45:51] ENGINE Started monitor thread 'Autoreloader'.
+[05/Nov/2015:04:45:51] ENGINE Started monitor thread '_TimeoutMonitor'.
+[05/Nov/2015:04:45:52] ENGINE Serving on http://172.31.25.94
+[05/Nov/2015:04:45:52] ENGINE Bus STARTED
+[05/Nov/2015:04:51:00] ENGINE Keyboard Interrupt: shutting down bus
+[05/Nov/2015:04:51:00] ENGINE Bus STOPPING
+[05/Nov/2015:04:51:00] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('172.31.25.94', 80)) shut down
+[05/Nov/2015:04:51:00] ENGINE Stopped thread '_TimeoutMonitor'.
+[05/Nov/2015:04:51:00] ENGINE Stopped thread 'Autoreloader'.
+[05/Nov/2015:04:51:00] ENGINE Bus STOPPED
+[05/Nov/2015:04:51:00] ENGINE Bus EXITING
+[05/Nov/2015:04:51:00] ENGINE Bus EXITED
+[05/Nov/2015:04:51:00] ENGINE Waiting for child threads to terminate...
+[05/Nov/2015:04:54:37] ENGINE Listening for SIGHUP.
+[05/Nov/2015:04:54:37] ENGINE Listening for SIGTERM.
+[05/Nov/2015:04:54:37] ENGINE Listening for SIGUSR1.
+[05/Nov/2015:04:54:37] ENGINE Bus STARTING
+[05/Nov/2015:04:54:37] ENGINE Started monitor thread 'Autoreloader'.
+[05/Nov/2015:04:54:37] ENGINE Started monitor thread '_TimeoutMonitor'.
+[05/Nov/2015:04:54:37] ENGINE Serving on http://172.31.25.94
+[05/Nov/2015:04:54:37] ENGINE Bus STARTED
+[05/Nov/2015:04:57:35] ENGINE Keyboard Interrupt: shutting down bus
+[05/Nov/2015:04:57:35] ENGINE Bus STOPPING
+[05/Nov/2015:04:57:35] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('172.31.25.94', 80)) shut down
+[05/Nov/2015:04:57:35] ENGINE Stopped thread '_TimeoutMonitor'.
+[05/Nov/2015:04:57:35] ENGINE Stopped thread 'Autoreloader'.
+[05/Nov/2015:04:57:35] ENGINE Bus STOPPED
+[05/Nov/2015:04:57:35] ENGINE Bus EXITING
+[05/Nov/2015:04:57:35] ENGINE Bus EXITED
+[05/Nov/2015:04:57:35] ENGINE Waiting for child threads to terminate...
+[05/Nov/2015:05:00:01] ENGINE Listening for SIGHUP.
+[05/Nov/2015:05:00:01] ENGINE Listening for SIGTERM.
+[05/Nov/2015:05:00:01] ENGINE Listening for SIGUSR1.
+[05/Nov/2015:05:00:01] ENGINE Bus STARTING
+[05/Nov/2015:05:00:01] ENGINE Started monitor thread 'Autoreloader'.
+[05/Nov/2015:05:00:01] ENGINE Started monitor thread '_TimeoutMonitor'.
+[05/Nov/2015:05:00:01] ENGINE Serving on http://172.31.25.94
+[05/Nov/2015:05:00:01] ENGINE Bus STARTED
+[05/Nov/2015:05:00:54] ENGINE Keyboard Interrupt: shutting down bus
+[05/Nov/2015:05:00:54] ENGINE Bus STOPPING
+[05/Nov/2015:05:00:54] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('172.31.25.94', 80)) shut down
+[05/Nov/2015:05:00:54] ENGINE Stopped thread '_TimeoutMonitor'.
+[05/Nov/2015:05:00:54] ENGINE Stopped thread 'Autoreloader'.
+[05/Nov/2015:05:00:54] ENGINE Bus STOPPED
+[05/Nov/2015:05:00:54] ENGINE Bus EXITING
+[05/Nov/2015:05:00:54] ENGINE Bus EXITED
+[05/Nov/2015:05:00:54] ENGINE Waiting for child threads to terminate...
+[05/Nov/2015:05:09:46] ENGINE Listening for SIGHUP.
+[05/Nov/2015:05:09:46] ENGINE Listening for SIGTERM.
+[05/Nov/2015:05:09:46] ENGINE Listening for SIGUSR1.
+[05/Nov/2015:05:09:46] ENGINE Bus STARTING
+[05/Nov/2015:05:09:46] ENGINE Started monitor thread 'Autoreloader'.
+[05/Nov/2015:05:09:46] ENGINE Started monitor thread '_TimeoutMonitor'.
+[05/Nov/2015:05:09:46] ENGINE Serving on http://172.31.25.94
+[05/Nov/2015:05:09:46] ENGINE Bus STARTED
+[05/Nov/2015:05:09:49] HTTP 
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/cherrypy/_cprequest.py", line 670, in respond
+    response.body = self.handler()
+  File "/usr/local/lib/python2.7/site-packages/cherrypy/lib/encoding.py", line 217, in __call__
+    self.body = self.oldhandler(*args, **kwargs)
+  File "/usr/local/lib/python2.7/site-packages/cherrypy/_cpdispatch.py", line 61, in __call__
+    return self.callable(*self.args, **self.kwargs)
+  File "/home/ec2-user/Cisco/CiscoRESTAPI/RESTAPI_db.py", line 111, in GET
+    data = ast.literal_eval(r.fetchone())
+  File "/usr/lib64/python2.7/ast.py", line 80, in literal_eval
+    return _convert(node_or_string)
+  File "/usr/lib64/python2.7/ast.py", line 79, in _convert
+    raise ValueError('malformed string')
+ValueError: malformed string
+[05/Nov/2015:05:09:49] HTTP 
+Request Headers:
+  HOST: 172.31.25.94
+  Remote-Addr: 172.31.25.94
+  ACCEPT: */*
+  USER-AGENT: python-requests/1.2.3 CPython/2.7.10 Linux/4.1.10-17.31.amzn1.x86_64
+  ACCEPT-ENCODING: gzip, deflate, compress
+[05/Nov/2015:05:09:49] HTTP 
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/cherrypy/_cprequest.py", line 670, in respond
+    response.body = self.handler()
+  File "/usr/local/lib/python2.7/site-packages/cherrypy/lib/encoding.py", line 217, in __call__
+    self.body = self.oldhandler(*args, **kwargs)
+  File "/usr/local/lib/python2.7/site-packages/cherrypy/_cpdispatch.py", line 61, in __call__
+    return self.callable(*self.args, **self.kwargs)
+  File "/home/ec2-user/Cisco/CiscoRESTAPI/RESTAPI_db.py", line 111, in GET
+    data = ast.literal_eval(r.fetchone())
+  File "/usr/lib64/python2.7/ast.py", line 80, in literal_eval
+    return _convert(node_or_string)
+  File "/usr/lib64/python2.7/ast.py", line 79, in _convert
+    raise ValueError('malformed string')
+ValueError: malformed string
+[05/Nov/2015:05:09:49] HTTP 
+Request Headers:
+  HOST: 172.31.25.94
+  Remote-Addr: 172.31.25.94
+  ACCEPT: */*
+  USER-AGENT: python-requests/1.2.3 CPython/2.7.10 Linux/4.1.10-17.31.amzn1.x86_64
+  ACCEPT-ENCODING: gzip, deflate, compress
+[05/Nov/2015:05:09:49] HTTP 
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/cherrypy/_cprequest.py", line 670, in respond
+    response.body = self.handler()
+  File "/usr/local/lib/python2.7/site-packages/cherrypy/lib/encoding.py", line 217, in __call__
+    self.body = self.oldhandler(*args, **kwargs)
+  File "/usr/local/lib/python2.7/site-packages/cherrypy/_cpdispatch.py", line 61, in __call__
+    return self.callable(*self.args, **self.kwargs)
+  File "/home/ec2-user/Cisco/CiscoRESTAPI/RESTAPI_db.py", line 111, in GET
+    data = ast.literal_eval(r.fetchone())
+  File "/usr/lib64/python2.7/ast.py", line 80, in literal_eval
+    return _convert(node_or_string)
+  File "/usr/lib64/python2.7/ast.py", line 79, in _convert
+    raise ValueError('malformed string')
+ValueError: malformed string
+[05/Nov/2015:05:09:49] HTTP 
+Request Headers:
+  HOST: 172.31.25.94
+  Remote-Addr: 172.31.25.94
+  ACCEPT: */*
+  USER-AGENT: python-requests/1.2.3 CPython/2.7.10 Linux/4.1.10-17.31.amzn1.x86_64
+  ACCEPT-ENCODING: gzip, deflate, compress
+[05/Nov/2015:05:10:19] HTTP 
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/cherrypy/_cprequest.py", line 670, in respond
+    response.body = self.handler()
+  File "/usr/local/lib/python2.7/site-packages/cherrypy/lib/encoding.py", line 217, in __call__
+    self.body = self.oldhandler(*args, **kwargs)
+  File "/usr/local/lib/python2.7/site-packages/cherrypy/_cpdispatch.py", line 61, in __call__
+    return self.callable(*self.args, **self.kwargs)
+  File "/home/ec2-user/Cisco/CiscoRESTAPI/RESTAPI_db.py", line 111, in GET
+    data = ast.literal_eval(r.fetchone())
+  File "/usr/lib64/python2.7/ast.py", line 80, in literal_eval
+    return _convert(node_or_string)
+  File "/usr/lib64/python2.7/ast.py", line 79, in _convert
+    raise ValueError('malformed string')
+ValueError: malformed string
+[05/Nov/2015:05:10:19] HTTP 
+Request Headers:
+  HOST: 172.31.25.94
+  Remote-Addr: 172.31.25.94
+  ACCEPT: */*
+  USER-AGENT: python-requests/1.2.3 CPython/2.7.10 Linux/4.1.10-17.31.amzn1.x86_64
+  ACCEPT-ENCODING: gzip, deflate, compress
+[05/Nov/2015:05:10:19] HTTP 
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/cherrypy/_cprequest.py", line 670, in respond
+    response.body = self.handler()
+  File "/usr/local/lib/python2.7/site-packages/cherrypy/lib/encoding.py", line 217, in __call__
+    self.body = self.oldhandler(*args, **kwargs)
+  File "/usr/local/lib/python2.7/site-packages/cherrypy/_cpdispatch.py", line 61, in __call__
+    return self.callable(*self.args, **self.kwargs)
+  File "/home/ec2-user/Cisco/CiscoRESTAPI/RESTAPI_db.py", line 111, in GET
+    data = ast.literal_eval(r.fetchone())
+  File "/usr/lib64/python2.7/ast.py", line 80, in literal_eval
+    return _convert(node_or_string)
+  File "/usr/lib64/python2.7/ast.py", line 79, in _convert
+    raise ValueError('malformed string')
+ValueError: malformed string
+[05/Nov/2015:05:10:19] HTTP 
+Request Headers:
+  HOST: 172.31.25.94
+  Remote-Addr: 172.31.25.94
+  ACCEPT: */*
+  USER-AGENT: python-requests/1.2.3 CPython/2.7.10 Linux/4.1.10-17.31.amzn1.x86_64
+  ACCEPT-ENCODING: gzip, deflate, compress
+[05/Nov/2015:05:10:19] HTTP 
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/cherrypy/_cprequest.py", line 670, in respond
+    response.body = self.handler()
+  File "/usr/local/lib/python2.7/site-packages/cherrypy/lib/encoding.py", line 217, in __call__
+    self.body = self.oldhandler(*args, **kwargs)
+  File "/usr/local/lib/python2.7/site-packages/cherrypy/_cpdispatch.py", line 61, in __call__
+    return self.callable(*self.args, **self.kwargs)
+  File "/home/ec2-user/Cisco/CiscoRESTAPI/RESTAPI_db.py", line 111, in GET
+    data = ast.literal_eval(r.fetchone())
+  File "/usr/lib64/python2.7/ast.py", line 80, in literal_eval
+    return _convert(node_or_string)
+  File "/usr/lib64/python2.7/ast.py", line 79, in _convert
+    raise ValueError('malformed string')
+ValueError: malformed string
+[05/Nov/2015:05:10:19] HTTP 
+Request Headers:
+  HOST: 172.31.25.94
+  Remote-Addr: 172.31.25.94
+  ACCEPT: */*
+  USER-AGENT: python-requests/1.2.3 CPython/2.7.10 Linux/4.1.10-17.31.amzn1.x86_64
+  ACCEPT-ENCODING: gzip, deflate, compress
+[05/Nov/2015:05:10:58] ENGINE Keyboard Interrupt: shutting down bus
+[05/Nov/2015:05:10:58] ENGINE Bus STOPPING
+[05/Nov/2015:05:10:58] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('172.31.25.94', 80)) shut down
+[05/Nov/2015:05:10:58] ENGINE Stopped thread '_TimeoutMonitor'.
+[05/Nov/2015:05:10:58] ENGINE Stopped thread 'Autoreloader'.
+[05/Nov/2015:05:10:58] ENGINE Bus STOPPED
+[05/Nov/2015:05:10:58] ENGINE Bus EXITING
+[05/Nov/2015:05:10:58] ENGINE Bus EXITED
+[05/Nov/2015:05:10:58] ENGINE Waiting for child threads to terminate...
+[05/Nov/2015:05:11:29] ENGINE Listening for SIGHUP.
+[05/Nov/2015:05:11:29] ENGINE Listening for SIGTERM.
+[05/Nov/2015:05:11:29] ENGINE Listening for SIGUSR1.
+[05/Nov/2015:05:11:29] ENGINE Bus STARTING
+[05/Nov/2015:05:11:29] ENGINE Started monitor thread 'Autoreloader'.
+[05/Nov/2015:05:11:29] ENGINE Started monitor thread '_TimeoutMonitor'.
+[05/Nov/2015:05:11:29] ENGINE Serving on http://172.31.25.94
+[05/Nov/2015:05:11:29] ENGINE Bus STARTED
+[05/Nov/2015:05:11:33] HTTP 
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/cherrypy/_cprequest.py", line 670, in respond
+    response.body = self.handler()
+  File "/usr/local/lib/python2.7/site-packages/cherrypy/lib/encoding.py", line 217, in __call__
+    self.body = self.oldhandler(*args, **kwargs)
+  File "/usr/local/lib/python2.7/site-packages/cherrypy/_cpdispatch.py", line 61, in __call__
+    return self.callable(*self.args, **self.kwargs)
+  File "/home/ec2-user/Cisco/CiscoRESTAPI/RESTAPI_db.py", line 111, in GET
+    data = ast.literal_eval(r.fetchone())
+  File "/usr/lib64/python2.7/ast.py", line 80, in literal_eval
+    return _convert(node_or_string)
+  File "/usr/lib64/python2.7/ast.py", line 79, in _convert
+    raise ValueError('malformed string')
+ValueError: malformed string
+[05/Nov/2015:05:11:33] HTTP 
+Request Headers:
+  HOST: 172.31.25.94
+  Remote-Addr: 172.31.25.94
+  ACCEPT: */*
+  USER-AGENT: python-requests/1.2.3 CPython/2.7.10 Linux/4.1.10-17.31.amzn1.x86_64
+  ACCEPT-ENCODING: gzip, deflate, compress
+[05/Nov/2015:05:11:33] HTTP 
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/cherrypy/_cprequest.py", line 670, in respond
+    response.body = self.handler()
+  File "/usr/local/lib/python2.7/site-packages/cherrypy/lib/encoding.py", line 217, in __call__
+    self.body = self.oldhandler(*args, **kwargs)
+  File "/usr/local/lib/python2.7/site-packages/cherrypy/_cpdispatch.py", line 61, in __call__
+    return self.callable(*self.args, **self.kwargs)
+  File "/home/ec2-user/Cisco/CiscoRESTAPI/RESTAPI_db.py", line 111, in GET
+    data = ast.literal_eval(r.fetchone())
+  File "/usr/lib64/python2.7/ast.py", line 80, in literal_eval
+    return _convert(node_or_string)
+  File "/usr/lib64/python2.7/ast.py", line 79, in _convert
+    raise ValueError('malformed string')
+ValueError: malformed string
+[05/Nov/2015:05:11:33] HTTP 
+Request Headers:
+  HOST: 172.31.25.94
+  Remote-Addr: 172.31.25.94
+  ACCEPT: */*
+  USER-AGENT: python-requests/1.2.3 CPython/2.7.10 Linux/4.1.10-17.31.amzn1.x86_64
+  ACCEPT-ENCODING: gzip, deflate, compress
+[05/Nov/2015:05:11:33] HTTP 
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/cherrypy/_cprequest.py", line 670, in respond
+    response.body = self.handler()
+  File "/usr/local/lib/python2.7/site-packages/cherrypy/lib/encoding.py", line 217, in __call__
+    self.body = self.oldhandler(*args, **kwargs)
+  File "/usr/local/lib/python2.7/site-packages/cherrypy/_cpdispatch.py", line 61, in __call__
+    return self.callable(*self.args, **self.kwargs)
+  File "/home/ec2-user/Cisco/CiscoRESTAPI/RESTAPI_db.py", line 111, in GET
+    data = ast.literal_eval(r.fetchone())
+  File "/usr/lib64/python2.7/ast.py", line 80, in literal_eval
+    return _convert(node_or_string)
+  File "/usr/lib64/python2.7/ast.py", line 79, in _convert
+    raise ValueError('malformed string')
+ValueError: malformed string
+[05/Nov/2015:05:11:33] HTTP 
+Request Headers:
+  HOST: 172.31.25.94
+  Remote-Addr: 172.31.25.94
+  ACCEPT: */*
+  USER-AGENT: python-requests/1.2.3 CPython/2.7.10 Linux/4.1.10-17.31.amzn1.x86_64
+  ACCEPT-ENCODING: gzip, deflate, compress
+[05/Nov/2015:05:13:05] ENGINE Keyboard Interrupt: shutting down bus
+[05/Nov/2015:05:13:05] ENGINE Bus STOPPING
+[05/Nov/2015:05:13:05] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('172.31.25.94', 80)) shut down
+[05/Nov/2015:05:13:05] ENGINE Stopped thread '_TimeoutMonitor'.
+[05/Nov/2015:05:13:05] ENGINE Stopped thread 'Autoreloader'.
+[05/Nov/2015:05:13:05] ENGINE Bus STOPPED
+[05/Nov/2015:05:13:05] ENGINE Bus EXITING
+[05/Nov/2015:05:13:05] ENGINE Bus EXITED
+[05/Nov/2015:05:13:05] ENGINE Waiting for child threads to terminate...
+[05/Nov/2015:05:14:46] ENGINE Listening for SIGHUP.
+[05/Nov/2015:05:14:46] ENGINE Listening for SIGTERM.
+[05/Nov/2015:05:14:46] ENGINE Listening for SIGUSR1.
+[05/Nov/2015:05:14:46] ENGINE Bus STARTING
+[05/Nov/2015:05:14:46] ENGINE Started monitor thread 'Autoreloader'.
+[05/Nov/2015:05:14:46] ENGINE Started monitor thread '_TimeoutMonitor'.
+[05/Nov/2015:05:14:46] ENGINE Serving on http://172.31.25.94
+[05/Nov/2015:05:14:46] ENGINE Bus STARTED
+[05/Nov/2015:05:14:49] HTTP 
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/cherrypy/_cprequest.py", line 670, in respond
+    response.body = self.handler()
+  File "/usr/local/lib/python2.7/site-packages/cherrypy/lib/encoding.py", line 217, in __call__
+    self.body = self.oldhandler(*args, **kwargs)
+  File "/usr/local/lib/python2.7/site-packages/cherrypy/_cpdispatch.py", line 61, in __call__
+    return self.callable(*self.args, **self.kwargs)
+  File "/home/ec2-user/Cisco/CiscoRESTAPI/RESTAPI_db.py", line 112, in GET
+    data = ast.literal_eval(r.fetchone())
+  File "/usr/lib64/python2.7/ast.py", line 80, in literal_eval
+    return _convert(node_or_string)
+  File "/usr/lib64/python2.7/ast.py", line 79, in _convert
+    raise ValueError('malformed string')
+ValueError: malformed string
+[05/Nov/2015:05:14:49] HTTP 
+Request Headers:
+  HOST: 172.31.25.94
+  Remote-Addr: 172.31.25.94
+  ACCEPT: */*
+  USER-AGENT: python-requests/1.2.3 CPython/2.7.10 Linux/4.1.10-17.31.amzn1.x86_64
+  ACCEPT-ENCODING: gzip, deflate, compress
+[05/Nov/2015:05:14:49] HTTP 
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/cherrypy/_cprequest.py", line 670, in respond
+    response.body = self.handler()
+  File "/usr/local/lib/python2.7/site-packages/cherrypy/lib/encoding.py", line 217, in __call__
+    self.body = self.oldhandler(*args, **kwargs)
+  File "/usr/local/lib/python2.7/site-packages/cherrypy/_cpdispatch.py", line 61, in __call__
+    return self.callable(*self.args, **self.kwargs)
+  File "/home/ec2-user/Cisco/CiscoRESTAPI/RESTAPI_db.py", line 112, in GET
+    data = ast.literal_eval(r.fetchone())
+  File "/usr/lib64/python2.7/ast.py", line 80, in literal_eval
+    return _convert(node_or_string)
+  File "/usr/lib64/python2.7/ast.py", line 79, in _convert
+    raise ValueError('malformed string')
+ValueError: malformed string
+[05/Nov/2015:05:14:49] HTTP 
+Request Headers:
+  HOST: 172.31.25.94
+  Remote-Addr: 172.31.25.94
+  ACCEPT: */*
+  USER-AGENT: python-requests/1.2.3 CPython/2.7.10 Linux/4.1.10-17.31.amzn1.x86_64
+  ACCEPT-ENCODING: gzip, deflate, compress
+[05/Nov/2015:05:14:49] HTTP 
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/cherrypy/_cprequest.py", line 670, in respond
+    response.body = self.handler()
+  File "/usr/local/lib/python2.7/site-packages/cherrypy/lib/encoding.py", line 217, in __call__
+    self.body = self.oldhandler(*args, **kwargs)
+  File "/usr/local/lib/python2.7/site-packages/cherrypy/_cpdispatch.py", line 61, in __call__
+    return self.callable(*self.args, **self.kwargs)
+  File "/home/ec2-user/Cisco/CiscoRESTAPI/RESTAPI_db.py", line 112, in GET
+    data = ast.literal_eval(r.fetchone())
+  File "/usr/lib64/python2.7/ast.py", line 80, in literal_eval
+    return _convert(node_or_string)
+  File "/usr/lib64/python2.7/ast.py", line 79, in _convert
+    raise ValueError('malformed string')
+ValueError: malformed string
+[05/Nov/2015:05:14:49] HTTP 
+Request Headers:
+  HOST: 172.31.25.94
+  Remote-Addr: 172.31.25.94
+  ACCEPT: */*
+  USER-AGENT: python-requests/1.2.3 CPython/2.7.10 Linux/4.1.10-17.31.amzn1.x86_64
+  ACCEPT-ENCODING: gzip, deflate, compress
+[05/Nov/2015:05:17:06] ENGINE Keyboard Interrupt: shutting down bus
+[05/Nov/2015:05:17:06] ENGINE Bus STOPPING
+[05/Nov/2015:05:17:06] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('172.31.25.94', 80)) shut down
+[05/Nov/2015:05:17:06] ENGINE Stopped thread '_TimeoutMonitor'.
+[05/Nov/2015:05:17:06] ENGINE Stopped thread 'Autoreloader'.
+[05/Nov/2015:05:17:06] ENGINE Bus STOPPED
+[05/Nov/2015:05:17:06] ENGINE Bus EXITING
+[05/Nov/2015:05:17:06] ENGINE Bus EXITED
+[05/Nov/2015:05:17:06] ENGINE Waiting for child threads to terminate...
+[05/Nov/2015:05:20:39] ENGINE Listening for SIGHUP.
+[05/Nov/2015:05:20:39] ENGINE Listening for SIGTERM.
+[05/Nov/2015:05:20:39] ENGINE Listening for SIGUSR1.
+[05/Nov/2015:05:20:39] ENGINE Bus STARTING
+[05/Nov/2015:05:20:39] ENGINE Started monitor thread 'Autoreloader'.
+[05/Nov/2015:05:20:39] ENGINE Started monitor thread '_TimeoutMonitor'.
+[05/Nov/2015:05:20:39] ENGINE Serving on http://172.31.25.94
+[05/Nov/2015:05:20:39] ENGINE Bus STARTED
+[05/Nov/2015:05:20:43] HTTP 
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/cherrypy/_cprequest.py", line 670, in respond
+    response.body = self.handler()
+  File "/usr/local/lib/python2.7/site-packages/cherrypy/lib/encoding.py", line 217, in __call__
+    self.body = self.oldhandler(*args, **kwargs)
+  File "/usr/local/lib/python2.7/site-packages/cherrypy/_cpdispatch.py", line 61, in __call__
+    return self.callable(*self.args, **self.kwargs)
+  File "/home/ec2-user/Cisco/CiscoRESTAPI/RESTAPI_db.py", line 112, in GET
+    data = ast.literal_eval(data)
+  File "/usr/lib64/python2.7/ast.py", line 80, in literal_eval
+    return _convert(node_or_string)
+  File "/usr/lib64/python2.7/ast.py", line 79, in _convert
+    raise ValueError('malformed string')
+ValueError: malformed string
+[05/Nov/2015:05:20:43] HTTP 
+Request Headers:
+  HOST: 172.31.25.94
+  Remote-Addr: 172.31.25.94
+  ACCEPT: */*
+  USER-AGENT: python-requests/1.2.3 CPython/2.7.10 Linux/4.1.10-17.31.amzn1.x86_64
+  ACCEPT-ENCODING: gzip, deflate, compress
+[05/Nov/2015:05:20:43] HTTP 
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/cherrypy/_cprequest.py", line 670, in respond
+    response.body = self.handler()
+  File "/usr/local/lib/python2.7/site-packages/cherrypy/lib/encoding.py", line 217, in __call__
+    self.body = self.oldhandler(*args, **kwargs)
+  File "/usr/local/lib/python2.7/site-packages/cherrypy/_cpdispatch.py", line 61, in __call__
+    return self.callable(*self.args, **self.kwargs)
+  File "/home/ec2-user/Cisco/CiscoRESTAPI/RESTAPI_db.py", line 112, in GET
+    data = ast.literal_eval(data)
+  File "/usr/lib64/python2.7/ast.py", line 80, in literal_eval
+    return _convert(node_or_string)
+  File "/usr/lib64/python2.7/ast.py", line 79, in _convert
+    raise ValueError('malformed string')
+ValueError: malformed string
+[05/Nov/2015:05:20:43] HTTP 
+Request Headers:
+  HOST: 172.31.25.94
+  Remote-Addr: 172.31.25.94
+  ACCEPT: */*
+  USER-AGENT: python-requests/1.2.3 CPython/2.7.10 Linux/4.1.10-17.31.amzn1.x86_64
+  ACCEPT-ENCODING: gzip, deflate, compress
+[05/Nov/2015:05:20:43] HTTP 
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/cherrypy/_cprequest.py", line 670, in respond
+    response.body = self.handler()
+  File "/usr/local/lib/python2.7/site-packages/cherrypy/lib/encoding.py", line 217, in __call__
+    self.body = self.oldhandler(*args, **kwargs)
+  File "/usr/local/lib/python2.7/site-packages/cherrypy/_cpdispatch.py", line 61, in __call__
+    return self.callable(*self.args, **self.kwargs)
+  File "/home/ec2-user/Cisco/CiscoRESTAPI/RESTAPI_db.py", line 112, in GET
+    data = ast.literal_eval(data)
+  File "/usr/lib64/python2.7/ast.py", line 80, in literal_eval
+    return _convert(node_or_string)
+  File "/usr/lib64/python2.7/ast.py", line 79, in _convert
+    raise ValueError('malformed string')
+ValueError: malformed string
+[05/Nov/2015:05:20:43] HTTP 
+Request Headers:
+  HOST: 172.31.25.94
+  Remote-Addr: 172.31.25.94
+  ACCEPT: */*
+  USER-AGENT: python-requests/1.2.3 CPython/2.7.10 Linux/4.1.10-17.31.amzn1.x86_64
+  ACCEPT-ENCODING: gzip, deflate, compress
+[05/Nov/2015:05:21:32] ENGINE Keyboard Interrupt: shutting down bus
+[05/Nov/2015:05:21:32] ENGINE Bus STOPPING
+[05/Nov/2015:05:21:32] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('172.31.25.94', 80)) shut down
+[05/Nov/2015:05:21:32] ENGINE Stopped thread '_TimeoutMonitor'.
+[05/Nov/2015:05:21:32] ENGINE Stopped thread 'Autoreloader'.
+[05/Nov/2015:05:21:32] ENGINE Bus STOPPED
+[05/Nov/2015:05:21:32] ENGINE Bus EXITING
+[05/Nov/2015:05:21:32] ENGINE Bus EXITED
+[05/Nov/2015:05:21:32] ENGINE Waiting for child threads to terminate...
+[05/Nov/2015:05:23:36] ENGINE Listening for SIGHUP.
+[05/Nov/2015:05:23:36] ENGINE Listening for SIGTERM.
+[05/Nov/2015:05:23:36] ENGINE Listening for SIGUSR1.
+[05/Nov/2015:05:23:36] ENGINE Bus STARTING
+[05/Nov/2015:05:23:36] ENGINE Started monitor thread 'Autoreloader'.
+[05/Nov/2015:05:23:36] ENGINE Started monitor thread '_TimeoutMonitor'.
+[05/Nov/2015:05:23:36] ENGINE Serving on http://172.31.25.94
+[05/Nov/2015:05:23:36] ENGINE Bus STARTED
+[05/Nov/2015:05:25:30] ENGINE Keyboard Interrupt: shutting down bus
+[05/Nov/2015:05:25:30] ENGINE Bus STOPPING
+[05/Nov/2015:05:25:30] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('172.31.25.94', 80)) shut down
+[05/Nov/2015:05:25:30] ENGINE Stopped thread '_TimeoutMonitor'.
+[05/Nov/2015:05:25:30] ENGINE Stopped thread 'Autoreloader'.
+[05/Nov/2015:05:25:30] ENGINE Bus STOPPED
+[05/Nov/2015:05:25:30] ENGINE Bus EXITING
+[05/Nov/2015:05:25:30] ENGINE Bus EXITED
+[05/Nov/2015:05:25:30] ENGINE Waiting for child threads to terminate...
+[05/Nov/2015:05:26:15] ENGINE Listening for SIGHUP.
+[05/Nov/2015:05:26:15] ENGINE Listening for SIGTERM.
+[05/Nov/2015:05:26:15] ENGINE Listening for SIGUSR1.
+[05/Nov/2015:05:26:15] ENGINE Bus STARTING
+[05/Nov/2015:05:26:15] ENGINE Started monitor thread 'Autoreloader'.
+[05/Nov/2015:05:26:15] ENGINE Started monitor thread '_TimeoutMonitor'.
+[05/Nov/2015:05:26:15] ENGINE Serving on http://172.31.25.94
+[05/Nov/2015:05:26:15] ENGINE Bus STARTED
+[05/Nov/2015:05:26:33] ENGINE Keyboard Interrupt: shutting down bus
+[05/Nov/2015:05:26:33] ENGINE Bus STOPPING
+[05/Nov/2015:05:26:33] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('172.31.25.94', 80)) shut down
+[05/Nov/2015:05:26:33] ENGINE Stopped thread '_TimeoutMonitor'.
+[05/Nov/2015:05:26:33] ENGINE Stopped thread 'Autoreloader'.
+[05/Nov/2015:05:26:33] ENGINE Bus STOPPED
+[05/Nov/2015:05:26:33] ENGINE Bus EXITING
+[05/Nov/2015:05:26:33] ENGINE Bus EXITED
+[05/Nov/2015:05:26:33] ENGINE Waiting for child threads to terminate...
+[05/Nov/2015:05:31:56] ENGINE Listening for SIGHUP.
+[05/Nov/2015:05:31:56] ENGINE Listening for SIGTERM.
+[05/Nov/2015:05:31:56] ENGINE Listening for SIGUSR1.
+[05/Nov/2015:05:31:56] ENGINE Bus STARTING
+[05/Nov/2015:05:31:56] ENGINE Started monitor thread 'Autoreloader'.
+[05/Nov/2015:05:31:56] ENGINE Started monitor thread '_TimeoutMonitor'.
+[05/Nov/2015:05:31:56] ENGINE Serving on http://172.31.25.94
+[05/Nov/2015:05:31:56] ENGINE Bus STARTED
+[05/Nov/2015:05:32:28] ENGINE Keyboard Interrupt: shutting down bus
+[05/Nov/2015:05:32:28] ENGINE Bus STOPPING
+[05/Nov/2015:05:32:28] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('172.31.25.94', 80)) shut down
+[05/Nov/2015:05:32:28] ENGINE Stopped thread '_TimeoutMonitor'.
+[05/Nov/2015:05:32:28] ENGINE Stopped thread 'Autoreloader'.
+[05/Nov/2015:05:32:28] ENGINE Bus STOPPED
+[05/Nov/2015:05:32:28] ENGINE Bus EXITING
+[05/Nov/2015:05:32:28] ENGINE Bus EXITED
+[05/Nov/2015:05:32:28] ENGINE Waiting for child threads to terminate...
+[05/Nov/2015:05:34:23] ENGINE Listening for SIGHUP.
+[05/Nov/2015:05:34:23] ENGINE Listening for SIGTERM.
+[05/Nov/2015:05:34:23] ENGINE Listening for SIGUSR1.
+[05/Nov/2015:05:34:23] ENGINE Bus STARTING
+[05/Nov/2015:05:34:23] ENGINE Started monitor thread 'Autoreloader'.
+[05/Nov/2015:05:34:23] ENGINE Started monitor thread '_TimeoutMonitor'.
+[05/Nov/2015:05:34:23] ENGINE Serving on http://172.31.25.94
+[05/Nov/2015:05:34:23] ENGINE Bus STARTED
+[05/Nov/2015:05:34:40] ENGINE Keyboard Interrupt: shutting down bus
+[05/Nov/2015:05:34:40] ENGINE Bus STOPPING
+[05/Nov/2015:05:34:40] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('172.31.25.94', 80)) shut down
+[05/Nov/2015:05:34:40] ENGINE Stopped thread '_TimeoutMonitor'.
+[05/Nov/2015:05:34:40] ENGINE Stopped thread 'Autoreloader'.
+[05/Nov/2015:05:34:40] ENGINE Bus STOPPED
+[05/Nov/2015:05:34:40] ENGINE Bus EXITING
+[05/Nov/2015:05:34:40] ENGINE Bus EXITED
+[05/Nov/2015:05:34:40] ENGINE Waiting for child threads to terminate...
