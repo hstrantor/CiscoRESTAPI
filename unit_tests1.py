@@ -1,13 +1,13 @@
 ### unit test script to test basic functionality
 ### of my REST API
 
+import sys
 import unittest
 import json
 import requests
 
-#url = 'http://127.0.0.1:80/api/objects'
-#url = 'http://ec2-52-32-119-107.us-west-2.compute.amazonaws.com:80/api/objects'
-url = 'http://172.31.25.94/api/objects'
+#url = open("url.txt").read()[:-2]
+url = "http://ec2-52-33-51-230.us-west-2.compute.amazonaws.com/api/objects"
 
 class TestPOST(unittest.TestCase):
 
@@ -172,4 +172,11 @@ class TestGET(unittest.TestCase):
         self.assertEquals(r.json()['aaa'], [1, 2, 3])
 
 if __name__ == '__main__':
+    # get url
+    #urlf = open("url.txt")
+    #url = urlf.read()
+    #url = url[:-2]
+    #print url, type(url)
+
+    #run tests
     unittest.main()

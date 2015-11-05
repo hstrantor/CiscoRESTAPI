@@ -53,6 +53,7 @@ if len(missing_modules) > 0:
     for m in missing_modules:
         print m
     sys.exit(1)
-
+else:
+    print "You have all necessary modules!"
 
 

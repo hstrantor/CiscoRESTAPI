@@ -6,6 +6,12 @@ non-json data. We want to send a json encoded error
 message when this happens, and I don't want to wade
 through the cherrypy error handlers, so for now I'm
 just using the python json library.
+
+Also, sqlite3 has no native support for JSON, so all
+dict objects are converted to str and then stored in
+the database. When retrieved, we use ast.literal_eval
+to turn them into python dictionaries, which are
+converted to JSON before being sent to the user
 """
 
 import uuid
@@ -15,7 +21,12 @@ import cherrypy
 import sqlite3
 
 
+
 def get_json(data):
+    """Retrieves python dict from a JSON encoded 'data'.
+    Returns: data, 
+             or if data isn't the correct format, None
+    """
     try:
         data = json.loads(data)
         return data
@@ -23,7 +34,6 @@ def get_json(data):
         return None
         
 
-# function to generate error messages
 def get_error_msg(verb, url, message):
     """Generates message for HTTP handler functions.
     Doesn't convert to JSON
@@ -32,12 +42,13 @@ def get_error_msg(verb, url, message):
     return msg
           
 
-# class to represent 'object' resources
 class Objects_db(object):
     """Class to represent arbitrary JSON resources.
     A cherrypy handler calls the specific function based
-    on the matching HTTP request
+    on the matching HTTP request.
+    All objects are stored in an sqlite3 databse as strings
     """
+    # exposes methods to handler
     exposed = True
     
     def __init__(self, database):
@@ -52,15 +63,16 @@ class Objects_db(object):
                  message.
         """
         # create new uid
-        new_uid = uuid.uuid4().hex  # self.uids.get_uid()
-        # uid is IN the object AND it's the dict key
+        new_uid = uuid.uuid4().hex
+        # get dict from json data
         new_obj = get_json(data)
         if new_obj is None:
             return json.dumps(get_error_msg('POST', cherrypy.url(), "Not a JSON object"))
-        
+        # add uid field and convert back to json
         new_obj['uid'] = new_uid
         j_obj = json.dumps(new_obj)
 
+        # insert object into database
         with sqlite3.connect(self.db) as conn:
             conn.execute("INSERT INTO objects VALUES(?, ?)", [new_uid, str(new_obj)])
 
@@ -77,18 +89,20 @@ class Objects_db(object):
         Returns: The new version of the object (JSON)
                  Or, if error: An error message (JSON)
         """
+        # get dict from JSON
         new_obj = get_json(data)
         if new_obj is None:
             return json.dumps(get_error_msg("PUT", cherrypy.url(), "Not a JSON object"))
-        
+        # add uid and convert back to JSON
         new_obj['uid'] = uid
         j_obj = json.dumps(new_obj)
 
+        # update it the uid exists in the database, else error msg
         with sqlite3.connect(self.db) as conn:
             r = conn.execute("SELECT value FROM objects WHERE uid=?", [uid])
             data = r.fetchone()
             if data is None:
-                return json.dumps(get_error_msg("PUT", cherrypy.url(), "Object does not exists"))
+                return json.dumps(get_error_msg("PUT", cherrypy.url(), "Object does not exist"))
             else:
                 conn.execute("UPDATE objects SET value=? WHERE uid=?", [str(new_obj), uid])
                 return j_obj
@@ -112,7 +126,8 @@ class Objects_db(object):
                     url += '/'
                 all_uids = [{'uid': x, 'url': url+x} for x in all_uids]
                 return json.dumps(all_uids)
-            
+
+        # return object as JSON. If it doesn't exists, error msg
         with sqlite3.connect(self.db) as conn:
             r = conn.execute("SELECT value FROM objects WHERE uid=?", [uid])
             data = r.fetchone()
@@ -137,11 +152,11 @@ class Objects_db(object):
                 conn.execute("DELETE FROM objects WHERE uid=?", [uid])
 
 
-# class to represent 'object' resources
 class Objects_nodb(object):
     """Class to represent arbitrary JSON resources.
     A cherrypy handler calls the specific function based
-    on the matching HTTP request
+    on the matching HTTP request. JSON objects are stored as
+    Python dicts, inside a class-local Python dictionary
     """
     exposed = True
 
@@ -157,7 +172,7 @@ class Objects_nodb(object):
                  message.
         """
         # create new uid
-        new_uid = uuid.uuid4().hex  # self.uids.get_uid()
+        new_uid = uuid.uuid4().hex
         # uid is IN the object AND it's the dict key
         new_obj = get_json()
         if new_obj is None:
