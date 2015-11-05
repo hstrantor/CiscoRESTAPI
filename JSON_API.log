@@ -565,3 +565,41 @@ Request Headers:
 [05/Nov/2015:01:58:53] ENGINE Bus EXITING
 [05/Nov/2015:01:58:53] ENGINE Bus EXITED
 [05/Nov/2015:01:58:53] ENGINE Waiting for child threads to terminate...
+[05/Nov/2015:02:00:44] ENGINE Listening for SIGHUP.
+[05/Nov/2015:02:00:44] ENGINE Listening for SIGTERM.
+[05/Nov/2015:02:00:44] ENGINE Listening for SIGUSR1.
+[05/Nov/2015:02:00:44] ENGINE Bus STARTING
+[05/Nov/2015:02:00:44] ENGINE Started monitor thread 'Autoreloader'.
+[05/Nov/2015:02:00:44] ENGINE Started monitor thread '_TimeoutMonitor'.
+[05/Nov/2015:02:00:44] ENGINE Error in HTTP server: shutting down
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/cherrypy/process/servers.py", line 206, in _start_http_thread
+    self.httpserver.start()
+  File "/usr/local/lib/python2.7/site-packages/cherrypy/wsgiserver/wsgiserver2.py", line 1955, in start
+    raise socket.error(msg)
+error: No socket could be created -- (('172.31.25.94', 80): [Errno 13] Permission denied)
+
+[05/Nov/2015:02:00:44] ENGINE Bus STOPPING
+[05/Nov/2015:02:00:44] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('172.31.25.94', 80)) already shut down
+[05/Nov/2015:02:00:44] ENGINE Stopped thread '_TimeoutMonitor'.
+[05/Nov/2015:02:00:44] ENGINE Stopped thread 'Autoreloader'.
+[05/Nov/2015:02:00:44] ENGINE Bus STOPPED
+[05/Nov/2015:02:00:44] ENGINE Bus EXITING
+[05/Nov/2015:02:00:44] ENGINE Bus EXITED
+[05/Nov/2015:02:00:48] ENGINE Listening for SIGHUP.
+[05/Nov/2015:02:00:48] ENGINE Listening for SIGTERM.
+[05/Nov/2015:02:00:48] ENGINE Listening for SIGUSR1.
+[05/Nov/2015:02:00:48] ENGINE Bus STARTING
+[05/Nov/2015:02:00:48] ENGINE Started monitor thread 'Autoreloader'.
+[05/Nov/2015:02:00:48] ENGINE Started monitor thread '_TimeoutMonitor'.
+[05/Nov/2015:02:00:48] ENGINE Serving on http://172.31.25.94
+[05/Nov/2015:02:00:48] ENGINE Bus STARTED
+[05/Nov/2015:02:01:22] ENGINE Keyboard Interrupt: shutting down bus
+[05/Nov/2015:02:01:22] ENGINE Bus STOPPING
+[05/Nov/2015:02:01:22] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('172.31.25.94', 80)) shut down
+[05/Nov/2015:02:01:22] ENGINE Stopped thread '_TimeoutMonitor'.
+[05/Nov/2015:02:01:22] ENGINE Stopped thread 'Autoreloader'.
+[05/Nov/2015:02:01:22] ENGINE Bus STOPPED
+[05/Nov/2015:02:01:22] ENGINE Bus EXITING
+[05/Nov/2015:02:01:22] ENGINE Bus EXITED
+[05/Nov/2015:02:01:22] ENGINE Waiting for child threads to terminate...

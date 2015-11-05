@@ -43,11 +43,11 @@ class Objects(object):
     objects = {}
     #uids = UID()
     # default url is localhost
-    my_url = "127.0.0.1:80"+"/api/objects"
+    #my_url = "127.0.0.1:80"+"/api/objects"
 
-    def __init__(self, url=None):
-        if (url != None):
-            self.my_url = url+"/api/objects"
+    #def __init__(self, url=None):
+    #    if (url != None):
+    #        self.my_url = url+"/api/objects"
    
     def POST(self, data=None):
         """Creates object with new uid and returns it. If called 2+ times,

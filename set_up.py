@@ -43,7 +43,7 @@ def main():
     # 3) run app
 
     # load config file and run cherrypy server
-    cherrypy.quickstart(server.Objects("ec2-52-32-119-107.us-west-2.compute.amazonaws.com"),
+    cherrypy.quickstart(server.Objects(),
                         script_name='/api/objects',
                         config="cherrypy.conf") 
 
